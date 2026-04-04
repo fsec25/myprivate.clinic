@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book an Appointment | My Private Clinic — Fulwood, Preston</title>
+<meta name="description" content="Book a private GP appointment at My Private Clinic, Fulwood, Preston. Same-day and next-day appointments available. Call or WhatsApp 07424 172034.">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://myprivate.clinic/book.html">
+<meta property="og:title" content="Book an Appointment | My Private Clinic — Fulwood, Preston">
+<meta property="og:description" content="Book a private GP appointment at My Private Clinic, Fulwood, Preston. Same-day and next-day appointments available. Call or WhatsApp 07424 172034.">
+<meta property="og:image" content="https://myprivate.clinic/assets/images/dr-secretary-v1.jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+/* Half hero */
+.half-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 540px;
+}
+.half-hero-left {
+  background: #0D2B1F;
+  padding: 80px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.half-hero-right {
+  position: relative;
+  overflow: hidden;
+}
+.half-hero-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 860px) {
+  .half-hero { grid-template-columns: 1fr; }
+  .half-hero-right { min-height: 280px; }
+  .half-hero-left { padding: 56px 32px; }
+}
+
+/* How to Book cards */
+.book-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.book-card {
+  border: 1px solid rgba(13,43,31,0.15);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+}
+.book-card-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+.book-card h3 {
+  font-size: 22px;
+  color: var(--royal-deep);
+  margin-bottom: 8px;
+}
+.book-card-contact {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--royal);
+  margin-bottom: 16px;
+  display: block;
+}
+.book-card p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--mid-grey, #555);
+  font-weight: 300;
+  flex: 1;
+  margin-bottom: 28px;
+}
+.coming-soon-pill {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  margin-top: auto;
+}
+
+/* Appointment types */
+.appt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+.appt-card {
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 36px 32px;
+  position: relative;
+}
+.appt-card.recommended {
+  border-color: var(--gold);
+}
+.appt-recommended-tag {
+  position: absolute;
+  top: -12px;
+  left: 32px;
+  background: var(--gold);
+  color: var(--royal-deep);
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+}
+.appt-card h3 {
+  color: var(--cream);
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+.appt-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: block;
+}
+.appt-for {
+  margin-bottom: 12px;
+}
+.appt-for-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(201,168,76,0.8);
+  margin-bottom: 6px;
+}
+.appt-for ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.appt-for ul li {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(247,243,235,0.6);
+  line-height: 1.7;
+  padding-left: 14px;
+  position: relative;
+}
+.appt-for ul li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  opacity: 0.6;
+}
+.appt-for.not-for .appt-for-label { color: rgba(247,243,235,0.6); }
+.appt-for.not-for ul li { color: rgba(247,243,235,0.6); }
+.appt-for.not-for ul li::before { color: rgba(247,243,235,0.5); }
+.appt-note {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(201,168,76,0.12);
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(247,243,235,0.65);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.appt-callout {
+  margin-top: 40px;
+  border: 1px solid rgba(201,168,76,0.25);
+  border-left: 3px solid var(--gold);
+  padding: 28px 32px;
+  background: rgba(201,168,76,0.04);
+}
+.appt-callout p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
+  color: rgba(247,243,235,0.75);
+  line-height: 1.65;
+}
+.appt-callout a {
+  color: var(--gold);
+  text-decoration: none;
+  font-weight: 600;
+}
+.appt-callout a:hover { text-decoration: underline; }
+
+/* Clinic details */
+.clinic-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+.clinic-detail-item {
+  margin-bottom: 20px;
+}
+.clinic-detail-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.clinic-detail-value {
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(247,243,235,0.6);
+  font-weight: 300;
+}
+.clinic-detail-value a {
+  color: rgba(247,243,235,0.75);
+  text-decoration: none;
+}
+.clinic-detail-value a:hover { color: var(--gold); }
+.clinic-hours-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+.clinic-hours-table tr {
+  border-bottom: 1px solid rgba(201,168,76,0.08);
+}
+.clinic-hours-table tr:first-child {
+  border-top: 1px solid rgba(201,168,76,0.08);
+}
+.clinic-hours-table td {
+  padding: 10px 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(247,243,235,0.55);
+  vertical-align: top;
+}
+.clinic-hours-table td:first-child {
+  color: rgba(247,243,235,0.85);
+  font-weight: 400;
+  min-width: 160px;
+}
+
+
+/* Booking form */
+.field { margin-bottom: 24px; }
+.field label {
+  display: block;
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--royal-deep);
+  margin-bottom: 8px;
+}
+.field input, .field select, .field textarea {
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(13,43,31,0.15);
+  padding: 14px 16px;
+  font-family: 'Jost', sans-serif;
+  font-size: 15px;
+  color: var(--charcoal, #1C1C1C);
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--gold); }
+.field textarea { height: 120px; resize: vertical; }
+.field-helper { font-size: 12px; color: #888; margin-top: 6px; }
+.field-required { color: var(--gold); }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+@media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+
+.booking-form {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.form-privacy {
+  margin-top: 16px;
+  font-size: 12px;
+  color: #888;
+  line-height: 1.7;
+  font-family: 'Jost', sans-serif;
+}
+
+/* How steps on cream background */
+.section-cream .how-step-num { color: #1C1C1C; }
+.section-cream .how-step h3  { color: var(--royal-deep); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .appt-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 900px) {
+  .book-cards { grid-template-columns: 1fr; }
+  .appt-grid { grid-template-columns: 1fr; }
+  .clinic-two-col { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 640px) {
+  .book-card { padding: 28px 24px; }
+  .appt-card { padding: 28px 24px; }
+  .booking-form { max-width: 100%; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <a class="nav-logo" href="index.html" aria-label="My Private Clinic — home"><svg width="32" height="39" viewBox="0 0 62 76" fill="none" aria-hidden="true"><path d="M2 2 H60 V46 Q60 68 31 74 Q2 68 2 46 Z" stroke="#C9A84C" stroke-width="1.1" fill="none"/><path d="M7 7 H55 V46 Q55 63 31 69 Q7 63 7 46 Z" stroke="#C9A84C" stroke-width="0.4" fill="none" opacity="0.3"/><line x1="2" y1="22" x2="60" y2="22" stroke="#C9A84C" stroke-width="0.7" opacity="0.65"/><text x="31" y="18" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="12" font-style="italic" font-weight="300" fill="#C9A84C" letter-spacing="1">my</text><text x="31" y="55" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="40" font-weight="600" fill="#F7F3EB">P</text></svg><div class="nav-wordmark"><span class="nav-wm-my">my</span><span class="nav-wm-priv">Private</span><div class="nav-wm-rule"></div><span class="nav-wm-cli">Clinic</span></div></a>
+  <div class="nav-right">
+    <a href="tel:07424172034" class="nav-phone">07424 172034</a>
+    <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" class="nav-book">Book an Appointment</a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navDrawer"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer" aria-hidden="true">
+  <div class="nav-drawer-top">
+    <a class="nav-logo" href="index.html" aria-label="My Private Clinic — home"><svg width="32" height="39" viewBox="0 0 62 76" fill="none" aria-hidden="true"><path d="M2 2 H60 V46 Q60 68 31 74 Q2 68 2 46 Z" stroke="#C9A84C" stroke-width="1.1" fill="none"/><path d="M7 7 H55 V46 Q55 63 31 69 Q7 63 7 46 Z" stroke="#C9A84C" stroke-width="0.4" fill="none" opacity="0.3"/><line x1="2" y1="22" x2="60" y2="22" stroke="#C9A84C" stroke-width="0.7" opacity="0.65"/><text x="31" y="18" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="12" font-style="italic" font-weight="300" fill="#C9A84C" letter-spacing="1">my</text><text x="31" y="55" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="40" font-weight="600" fill="#0D2B1F">P</text></svg><div class="nav-wordmark nav-wordmark-dark"><span class="nav-wm-my">my</span><span class="nav-wm-priv">Private</span><div class="nav-wm-rule"></div><span class="nav-wm-cli">Clinic</span></div></a>
+    <button class="nav-drawer-close" aria-label="Close navigation">&#x2715;</button>
+  </div>
+  <ul class="nav-drawer-links">
+    <li><a href="index.html">Home</a></li>
+    <li>
+      <button class="sub-toggle" aria-expanded="false">Services <span class="sub-icon">+</span></button>
+      <ul class="sub-menu">
+        <li><a href="services/gp-consultations.html">GP Consultations</a></li>
+        <li><a href="services/womens-health.html">Women's Health</a></li>
+        <li><a href="services/mens-health.html">Men's Health</a></li>
+        <li><a href="services/childrens-health.html">Children's Health</a></li>
+        <li><a href="services/blood-tests.html">Blood Tests</a></li>
+        <li><a href="services/weight-loss.html">Weight Loss</a></li>
+        <li><a href="services/sexual-health.html">Sexual Health</a></li>
+        <li><a href="services/travel-health.html">Travel Health</a></li>
+        <li><a href="services/sick-notes.html">Sick Notes</a></li>
+        <li><a href="services/home-visits.html">Home Visits</a></li>
+        <li><a href="services/allergy-testing.html">Allergy Testing</a></li>
+        <li><a href="services/iv-drips.html">IV Drips</a></li>
+        <li><a href="services/joint-injections.html">Joint Injections</a></li>
+        <li><a href="services/minor-surgery.html">Minor Surgery</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="sub-toggle" aria-expanded="false">About <span class="sub-icon">+</span></button>
+      <ul class="sub-menu">
+        <li><a href="about/our-story.html">Our Story</a></li>
+        <li><a href="about/meet-the-doctor.html">Meet the Doctor</a></li>
+        <li><a href="about/reviews.html">Patient Reviews</a></li>
+        <li><a href="about/blog.html">Blog</a></li>
+        <li><a href="about/contact.html">Contact Us</a></li>
+      </ul>
+    </li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="services/nhs-records.html">NHS Records</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+  </ul>
+  <div class="nav-drawer-cta">
+    <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" class="btn-primary">Book an Appointment</a>
+    <p class="nav-drawer-cta-phone">Call or WhatsApp: <a href="tel:07424172034">07424 172034</a></p>
+  </div>
+</div>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+<!-- HERO -->
+<header class="half-hero">
+  <div class="half-hero-left">
+    <span class="gold-tag">Book an Appointment</span>
+    <h1 style="color:#F7F3EB; font-size:clamp(36px,4.5vw,58px); margin:20px 0 16px;">See a GP Today</h1>
+    <p class="hero-sub" style="color:rgba(247,243,235,0.65); margin-bottom:32px;">Same-day and next-day appointments available. No NHS referral needed — just call or WhatsApp us.</p>
+    <div class="page-hero-actions" style="display:flex; flex-wrap:wrap; gap:12px; margin-bottom:36px;">
+      <a href="tel:07424172034" class="btn-primary">Call or WhatsApp: 07424 172034</a>
+      <a href="mailto:hello@myprivate.clinic" class="btn-outline">Email: hello@myprivate.clinic</a>
+    </div>
+    <div class="page-hero-trust">
+      <span>Adults from £69</span>
+      <span class="trust-dot"></span>
+      <span>Children from £49</span>
+      <span class="trust-dot"></span>
+      <span>Prescription Writing Included</span>
+      <span class="trust-dot"></span>
+      <span>No Registration Fee</span>
+    </div>
+  </div>
+  <div class="half-hero-right">
+    <img src="assets/images/book-hero-d.jpeg" alt="Book an appointment at My Private Clinic">
+  </div>
+</header>
+
+<!-- HOW TO BOOK -->
+<section class="section-cream">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="gold-tag">How to Book</span>
+      <h2>Book Your Appointment</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="book-cards">
+      <div class="book-card fade-up">
+        <div class="book-card-label">Call or WhatsApp</div>
+        <h3>Phone &amp; WhatsApp</h3>
+        <a href="tel:07424172034" class="book-card-contact">07424 172034</a>
+        <p>The fastest way to get an appointment. Call or WhatsApp and we'll confirm your slot — same day where available.</p>
+        <a href="tel:07424172034" class="btn-primary">Call Now</a>
+      </div>
+      <div class="book-card fade-up">
+        <div class="book-card-label">Email</div>
+        <h3>Email Us</h3>
+        <a href="mailto:hello@myprivate.clinic" class="book-card-contact">hello@myprivate.clinic</a>
+        <p>For non-urgent enquiries, pricing questions, or if you'd like to check availability before committing to a time.</p>
+        <a href="mailto:hello@myprivate.clinic" class="btn-primary">Send an Email</a>
+      </div>
+      <div class="book-card fade-up">
+        <div class="book-card-label">Online Booking</div>
+        <h3>Book Online</h3>
+        <p>Choose your appointment type and pick a time that suits you — confirmed instantly.</p>
+        <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" class="btn-primary" target="_blank" rel="noopener">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPOINTMENT TYPES -->
+<section class="section-dark">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="gold-tag">What to Book</span>
+      <h2>Choosing the Right Appointment</h2>
+      <div class="gold-rule"></div>
+      <p style="margin-top:16px; font-size:16px; font-weight:300; color:rgba(247,243,235,0.55); max-width:600px;">Not sure which appointment to book? Here's a quick guide.</p>
+    </div>
+
+    <div class="appt-grid">
+      <div class="appt-card fade-up">
+        <h3>15-Minute Appointment</h3>
+        <span class="appt-price">£69 Adults &nbsp;·&nbsp; £49 Children</span>
+        <div class="appt-for">
+          <div class="appt-for-label">Suitable for</div>
+          <ul>
+            <li>Minor or straightforward issues</li>
+            <li>Coughs, colds, UTIs, earache</li>
+            <li>Simple skin complaints</li>
+            <li>Follow-up appointments</li>
+          </ul>
+        </div>
+        <div class="appt-for not-for" style="margin-top:16px;">
+          <div class="appt-for-label">Not suitable for</div>
+          <ul>
+            <li>Multiple concerns</li>
+            <li>New or complex symptoms</li>
+            <li>Women's or men's health</li>
+            <li>Chronic conditions</li>
+          </ul>
+        </div>
+        <p class="appt-note">If in doubt, book 30 minutes.</p>
+      </div>
+
+      <div class="appt-card recommended fade-up">
+        <div class="appt-recommended-tag">Recommended</div>
+        <h3>30-Minute Appointment</h3>
+        <span class="appt-price">£119</span>
+        <div class="appt-for">
+          <div class="appt-for-label">Suitable for</div>
+          <ul>
+            <li>New concerns and multiple issues</li>
+            <li>Ongoing or chronic conditions</li>
+            <li>Test results and referrals</li>
+            <li>Women's health and men's health</li>
+            <li>Sexual health</li>
+            <li>Anything you want to cover properly</li>
+          </ul>
+        </div>
+        <p class="appt-note">This is the recommended appointment for most patients.</p>
+      </div>
+
+      <div class="appt-card fade-up">
+        <h3>60-Minute Appointment</h3>
+        <span class="appt-price">£199</span>
+        <div class="appt-for">
+          <div class="appt-for-label">Suitable for</div>
+          <ul>
+            <li>Complex or multiple concerns</li>
+            <li>Chronic disease management</li>
+            <li>Full health review</li>
+            <li>Anything requiring extended discussion</li>
+          </ul>
+        </div>
+        <p class="appt-note">Our most comprehensive appointment — unhurried, thorough care.</p>
+      </div>
+
+      <div class="appt-card fade-up" style="grid-column: 1 / -1;">
+        <h3>Telephone / Video Consultation</h3>
+        <span class="appt-price">£49 — New &amp; existing patients</span>
+        <div class="appt-for">
+          <div class="appt-for-label">Suitable for</div>
+          <ul style="display:flex; gap:0 40px; flex-wrap:wrap;">
+            <li>Follow-up appointments</li>
+            <li>Results review</li>
+            <li>Prescription queries</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="appt-callout fade-up">
+      <p>If you're unsure which to book — call us. We'd rather help you choose the right appointment than have you feel rushed. <a href="tel:07424172034">07424 172034</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT TO EXPECT -->
+<section class="section-cream">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="gold-tag">What to Expect</span>
+      <h2>Your First Appointment</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="how-steps">
+      <div class="how-step fade-up">
+        <div class="how-step-num">01</div>
+        <h3>Book</h3>
+        <p style="color:#1C1C1C;">Call, WhatsApp or email. We'll confirm your appointment slot and send you details of where to come. Fatima Health Centre, 228 Garstang Road, Fulwood, Preston, PR2 9QB.</p>
+      </div>
+      <div class="how-step fade-up">
+        <div class="how-step-num">02</div>
+        <h3>Arrive</h3>
+        <p style="color:#1C1C1C;">Come to Fatima Health Centre in Fulwood. There is ample parking on site. The clinic is also well served by local bus routes. Please arrive a few minutes early for your first visit.</p>
+      </div>
+      <div class="how-step fade-up">
+        <div class="how-step-num">03</div>
+        <h3>Be Seen</h3>
+        <p style="color:#1C1C1C;">You'll be seen by Dr Faizal Secretary personally. He will give you the full time you've booked. Prescription writing and referral letters included in your appointment fee if needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLINIC DETAILS -->
+<section class="section-dark">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="gold-tag">Find Us</span>
+      <h2>My Private Clinic</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="clinic-two-col" style="margin-top:48px;">
+      <div class="fade-up">
+        <div class="clinic-detail-item">
+          <div class="clinic-detail-label">Address</div>
+          <div class="clinic-detail-value">
+            Ground Floor, Fatima Health Centre<br>
+            228 Garstang Road, Fulwood<br>
+            Preston, PR2 9QB
+          </div>
+        </div>
+        <div class="clinic-detail-item">
+          <div class="clinic-detail-label">Phone &amp; WhatsApp</div>
+          <div class="clinic-detail-value">
+            <a href="tel:07424172034">07424 172034</a>
+          </div>
+        </div>
+        <div class="clinic-detail-item">
+          <div class="clinic-detail-label">Email</div>
+          <div class="clinic-detail-value">
+            <a href="mailto:hello@myprivate.clinic">hello@myprivate.clinic</a>
+          </div>
+        </div>
+        <div class="clinic-detail-item">
+          <div class="clinic-detail-label">Opening Hours</div>
+          <table class="clinic-hours-table">
+            <tbody>
+              <tr>
+                <td>Friday</td>
+                <td>9am–8pm (full clinic day)</td>
+              </tr>
+              <tr>
+                <td>Mon–Thu &amp; Weekend</td>
+                <td>By appointment only</td>
+              </tr>
+              <tr>
+                <td>Seven-day service</td>
+                <td>Coming soon</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="fade-up">
+        <iframe
+          src="https://maps.google.com/maps?q=228+Garstang+Road+Fulwood+Preston+PR2+9QB&output=embed"
+          width="100%"
+          height="360"
+          style="border:0; display:block; border-radius:4px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="My Private Clinic location map">
+        </iframe>
+        <a href="https://maps.google.com/?q=228+Garstang+Road+Fulwood+Preston+PR2+9QB" target="_blank" rel="noopener" style="display:inline-block; margin-top:14px; font-family:'Jost',sans-serif; font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:rgba(247,243,235,0.55); text-decoration:none;">Open in Google Maps ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING FORM -->
+<section class="section-cream">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="gold-tag">Send Us a Message</span>
+      <h2>Request a Callback or Appointment</h2>
+      <div class="gold-rule"></div>
+      <p style="margin-top:16px; font-size:15px; font-weight:300; color:var(--mid-grey, #555); max-width:600px;">Fill in the form below and we'll be in touch to confirm your appointment. For the fastest response, call or WhatsApp: <a href="tel:07424172034" style="color:var(--royal-deep); font-weight:500; text-decoration:none;">07424 172034</a></p>
+    </div>
+
+    <div class="booking-form fade-up">
+      <form action="#" method="post" novalidate>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="full-name">Full Name <span class="field-required" aria-label="required">*</span></label>
+            <input type="text" id="full-name" name="full_name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number <span class="field-required" aria-label="required">*</span></label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+            <div class="field-helper">We'll use this to confirm your appointment</div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" autocomplete="email">
+        </div>
+
+        <div class="field">
+          <label for="appt-type">Type of Appointment</label>
+          <select id="appt-type" name="appt_type">
+            <option value="">Please select…</option>
+            <option value="gp-60">GP Consultation (60 min — £199)</option>
+            <option value="gp-30">GP Consultation (30 min — £119)</option>
+            <option value="gp-15">GP Consultation (15 min — £69)</option>
+            <option value="children">Children's Appointment (£49)</option>
+            <option value="telephone-video">Telephone / Video (existing patients — £49)</option>
+            <option value="womens-health">Women's Health</option>
+            <option value="mens-health">Men's Health</option>
+            <option value="blood-tests">Blood Tests</option>
+            <option value="weight-loss">Weight Loss</option>
+            <option value="other">Other — please specify</option>
+          </select>
+        </div>
+
+        <div class="form-grid">
+          <div class="field">
+            <label for="preferred-day">Preferred Day</label>
+            <select id="preferred-day" name="preferred_day">
+              <option value="">Please select…</option>
+              <option value="friday">Friday (main clinic day)</option>
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="saturday">Saturday</option>
+              <option value="sunday">Sunday</option>
+              <option value="no-preference">No preference</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="preferred-time">Preferred Time</label>
+            <select id="preferred-time" name="preferred_time">
+              <option value="">Please select…</option>
+              <option value="morning">Morning (9am–12pm)</option>
+              <option value="afternoon">Afternoon (12pm–5pm)</option>
+              <option value="evening">Evening (5pm–8pm)</option>
+              <option value="no-preference">No preference</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="reason">What's the reason for your visit? <span style="font-weight:300; text-transform:none; letter-spacing:0;">(optional)</span></label>
+          <textarea id="reason" name="reason"></textarea>
+          <div class="field-helper">This helps Dr Secretary prepare — keep it brief</div>
+        </div>
+
+        <div class="field">
+          <label for="referral">How did you hear about us?</label>
+          <select id="referral" name="referral">
+            <option value="">Please select…</option>
+            <option value="google">Google</option>
+            <option value="social-media">Social media</option>
+            <option value="recommended">Recommended</option>
+            <option value="drove-past">Drove past</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <button type="submit" class="btn-primary" style="width:100%; text-align:center; border:none; cursor:pointer; font-size:14px;">Request Appointment</button>
+        </div>
+
+      </form>
+      <p class="form-privacy">Your details are held securely and will never be shared with third parties. We will only use them to contact you about your appointment.</p>
+    </div>
+  </div>
+</section>
+
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo-wrap" href="index.html">
+          <svg width="28" height="34" viewBox="0 0 62 76" fill="none" aria-hidden="true"><path d="M2 2 H60 V46 Q60 68 31 74 Q2 68 2 46 Z" stroke="#C9A84C" stroke-width="1.1" fill="none"/><text x="31" y="55" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="40" font-weight="600" fill="#F7F3EB">P</text></svg>
+          <div class="nav-wordmark"><span class="nav-wm-my">my</span><span class="nav-wm-priv">Private</span><div class="nav-wm-rule"></div><span class="nav-wm-cli">Clinic</span></div>
+        </a>
+        <p>Ground Floor, Fatima Health Centre<br>228 Garstang Road, Fulwood<br>Preston, PR2 9QB</p>
+        <p class="footer-cqc">CQC Registered · GMC Certified</p>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="services/gp-consultations.html">GP Consultations</a></li>
+        <li><a href="services/womens-health.html">Women's Health</a></li>
+        <li><a href="services/mens-health.html">Men's Health</a></li>
+        <li><a href="services/blood-tests.html">Blood Tests</a></li>
+        <li><a href="services/weight-loss.html">Weight Loss</a></li>
+        <li><a href="services/sexual-health.html">Sexual Health</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>About</h4><ul>
+        <li><a href="about/our-story.html">Our Story</a></li>
+        <li><a href="about/meet-the-team.html">Meet the Team</a></li>
+        <li><a href="about/reviews.html">Reviews</a></li>
+        <li><a href="about/blog.html">Blog</a></li>
+        <li><a href="about/contact.html">Contact Us</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4>
+        <p class="footer-contact-item"><a href="tel:07424172034">07424 172034</a></p>
+        <p class="footer-contact-item"><a href="mailto:hello@myprivate.clinic">hello@myprivate.clinic</a></p>
+        <p class="footer-contact-item">Friday 9am–8pm<br>Other days by appointment</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 My Private Clinic · All rights reserved</p>
+      <ul class="footer-legal"><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+const navToggle=document.querySelector('.nav-toggle'),navDrawer=document.getElementById('navDrawer'),navOverlay=document.getElementById('navOverlay'),navClose=document.querySelector('.nav-drawer-close');
+function openNav(){if(!navDrawer)return;navDrawer.classList.add('open');navOverlay.classList.add('open');navDrawer.setAttribute('aria-hidden','false');navToggle.setAttribute('aria-expanded','true');document.body.classList.add('nav-open');}
+function closeNav(){if(!navDrawer)return;navDrawer.classList.remove('open');navOverlay.classList.remove('open');navDrawer.setAttribute('aria-hidden','true');navToggle.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open');}
+if(navToggle)navToggle.addEventListener('click',openNav);
+if(navClose)navClose.addEventListener('click',closeNav);
+if(navOverlay)navOverlay.addEventListener('click',closeNav);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav();});
+document.querySelectorAll('.sub-toggle').forEach(btn=>{btn.addEventListener('click',()=>{const exp=btn.getAttribute('aria-expanded')==='true';document.querySelectorAll('.sub-toggle').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.classList.remove('open');b.querySelector('.sub-icon').textContent='+';});if(!exp){btn.setAttribute('aria-expanded','true');btn.nextElementSibling.classList.add('open');btn.querySelector('.sub-icon').textContent='−';}});});
+const fadeEls=document.querySelectorAll('.fade-up');
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1});
+fadeEls.forEach(el=>observer.observe(el));
+</script>
+
+<script src="assets/js/widgets.js"></script>
+</body>
+</html>

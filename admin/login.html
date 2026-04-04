@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login — MyPrivateClinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="/admin/config.js"></script>
+</head>
+<body class="login-page">
+
+  <div class="login-card">
+    <div class="login-logo">
+      <div class="clinic-name">My<span class="gold-accent">Private</span>Clinic</div>
+      <div class="subtitle">Preston Private GP Practice</div>
+    </div>
+
+    <h2>Admin Login</h2>
+
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="admin@myprivate.clinic"
+          autocomplete="email"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="••••••••"
+          autocomplete="current-password"
+          required
+        >
+      </div>
+
+      <button type="submit" class="btn-login" id="loginBtn">
+        Sign In
+      </button>
+
+      <div class="login-error" id="loginError"></div>
+    </form>
+
+    <div class="login-footer">
+      MyPrivateClinic Admin v1.0 &nbsp;·&nbsp; Secure &amp; Encrypted
+    </div>
+  </div>
+
+  <script>
+    (async () => {
+      // Check if config is set
+      if (!SUPABASE_URL || SUPABASE_URL === 'YOUR_SUPABASE_URL_HERE') {
+        document.getElementById('loginError').style.display = 'block';
+        document.getElementById('loginError').textContent =
+          'Supabase not configured. Please update config.js with your project credentials.';
+        document.getElementById('loginBtn').disabled = true;
+        return;
+      }
+
+      const sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+      // If already logged in, go straight to dashboard
+      const { data: { session } } = await sb.auth.getSession();
+      if (session) {
+        window.location.href = 'index.html';
+        return;
+      }
+
+      const form = document.getElementById('loginForm');
+      const btn  = document.getElementById('loginBtn');
+      const err  = document.getElementById('loginError');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        btn.disabled = true;
+        btn.textContent = 'Signing in…';
+        err.style.display = 'none';
+
+        const email    = document.getElementById('email').value.trim();
+        const password = document.getElementById('password').value;
+
+        const { error } = await sb.auth.signInWithPassword({ email, password });
+
+        if (error) {
+          err.textContent = error.message || 'Invalid email or password.';
+          err.style.display = 'block';
+          btn.disabled = false;
+          btn.textContent = 'Sign In';
+        } else {
+          window.location.href = 'index.html';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

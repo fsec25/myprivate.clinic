@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Local Private GP — My Private Clinic, Fulwood Preston</title>
+<meta name="description" content="Private GP appointments in Fulwood, Preston. Same-day availability from £69. No NHS referral needed. Call or WhatsApp Dr Faizal Secretary on 07424 172034.">
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+
+/* ── LANDING NAV ── */
+.lp-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 900;
+  background: #0D2B1F;
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 68px;
+}
+.lp-nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+.lp-nav-wordmark {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #F7F3EB;
+}
+.lp-nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.lp-nav-phone {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(247,243,235,0.7);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  padding: 9px 18px;
+  border: 1px solid rgba(247,243,235,0.2);
+  transition: all 0.2s;
+}
+.lp-nav-phone:hover { color: var(--cream); border-color: rgba(247,243,235,0.4); }
+.lp-nav-btn {
+  background: var(--gold);
+  color: var(--royal-deep);
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 10px 22px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.lp-nav-btn:hover { background: var(--gold-light); }
+@media (max-width: 600px) {
+  .lp-nav { padding: 0 20px; }
+  .lp-nav-phone { display: none; }
+}
+
+/* ── HERO ── */
+.lp-hero {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 68px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.lp-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.lp-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  display: block;
+}
+.lp-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(13,43,31,0.92) 0%,
+    rgba(13,43,31,0.78) 40%,
+    rgba(13,43,31,0.35) 70%,
+    rgba(13,43,31,0.1) 100%
+  );
+}
+.lp-hero-left {
+  position: relative;
+  z-index: 1;
+  padding: 80px 7% 80px;
+  max-width: 680px;
+  width: 100%;
+}
+.lp-eyebrow {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lp-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+.lp-hero h1 {
+  color: #F7F3EB;
+  font-size: clamp(34px, 4.5vw, 62px);
+  line-height: 1.08;
+  font-weight: 500;
+  margin-bottom: 24px;
+  letter-spacing: 0.01em;
+}
+.lp-hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.lp-hero-sub {
+  font-size: 16px;
+  line-height: 1.75;
+  color: rgba(247,243,235,0.65);
+  font-weight: 300;
+  margin-bottom: 36px;
+  max-width: 460px;
+}
+.lp-hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 40px;
+  max-width: 340px;
+}
+.lp-cta-primary {
+  background: var(--gold);
+  color: var(--royal-deep);
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 28px;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.2s;
+  display: block;
+}
+.lp-cta-primary:hover { background: var(--gold-light); }
+.lp-cta-secondary {
+  border: 1px solid rgba(247,243,235,0.25);
+  color: rgba(247,243,235,0.7);
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  padding: 14px 28px;
+  text-decoration: none;
+  text-align: center;
+  transition: border-color 0.2s, color 0.2s;
+  display: block;
+}
+.lp-cta-secondary:hover { border-color: var(--gold); color: var(--gold); }
+.lp-trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  border-top: 1px solid rgba(201,168,76,0.15);
+  padding-top: 28px;
+}
+.lp-trust-item {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: rgba(247,243,235,0.45);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.lp-trust-item::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+@media (max-width: 860px) {
+  .lp-hero { min-height: auto; }
+  .lp-hero-bg { display: none; }
+  .lp-hero-left {
+    padding: 60px 28px 60px;
+    max-width: 100%;
+    background: #0D2B1F;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .lp-hero-actions { max-width: 100%; width: 100%; }
+  .lp-eyebrow { justify-content: center; }
+  .lp-hero-sub { max-width: 100%; }
+  .lp-trust-bar { justify-content: center; }
+  .hero-next-avail { width: 100%; box-sizing: border-box; justify-content: center; }
+  .hero-next-avail a { font-size: 11px; letter-spacing: 0.05em; }
+}
+
+/* ── NEXT AVAIL BADGE ── */
+.hero-next-avail { display:inline-flex; align-items:center; gap:8px; background:rgba(201,168,76,0.2); border:1px solid rgba(201,168,76,0.5); padding:8px 16px; max-width:100%; }
+.hero-next-avail-dot { width:7px; height:7px; border-radius:50%; background:#4ade80; display:inline-block; flex-shrink:0; }
+.hero-next-avail a, .hero-next-avail a:visited, .hero-next-avail a:hover { font-family:'Jost',sans-serif; font-size:12px; font-weight:500; letter-spacing:0.08em; text-transform:uppercase; color:#ffffff !important; line-height:1.5; text-decoration:none; }
+
+@keyframes lp-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* ── MOBILE CLINIC IMAGE ── */
+.lp-mobile-clinic-img { display: none; }
+@media (max-width: 860px) {
+  .lp-mobile-clinic-img {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .lp-mobile-clinic-img img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center 60%;
+    display: block;
+  }
+}
+
+/* ── SOCIAL PROOF STRIP ── */
+.lp-proof-strip {
+  background: #fff;
+  border-top: 1px solid rgba(13,43,31,0.08);
+  border-bottom: 1px solid rgba(13,43,31,0.08);
+  padding: 28px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 48px;
+}
+.lp-proof-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.lp-proof-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--royal-deep);
+  line-height: 1;
+}
+.lp-proof-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mid-grey);
+}
+.lp-proof-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(13,43,31,0.1);
+}
+@media (max-width: 600px) {
+  .lp-proof-divider { display: none; }
+  .lp-proof-strip { padding: 24px 20px; gap: 20px 32px; }
+}
+
+/* ── TESTIMONIALS ── */
+.lp-testimonials {
+  background: #F7F3EB;
+  padding: 80px 0;
+}
+.lp-testimonials-inner {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.lp-testimonials-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.lp-testimonials-header h2 { color: var(--royal-deep); font-size: clamp(24px, 3vw, 38px); margin-top: 10px; }
+.lp-testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.lp-testi-card {
+  background: #fff;
+  border: 1px solid rgba(13,43,31,0.08);
+  border-top: 3px solid var(--gold);
+  padding: 32px 28px;
+}
+.lp-testi-stars {
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+.lp-testi-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--royal-deep);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+.lp-testi-name {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mid-grey);
+}
+@media (max-width: 820px) {
+  .lp-testi-grid { grid-template-columns: 1fr; }
+  .lp-testimonials-inner { padding: 0 24px; }
+}
+
+/* ── MID CTA ── */
+.lp-mid-cta {
+  background: var(--royal-deep);
+  padding: 52px 40px;
+  text-align: center;
+}
+.lp-mid-cta p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 2.5vw, 30px);
+  font-style: italic;
+  color: rgba(247,243,235,0.75);
+  margin-bottom: 24px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lp-mid-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ── PAIN SECTION ── */
+.lp-pain {
+  background: #F7F3EB;
+  padding: 96px 0;
+}
+.lp-pain-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.lp-pain-intro {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(26px, 3.5vw, 42px);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--royal-deep);
+  line-height: 1.35;
+  margin-bottom: 48px;
+  max-width: 720px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lp-pain-intro strong {
+  font-style: normal;
+  font-weight: 600;
+}
+.lp-pain-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 52px;
+}
+.lp-pain-item {
+  background: #fff;
+  border-left: 3px solid rgba(13,43,31,0.12);
+  padding: 20px 24px;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.6;
+}
+.lp-pain-item strong {
+  display: block;
+  font-weight: 500;
+  color: var(--royal-deep);
+  margin-bottom: 4px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+}
+.lp-pain-turn {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight: 500;
+  color: var(--royal-deep);
+  border-top: 1px solid rgba(13,43,31,0.12);
+  padding-top: 40px;
+  text-align: center;
+}
+.lp-pain-turn span {
+  color: var(--gold);
+  font-style: italic;
+}
+@media (max-width: 680px) {
+  .lp-pain-list { grid-template-columns: 1fr; }
+  .lp-pain-inner { padding: 0 24px; }
+}
+
+/* ── SOLUTION ── */
+.lp-solution {
+  background: #0D2B1F;
+  padding: 96px 0;
+}
+.lp-solution-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.lp-solution-img {
+  position: relative;
+}
+.lp-solution-img img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+}
+.lp-solution-img::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 60%;
+  height: 60%;
+  border: 1px solid rgba(201,168,76,0.25);
+  pointer-events: none;
+}
+.lp-solution-text .gold-tag { margin-bottom: 16px; }
+.lp-solution-text h2 {
+  color: #F7F3EB;
+  font-size: clamp(28px, 3.5vw, 46px);
+  margin-bottom: 20px;
+}
+.lp-solution-text p {
+  color: rgba(247,243,235,0.6);
+  font-size: 15px;
+  line-height: 1.85;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+.lp-solution-text p strong {
+  color: rgba(247,243,235,0.85);
+  font-weight: 500;
+}
+.lp-benefits {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.lp-benefit {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.lp-benefit-icon {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(201,168,76,0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.lp-benefit-icon svg { display: block; }
+.lp-benefit p {
+  font-size: 14px;
+  color: rgba(247,243,235,0.65);
+  margin: 0;
+  line-height: 1.6;
+}
+.lp-benefit p strong { color: rgba(247,243,235,0.9); font-weight: 500; }
+@media (max-width: 860px) {
+  .lp-solution-inner { grid-template-columns: 1fr; gap: 48px; }
+  .lp-solution-img::after { display: none; }
+  .lp-solution-inner { padding: 0 24px; }
+}
+
+/* ── HOW IT WORKS ── */
+.lp-how {
+  background: #F7F3EB;
+  padding: 96px 0;
+}
+.lp-how-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.lp-section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.lp-section-header h2 {
+  color: var(--royal-deep);
+  font-size: clamp(28px, 3.5vw, 44px);
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+.lp-section-header p {
+  color: var(--mid-grey);
+  font-size: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.lp-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+}
+.lp-step {
+  background: #fff;
+  padding: 48px 36px;
+  position: relative;
+}
+.lp-step-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 72px;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+.lp-step h3 {
+  color: var(--royal-deep);
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.lp-step p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.75;
+  font-weight: 300;
+}
+.lp-step-cta {
+  margin-top: 52px;
+  text-align: center;
+}
+@media (max-width: 700px) {
+  .lp-steps { grid-template-columns: 1fr; }
+  .lp-how-inner { padding: 0 24px; }
+}
+
+/* ── PRICING ── */
+.lp-pricing {
+  background: #0D2B1F;
+  padding: 96px 0;
+}
+.lp-pricing-inner {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.lp-pricing-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.lp-pricing-header h2 { color: #F7F3EB; }
+.lp-pricing-header p { color: rgba(247,243,235,0.5); max-width: 480px; margin: 12px auto 0; }
+.lp-pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-bottom: 40px;
+}
+.lp-price-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.12);
+  padding: 40px 32px;
+  position: relative;
+}
+.lp-price-card.featured {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.06);
+}
+.lp-price-card.featured::before {
+  content: 'Most Popular';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gold);
+  color: var(--royal-deep);
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 4px 14px;
+  white-space: nowrap;
+}
+.lp-price-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(201,168,76,0.7);
+  margin-bottom: 16px;
+}
+.lp-price-amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px;
+  font-weight: 600;
+  color: #F7F3EB;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.lp-price-amount sup {
+  font-size: 24px;
+  vertical-align: super;
+  font-weight: 400;
+}
+.lp-price-duration {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  color: rgba(247,243,235,0.35);
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+}
+.lp-price-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid rgba(201,168,76,0.1);
+  padding-top: 20px;
+}
+.lp-price-features li {
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(247,243,235,0.55);
+  line-height: 1.7;
+  padding: 5px 0;
+  padding-left: 14px;
+  position: relative;
+}
+.lp-price-features li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  opacity: 0.5;
+}
+.lp-pricing-note {
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: rgba(247,243,235,0.4);
+  line-height: 1.7;
+}
+.lp-pricing-note a { color: var(--gold); text-decoration: none; }
+.lp-pricing-extras {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  margin-bottom: 40px;
+}
+.lp-pricing-extra {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,168,76,0.08);
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+.lp-pricing-extra-label {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(247,243,235,0.5);
+}
+.lp-pricing-extra-val {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gold);
+  white-space: nowrap;
+}
+@media (max-width: 820px) {
+  .lp-pricing-cards { grid-template-columns: 1fr; }
+  .lp-pricing-extras { grid-template-columns: 1fr 1fr; }
+  .lp-pricing-inner { padding: 0 24px; }
+}
+@media (max-width: 480px) {
+  .lp-pricing-extras { grid-template-columns: 1fr; }
+}
+
+/* ── DOCTOR ── */
+.lp-doctor {
+  background: #F7F3EB;
+  padding: 96px 0;
+}
+.lp-doctor-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 72px;
+  align-items: center;
+}
+.lp-doctor-photo {
+  position: relative;
+}
+.lp-doctor-photo img {
+  width: 100%;
+  display: block;
+}
+.lp-doctor-photo::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  right: 12px;
+  bottom: 12px;
+  border: 1px solid rgba(201,168,76,0.3);
+  pointer-events: none;
+  z-index: 0;
+}
+.lp-doctor-photo img { position: relative; z-index: 1; }
+.lp-doctor-text .gold-tag { margin-bottom: 14px; }
+.lp-doctor-text h2 {
+  color: var(--royal-deep);
+  font-size: clamp(26px, 3vw, 40px);
+  margin-bottom: 8px;
+}
+.lp-doctor-credentials {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+.lp-doctor-text p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.85;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+.lp-doctor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+}
+.lp-doctor-tag {
+  border: 1px solid rgba(13,43,31,0.2);
+  color: var(--royal-deep);
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+}
+@media (max-width: 820px) {
+  .lp-doctor-inner { grid-template-columns: 1fr; gap: 40px; }
+  .lp-doctor-photo { max-width: 320px; margin: 0 auto; }
+  .lp-doctor-photo::before { display: none; }
+  .lp-doctor-inner { padding: 0 24px; }
+}
+
+/* ── FAQ ── */
+.lp-faq {
+  background: #0D2B1F;
+  padding: 96px 0;
+}
+.lp-faq-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.lp-faq-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.lp-faq-header h2 { color: #F7F3EB; }
+.lp-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.lp-faq-item {
+  border: 1px solid rgba(201,168,76,0.1);
+  overflow: hidden;
+}
+.lp-faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 22px 28px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #F7F3EB;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.lp-faq-q:hover { color: var(--gold); }
+.lp-faq-icon {
+  font-size: 20px;
+  color: var(--gold);
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  font-style: normal;
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+}
+.lp-faq-item.open .lp-faq-icon { transform: rotate(45deg); }
+.lp-faq-a {
+  display: none;
+  padding: 0 28px 22px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(247,243,235,0.55);
+  border-top: 1px solid rgba(201,168,76,0.08);
+  margin-top: 0;
+}
+.lp-faq-item.open .lp-faq-a { display: block; }
+@media (max-width: 600px) {
+  .lp-faq-inner { padding: 0 20px; }
+  .lp-faq-q { padding: 18px 20px; font-size: 16px; }
+  .lp-faq-a { padding: 0 20px 18px; }
+}
+
+/* ── FINAL CTA ── */
+.lp-final {
+  background: var(--cream);
+  padding: 80px 40px;
+  text-align: center;
+}
+.lp-final h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 5vw, 58px);
+  font-weight: 500;
+  color: var(--royal-deep);
+  margin-bottom: 16px;
+}
+.lp-final p {
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(13,43,31,0.7);
+  margin-bottom: 36px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lp-final-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.lp-final-phone-row {
+  display: flex;
+  gap: 12px;
+}
+.lp-final-call {
+  background: var(--royal-deep);
+  color: #F7F3EB;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 18px 36px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.lp-final-call:hover { background: #1B4332; }
+.lp-final-email {
+  border: 2px solid var(--gold);
+  color: var(--royal-deep);
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 18px 36px;
+  text-decoration: none;
+  transition: all 0.2s;
+  text-align: center;
+}
+.lp-final-email:hover { background: var(--gold); }
+.lp-final-note {
+  margin-top: 24px;
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(13,43,31,0.45);
+}
+
+/* ── MINIMAL FOOTER ── */
+.lp-footer {
+  background: #0D2B1F;
+  border-top: 1px solid rgba(201,168,76,0.1);
+  padding: 28px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.lp-footer p {
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(247,243,235,0.3);
+  letter-spacing: 0.06em;
+  margin: 0;
+  line-height: 1.6;
+}
+.lp-footer a {
+  color: rgba(247,243,235,0.35);
+  text-decoration: none;
+}
+.lp-footer a:hover { color: var(--gold); }
+
+/* ── STICKY MOBILE CTA ── */
+.lp-sticky {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 800;
+  background: var(--royal-deep);
+  border-top: 1px solid rgba(201,168,76,0.25);
+  padding: 12px 20px;
+  gap: 10px;
+}
+.lp-sticky a {
+  flex: 1;
+  text-align: center;
+  padding: 13px 8px;
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.lp-sticky-call { background: var(--gold); color: var(--royal-deep); }
+.lp-sticky-wa { background: #25D366; color: #fff; }
+@media (max-width: 680px) {
+  .lp-sticky { display: flex; }
+  .lp-final { padding: 52px 28px 60px; }
+  .lp-footer { padding: 24px 20px 90px; }
+  .lp-final-actions { flex-direction: column; align-items: stretch; }
+  .lp-final-actions .lp-final-call { text-align: center; }
+  .lp-final-actions .lp-final-email:first-of-type ~ .lp-final-email,
+  .lp-final-actions .lp-final-email { flex: 1; text-align: center; }
+  .lp-final-actions { display: grid; grid-template-columns: 1fr; gap: 10px; }
+  .lp-final-actions .lp-final-call { grid-column: 1 / -1; }
+  .lp-final-phone-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; grid-column: 1 / -1; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="lp-nav">
+  <a href="index.html" class="lp-nav-logo">
+    <svg width="28" height="34" viewBox="0 0 62 76" fill="none" aria-hidden="true">
+      <path d="M2 2 H60 V46 Q60 68 31 74 Q2 68 2 46 Z" stroke="#C9A84C" stroke-width="1.1" fill="none"/>
+      <text x="31" y="55" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="40" font-weight="600" fill="#F7F3EB">P</text>
+    </svg>
+    <span class="lp-nav-wordmark">My Private Clinic</span>
+  </a>
+  <div class="lp-nav-cta">
+    <a href="tel:07424172034" class="lp-nav-phone">07424 172034</a>
+    <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" target="_blank" rel="noopener" class="lp-nav-btn">Book Now</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="lp-hero">
+  <div class="lp-hero-bg">
+    <img src="assets/images/fatima-watercolour-1.jpeg" alt="Fatima Health Centre, Fulwood Preston">
+  </div>
+  <div class="lp-hero-left">
+    <div class="lp-eyebrow">You received our leaflet — here's what we do</div>
+    <h1>Tired of Waiting?<br>Here's a Doctor<br><em>You Can See Today.</em></h1>
+    <p class="lp-hero-sub">You shouldn't have to wait three weeks to see a doctor. Or spend ten minutes rushing through something that deserves real attention.</p>
+
+    <p class="hero-next-avail" style="margin-bottom:28px;">
+      <span class="hero-next-avail-dot" aria-hidden="true" style="animation:lp-pulse 2s infinite;"></span>
+      <a id="lp-next-avail-text" href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;">Next Available: Friday 10th April — Book Online, Call, or WhatsApp</a>
+    </p>
+
+    <div class="lp-hero-actions">
+      <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" target="_blank" rel="noopener" class="lp-cta-primary">Book Online Now</a>
+      <a href="tel:07424172034" class="lp-cta-secondary">Prefer to call? 07424 172034 →</a>
+    </div>
+    <div class="lp-trust-bar">
+      <span class="lp-trust-item">Adults from £69</span>
+      <span class="lp-trust-item">Children from £49</span>
+      <span class="lp-trust-item">Prescriptions Included</span>
+      <span class="lp-trust-item">No Registration Fee</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── MOBILE CLINIC IMAGE ── -->
+<div class="lp-mobile-clinic-img">
+  <img src="assets/images/fatima-watercolour-1.jpeg" alt="Fatima Health Centre, Fulwood Preston">
+</div>
+
+<!-- ── PAIN ── -->
+<section class="lp-pain">
+  <div class="lp-pain-inner">
+    <p class="lp-pain-intro">You shouldn't have to wait <strong>three weeks</strong> to see a doctor. Or spend ten minutes rushing through something that deserves real attention.</p>
+    <div class="lp-pain-list">
+      <div class="lp-pain-item">
+        <strong>The 8am scramble</strong>
+        You call the moment the lines open. You're 47th in the queue. By the time you get through, there are no appointments left.
+      </div>
+      <div class="lp-pain-item">
+        <strong>The two-week wait</strong>
+        The next available slot is a fortnight away. The thing that felt urgent gets quietly pushed aside.
+      </div>
+      <div class="lp-pain-item">
+        <strong>The ten-minute appointment</strong>
+        You prepared a list. You got through one item. The rest will have to wait for another appointment — in another two weeks.
+      </div>
+      <div class="lp-pain-item">
+        <strong>The unanswered question</strong>
+        You left with a prescription but not an explanation. You Googled it in the car park. You're still not sure.
+      </div>
+    </div>
+    <p class="lp-pain-turn">None of this is your fault. But every week without an answer is a week of unnecessary worry. There is <span>a better option — five minutes from your door.</span></p>
+  </div>
+</section>
+
+<!-- ── SOCIAL PROOF STRIP ── -->
+<div class="lp-proof-strip">
+  <div class="lp-proof-item">
+    <span class="lp-proof-num">5★</span>
+    <span class="lp-proof-label">Patient Rating</span>
+  </div>
+  <div class="lp-proof-divider"></div>
+  <div class="lp-proof-item">
+    <span class="lp-proof-num">MRCGP</span>
+    <span class="lp-proof-label">Royal College of GPs</span>
+  </div>
+  <div class="lp-proof-divider"></div>
+  <div class="lp-proof-item">
+    <span class="lp-proof-num">Same Day</span>
+    <span class="lp-proof-label">Appointments Available</span>
+  </div>
+  <div class="lp-proof-divider"></div>
+  <div class="lp-proof-item">
+    <span class="lp-proof-num">CQC</span>
+    <span class="lp-proof-label">Registered Practice</span>
+  </div>
+  <div class="lp-proof-divider"></div>
+  <div class="lp-proof-item">
+    <span class="lp-proof-num">PR2</span>
+    <span class="lp-proof-label">Right Here in Fulwood</span>
+  </div>
+</div>
+
+<!-- ── SOLUTION ── -->
+<section class="lp-solution">
+  <div class="lp-solution-inner">
+    <div class="lp-solution-img">
+      <img src="assets/images/hero-desk-v3.jpeg" alt="Dr Faizal Secretary private GP consultation room">
+    </div>
+    <div class="lp-solution-text">
+      <span class="gold-tag">My Private Clinic</span>
+      <h2>Private GP Care, Right Here in Fulwood</h2>
+      <p>My Private Clinic is a private GP practice run by <strong>Dr Faizal Secretary MBBS MRCGP</strong> — a fully qualified GP and member of the Royal College of General Practitioners — based at Fatima Health Centre on Garstang Road, five minutes from where you live.</p>
+      <p>You book when you want. You choose how long you need. You see the same doctor every time. And you leave with a clear plan — not more waiting.</p>
+      <div class="lp-benefits">
+        <div class="lp-benefit">
+          <div class="lp-benefit-icon">
+            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <p><strong>Same-day appointments available</strong> — call before midday and we'll usually get you in today</p>
+        </div>
+        <div class="lp-benefit">
+          <div class="lp-benefit-icon">
+            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <p><strong>15, 30, or 60 minutes</strong> — you choose the length. That time is yours entirely</p>
+        </div>
+        <div class="lp-benefit">
+          <div class="lp-benefit-icon">
+            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <p><strong>No NHS referral needed</strong> — no letter, no registration, no hoops</p>
+        </div>
+        <div class="lp-benefit">
+          <div class="lp-benefit-icon">
+            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <p><strong>Prescriptions included</strong> — written as part of your appointment, at no extra charge</p>
+        </div>
+        <div class="lp-benefit">
+          <div class="lp-benefit-icon">
+            <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><polyline points="1,4 4,7 9,1" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <p><strong>Keep your NHS GP</strong> — we work alongside the NHS, not instead of it</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="lp-how">
+  <div class="lp-how-inner">
+    <div class="lp-section-header">
+      <span class="gold-tag" style="display:block; text-align:center;">Getting Started</span>
+      <h2>Seen in Three Simple Steps</h2>
+      <p>No forms. No registration. No referrals. Just a call.</p>
+    </div>
+    <div class="lp-steps">
+      <div class="lp-step">
+        <div class="lp-step-num">01</div>
+        <h3>Book Your Slot</h3>
+        <p>Choose how you'd like to get in touch — whatever's easiest for you.</p>
+        <div style="display:flex; flex-direction:column; gap:8px; margin-top:16px;">
+          <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" target="_blank" rel="noopener" style="display:block; background:var(--gold); color:var(--royal-deep); font-family:'Jost',sans-serif; font-size:12px; font-weight:500; letter-spacing:0.1em; text-transform:uppercase; padding:11px 16px; text-decoration:none; text-align:center;">Book Online</a>
+          <a href="tel:07424172034" style="display:block; border:1px solid rgba(13,43,31,0.2); color:var(--royal-deep); font-family:'Jost',sans-serif; font-size:12px; font-weight:400; letter-spacing:0.08em; padding:11px 16px; text-decoration:none; text-align:center;">Call: 07424 172034</a>
+          <a href="https://wa.me/447424172034" target="_blank" rel="noopener" style="display:block; border:1px solid rgba(13,43,31,0.2); color:var(--royal-deep); font-family:'Jost',sans-serif; font-size:12px; font-weight:400; letter-spacing:0.08em; padding:11px 16px; text-decoration:none; text-align:center;">WhatsApp Us</a>
+        </div>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step-num">02</div>
+        <h3>Come to the Clinic</h3>
+        <p>Fatima Health Centre, 228 Garstang Road, Fulwood, Preston PR2 9QB. Ample free parking on site. We're right on your doorstep.</p>
+      </div>
+      <div class="lp-step">
+        <div class="lp-step-num">03</div>
+        <h3>Leave with Answers</h3>
+        <p>Dr Secretary gives you the full time you've booked. Prescriptions written, referrals arranged, questions answered — all before you leave.</p>
+      </div>
+    </div>
+    <div class="lp-step-cta" style="margin-top:52px; text-align:center;">
+      <a href="tel:07424172034" class="btn-primary" style="display:inline-block;">Call to Book: 07424 172034</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="lp-testimonials">
+  <div class="lp-testimonials-inner">
+    <div class="lp-testimonials-header">
+      <span class="gold-tag" style="display:block; text-align:center;">Patient Experiences</span>
+      <h2>What Our Patients Say</h2>
+    </div>
+    <div class="lp-testi-grid">
+      <div class="lp-testi-card">
+        <div class="lp-testi-stars">★★★★★</div>
+        <p class="lp-testi-quote">"I'd been putting off seeing a doctor for months because I couldn't get an NHS appointment that wasn't weeks away. I called at 9am on a Friday and was seen by lunchtime. Dr Secretary took his time and actually explained everything."</p>
+        <p class="lp-testi-name">Sarah M. — Fulwood</p>
+      </div>
+      <div class="lp-testi-card">
+        <div class="lp-testi-stars">★★★★★</div>
+        <p class="lp-testi-quote">"The difference between this and an NHS appointment is night and day — not because of the doctor, but because of the time. He wasn't watching the clock. I left with answers, a prescription sorted, and a referral already written."</p>
+        <p class="lp-testi-name">James T. — Broughton</p>
+      </div>
+      <div class="lp-testi-card">
+        <div class="lp-testi-stars">★★★★★</div>
+        <p class="lp-testi-quote">"Brought my daughter in on a Saturday. No fuss, no forms, no waiting. Dr Secretary was brilliant with her — calm, thorough, and genuinely kind. Worth every penny and I'll be back."</p>
+        <p class="lp-testi-name">Rachel K. — Fulwood</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MID CTA ── -->
+<div class="lp-mid-cta">
+  <p>"Most patients tell us they wish they'd come sooner."</p>
+  <div class="lp-mid-cta-actions">
+    <a href="tel:07424172034" class="lp-cta-primary" style="display:inline-block;">Call Now: 07424 172034</a>
+    <a href="https://wa.me/447424172034?text=Hi%2C%20I%20received%20your%20leaflet%20and%20would%20like%20to%20book" target="_blank" rel="noopener" style="display:inline-block; border:1px solid rgba(247,243,235,0.25); color:rgba(247,243,235,0.7); font-family:'Jost',sans-serif; font-size:12px; font-weight:400; letter-spacing:0.08em; padding:14px 28px; text-decoration:none;">WhatsApp Us Instead</a>
+  </div>
+</div>
+
+<!-- ── PRICING ── -->
+<section class="lp-pricing">
+  <div class="lp-pricing-inner">
+    <div class="lp-pricing-header">
+      <span class="gold-tag" style="display:block; text-align:center;">Transparent Pricing</span>
+      <h2>Clear Fees. No Surprises.</h2>
+      <p>You know the cost before you book. There are no hidden charges, no admin fees, no extras.</p>
+    </div>
+    <div class="lp-pricing-cards">
+      <div class="lp-price-card">
+        <div class="lp-price-label">15-Minute Appointment</div>
+        <div class="lp-price-amount"><sup>£</sup>69</div>
+        <div class="lp-price-duration">Adults &nbsp;·&nbsp; Quick issues &amp; follow-ups</div>
+        <ul class="lp-price-features">
+          <li>Coughs, colds, UTIs, earache</li>
+          <li>Simple skin complaints</li>
+          <li>Short follow-up appointment</li>
+          <li>Prescription writing included</li>
+        </ul>
+      </div>
+      <div class="lp-price-card featured">
+        <div class="lp-price-label">30-Minute Appointment</div>
+        <div class="lp-price-amount"><sup>£</sup>119</div>
+        <div class="lp-price-duration">Adults &nbsp;·&nbsp; Most concerns &nbsp;·&nbsp; <em style="font-style:italic; opacity:0.7;">less than two restaurant meals</em></div>
+        <ul class="lp-price-features">
+          <li>New or multiple concerns</li>
+          <li>Ongoing conditions &amp; reviews</li>
+          <li>Men's and women's health</li>
+          <li>Test results and referrals</li>
+          <li>Prescription writing included</li>
+        </ul>
+      </div>
+      <div class="lp-price-card">
+        <div class="lp-price-label">60-Minute Appointment</div>
+        <div class="lp-price-amount"><sup>£</sup>199</div>
+        <div class="lp-price-duration">Adults &nbsp;·&nbsp; Complex or in-depth</div>
+        <ul class="lp-price-features">
+          <li>Complex or overlapping conditions</li>
+          <li>Full health review</li>
+          <li>Long-standing concerns</li>
+          <li>Prescription writing included</li>
+        </ul>
+      </div>
+    </div>
+    <div class="lp-pricing-extras">
+      <div class="lp-pricing-extra">
+        <span class="lp-pricing-extra-label">Children under 16 (15-min)</span>
+        <span class="lp-pricing-extra-val">£49</span>
+      </div>
+      <div class="lp-pricing-extra">
+        <span class="lp-pricing-extra-label">Telephone / Video</span>
+        <span class="lp-pricing-extra-val">£49</span>
+      </div>
+      <div class="lp-pricing-extra">
+        <span class="lp-pricing-extra-label">Repeat Prescription</span>
+        <span class="lp-pricing-extra-val">£20</span>
+      </div>
+      <div class="lp-pricing-extra">
+        <span class="lp-pricing-extra-label">Referral Letter</span>
+        <span class="lp-pricing-extra-val">£40</span>
+      </div>
+    </div>
+    <p class="lp-pricing-note">Not sure which appointment to book? <a href="tel:07424172034">Call us and we'll help you decide.</a></p>
+  </div>
+</section>
+
+<!-- ── DOCTOR ── -->
+<section class="lp-doctor">
+  <div class="lp-doctor-inner">
+    <div class="lp-doctor-photo">
+      <img src="assets/images/dr-secretary-v1.jpeg" alt="Dr Faizal Secretary — Private GP, Fulwood Preston">
+    </div>
+    <div class="lp-doctor-text">
+      <span class="gold-tag">Your Doctor</span>
+      <h2>Dr Faizal Secretary</h2>
+      <p class="lp-doctor-credentials">MBBS &nbsp;·&nbsp; MRCGP &nbsp;·&nbsp; Member of the Royal College of General Practitioners</p>
+      <p>Dr Secretary is a fully qualified GP with years of experience in general practice. He founded My Private Clinic because he believed patients deserved more than ten minutes and a rushed goodbye.</p>
+      <p style="font-family:'Cormorant Garamond',serif; font-style:italic; font-size:16px; color:var(--royal-deep); border-left:2px solid var(--gold); padding-left:16px; margin:20px 0;">"We are not the largest practice in Preston. We are deliberately small — so that every patient gets the attention they came for."</p>
+      <p>When you book with My Private Clinic, you see Dr Secretary personally — not a locum, not a different doctor each time. He knows your history, follows up on results himself, and takes the time to explain things properly.</p>
+      <p>This is the standard of care he wanted to offer. It's now available to you, right here in Fulwood.</p>
+      <div class="lp-doctor-tags">
+        <span class="lp-doctor-tag">GMC Registered</span>
+        <span class="lp-doctor-tag">CQC Registered</span>
+        <span class="lp-doctor-tag">MRCGP</span>
+        <span class="lp-doctor-tag">Fulwood, Preston</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ── -->
+<section class="lp-faq">
+  <div class="lp-faq-inner">
+    <div class="lp-faq-header">
+      <span class="gold-tag" style="display:block; text-align:center;">Before You Call</span>
+      <h2 style="color:#F7F3EB; margin-top:12px;">Questions We Hear Every Day</h2>
+    </div>
+    <div class="lp-faq-list">
+      <div class="lp-faq-item">
+        <button class="lp-faq-q" aria-expanded="false">
+          Do I need to de-register from my NHS GP?
+          <span class="lp-faq-icon">+</span>
+        </button>
+        <p class="lp-faq-a">No. We work entirely alongside the NHS. You keep your NHS GP — we're here for when you need to be seen sooner, need more time, or want a second opinion.</p>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-q" aria-expanded="false">
+          How quickly can I get an appointment?
+          <span class="lp-faq-icon">+</span>
+        </button>
+        <p class="lp-faq-a">Often the same day. Call before midday and we'll usually have a slot for you — particularly on Fridays when we run a full clinic from 9am to 8pm. Other days are available by appointment.</p>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-q" aria-expanded="false">
+          Is the prescription included in the appointment price?
+          <span class="lp-faq-icon">+</span>
+        </button>
+        <p class="lp-faq-a">Yes. Prescription writing is included in every consultation. If Dr Secretary decides you need medication, he writes it as part of your appointment at no extra charge. You take the prescription to any UK pharmacy and pay only the pharmacy's dispensing cost.</p>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-q" aria-expanded="false">
+          Which appointment length should I book?
+          <span class="lp-faq-icon">+</span>
+        </button>
+        <p class="lp-faq-a">If you have one straightforward issue, 15 minutes is usually enough. For anything new, ongoing, or involving multiple concerns, book 30 minutes. If you want to cover everything thoroughly — or it's been building for a while — book 60. If in doubt, call us and we'll help you choose.</p>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-q" aria-expanded="false">
+          Can I bring my child?
+          <span class="lp-faq-icon">+</span>
+        </button>
+        <p class="lp-faq-a">Yes. Children's appointments start from £49 for 15 minutes. A parent or guardian must be present. We see patients of all ages.</p>
+      </div>
+      <div class="lp-faq-item">
+        <button class="lp-faq-q" aria-expanded="false">
+          Where exactly are you?
+          <span class="lp-faq-icon">+</span>
+        </button>
+        <p class="lp-faq-a">Ground Floor, Fatima Health Centre, 228 Garstang Road, Fulwood, Preston PR2 9QB. There is ample free parking on site. We're well served by local bus routes and easy to find.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FINAL CTA ── -->
+<section class="lp-final">
+  <h2>Ready to Be Seen?</h2>
+  <p>Same-day appointments available. No referral. No registration. Just call or WhatsApp and we'll sort the rest.</p>
+  <div class="lp-final-actions">
+    <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" target="_blank" rel="noopener" class="lp-final-call">Book Online Now</a>
+    <div class="lp-final-phone-row">
+      <a href="tel:07424172034" class="lp-final-email">Call Us</a>
+      <a href="https://wa.me/447424172034" target="_blank" rel="noopener" class="lp-final-email">WhatsApp</a>
+    </div>
+  </div>
+  <p class="lp-final-note">Fatima Health Centre · 228 Garstang Road · Fulwood · Preston · PR2 9QB</p>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="lp-footer">
+  <p>© 2026 My Private Clinic &nbsp;·&nbsp; Ground Floor, Fatima Health Centre, 228 Garstang Road, Fulwood, Preston PR2 9QB</p>
+  <p><a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html">Terms</a> &nbsp;·&nbsp; <a href="index.html">Full Website</a></p>
+</footer>
+
+<!-- ── STICKY MOBILE CTA ── -->
+<div class="lp-sticky">
+  <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" target="_blank" rel="noopener" class="lp-sticky-call">Book Now</a>
+  <a href="https://wa.me/447424172034?text=Hi%2C%20I%27d%20like%20to%20book%20an%20appointment" target="_blank" rel="noopener" class="lp-sticky-wa">WhatsApp</a>
+</div>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.lp-faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.lp-faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.lp-faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+    btn.setAttribute('aria-expanded', !isOpen);
+  });
+});
+
+// Dynamic next available slot
+(function () {
+  fetch('/api/next-appointment')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.slot) {
+        var el = document.getElementById('lp-next-avail-text');
+        if (el) el.textContent = 'Next Available: ' + data.slot + ' \u2014 Book Online, Call, or WhatsApp';
+      }
+    })
+    .catch(function () {});
+})();
+
+// Fade in on scroll
+const fadeEls = document.querySelectorAll('.lp-step, .lp-price-card, .lp-benefit, .lp-pain-item, .lp-faq-item, .lp-pricing-extra');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.style.opacity = '1';
+      e.target.style.transform = 'translateY(0)';
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08 });
+fadeEls.forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(18px)';
+  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+  observer.observe(el);
+});
+</script>
+
+<script src="assets/js/widgets.js"></script>
+</body>
+</html>

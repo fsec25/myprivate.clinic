@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" }
+  ],
+  "redirects": [
+    { "source": "/about/blog", "destination": "/blog", "permanent": true },
+    { "source": "/about/blog.html", "destination": "/blog", "permanent": true },
+    { "source": "/about/contact", "destination": "/contact", "permanent": true },
+    { "source": "/about/contact.html", "destination": "/contact", "permanent": true }
+  ]
+}

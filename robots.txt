@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+Disallow: /index-shadow.html
+Disallow: /leaflet.html
+Disallow: /services-option-a.html
+Disallow: /services-option-b.html
+Disallow: /services-option-c.html
+Disallow: /services-option-d.html
+Disallow: /services-option-e.html
+Disallow: /services-option-f.html
+
+Sitemap: https://myprivate.clinic/sitemap.xml

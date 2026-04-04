@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — MyPrivateClinic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Sidebar backdrop (mobile) -->
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-logo">My<span>Private</span>Clinic</div>
+      <div class="sidebar-tagline">Admin Dashboard</div>
+    </div>
+
+    <nav class="sidebar-nav" id="sidebarNav">
+      <button class="nav-item active" data-module="dashboard">
+        <span class="nav-icon">🏠</span> Dashboard
+      </button>
+      <button class="nav-item" data-module="crm">
+        <span class="nav-icon">👥</span> CRM
+      </button>
+      <button class="nav-item" data-module="financials">
+        <span class="nav-icon">💰</span> Financials
+      </button>
+      <button class="nav-item" data-module="compliance">
+        <span class="nav-icon">✅</span> Compliance
+      </button>
+      <button class="nav-item" data-module="analytics">
+        <span class="nav-icon">📊</span> Analytics
+      </button>
+      <button class="nav-item" data-module="marketing">
+        <span class="nav-icon">📅</span> Marketing
+      </button>
+      <button class="nav-item" data-module="referrals">
+        <span class="nav-icon">🏥</span> Referrals
+      </button>
+      <button class="nav-item" data-module="inventory">
+        <span class="nav-icon">📦</span> Inventory
+      </button>
+      <button class="nav-item" data-module="team">
+        <span class="nav-icon">👤</span> Team
+      </button>
+      <button class="nav-item" data-module="feedback">
+        <span class="nav-icon">⭐</span> Feedback
+      </button>
+      <button class="nav-item" data-module="goals">
+        <span class="nav-icon">🎯</span> Goals
+      </button>
+      <button class="nav-item" data-module="settings">
+        <span class="nav-icon">⚙️</span> Settings
+      </button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="user-avatar" id="userAvatar">A</div>
+        <div class="user-info">
+          <div class="user-name" id="userName">Admin</div>
+          <div class="user-role">MyPrivateClinic</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main content -->
+  <div class="main-content">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="menu-toggle" id="menuToggle">☰</button>
+        <span class="page-title" id="pageTitle">Dashboard</span>
+      </div>
+      <div class="topbar-right">
+        <button class="btn-logout" id="logoutBtn">Sign Out</button>
+      </div>
+    </header>
+
+    <!-- Page content rendered here -->
+    <div class="page-content" id="pageContent">
+      <div class="loading-state">
+        <div class="spinner"></div>
+        Loading…
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <span class="modal-title" id="modalTitle">Add Record</span>
+      <button class="modal-close" id="modalClose">✕</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-footer">
+      <button class="btn btn-secondary" id="modalCancel">Cancel</button>
+      <button class="btn btn-primary" id="modalSave">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast container -->
+<div id="toast-container"></div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/admin/config.js"></script>
+<script src="/admin/admin.js"></script>
+
+</body>
+</html>

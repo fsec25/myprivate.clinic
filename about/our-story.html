@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://myprivate.clinic/about/our-story.html"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story | My Private Clinic</title>
+<meta name="description" content="The story behind My Private Clinic — why Dr Faizal Secretary founded a private GP practice in Fulwood, Preston, and what drives everything we do.">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://myprivate.clinic/about/our-story.html">
+<meta property="og:title" content="Our Story | My Private Clinic">
+<meta property="og:description" content="The story behind My Private Clinic — why Dr Faizal Secretary founded a private GP practice in Fulwood, Preston, and what drives everything we do.">
+<meta property="og:image" content="https://myprivate.clinic/assets/images/dr-secretary-v1.jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+.page-hero{display:grid;grid-template-columns:1fr 1fr;min-height:520px;padding:0;background:none;}
+.page-hero::before,.page-hero::after{display:none;}
+.half-hero-left{display:flex;align-items:center;background:var(--royal-deep);padding:calc(var(--nav-h) + 60px) 7% 60px;}
+.half-hero-left .page-hero-inner{max-width:100%;}
+.half-hero-right{position:relative;overflow:hidden;}
+.half-hero-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+@media(max-width:900px){.page-hero{grid-template-columns:1fr;min-height:auto;}.half-hero-right{height:75vw;min-height:280px;}}
+
+/* ── Split layout ── */
+.story-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.story-split.reverse { direction: rtl; }
+.story-split.reverse > * { direction: ltr; }
+
+.story-text p {
+  font-size: 16px;
+  line-height: 1.95;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.story-text p:last-child { margin-bottom: 0; }
+.section-dark .story-text p  { color: rgba(247,243,235,0.6); }
+.section-cream .story-text p,
+.section-white .story-text p { color: var(--mid-grey, #6b6b6b); }
+
+.story-img {
+  position: relative;
+  overflow: hidden;
+}
+.story-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4/3;
+}
+.story-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(201,168,76,0.15);
+  pointer-events: none;
+}
+
+/* ── Values grid ── */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 48px;
+}
+.value-card {
+  background: var(--white);
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 40px 32px;
+  transition: background 0.3s, border-color 0.3s;
+}
+.value-card:hover { background: rgba(201,168,76,0.05); border-color: rgba(201,168,76,0.4); }
+.value-card h3 { color: var(--royal-deep); font-size: 19px; margin-bottom: 12px; }
+.value-card p { color: var(--mid-grey, #6b6b6b); font-size: 13px; line-height: 1.75; font-weight: 300; }
+
+@media (max-width: 900px) {
+  .story-split, .story-split.reverse { grid-template-columns: 1fr; direction: ltr; gap: 40px; }
+  .story-img { order: -1; }
+  .values-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .values-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <a class="nav-logo" href="../index.html" aria-label="My Private Clinic — home"><svg width="32" height="39" viewBox="0 0 62 76" fill="none" aria-hidden="true"><path d="M2 2 H60 V46 Q60 68 31 74 Q2 68 2 46 Z" stroke="#C9A84C" stroke-width="1.1" fill="none"/><path d="M7 7 H55 V46 Q55 63 31 69 Q7 63 7 46 Z" stroke="#C9A84C" stroke-width="0.4" fill="none" opacity="0.3"/><line x1="2" y1="22" x2="60" y2="22" stroke="#C9A84C" stroke-width="0.7" opacity="0.65"/><text x="31" y="18" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="12" font-style="italic" font-weight="300" fill="#C9A84C" letter-spacing="1">my</text><text x="31" y="55" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="40" font-weight="600" fill="#F7F3EB">P</text></svg><div class="nav-wordmark"><span class="nav-wm-my">my</span><span class="nav-wm-priv">Private</span><div class="nav-wm-rule"></div><span class="nav-wm-cli">Clinic</span></div></a>
+  <div class="nav-right">
+    <a href="tel:07424172034" class="nav-phone">07424 172034</a>
+    <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" class="nav-book">Book an Appointment</a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navDrawer"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer" aria-hidden="true">
+  <div class="nav-drawer-top">
+    <a class="nav-logo" href="../index.html" aria-label="My Private Clinic — home"><svg width="32" height="39" viewBox="0 0 62 76" fill="none" aria-hidden="true"><path d="M2 2 H60 V46 Q60 68 31 74 Q2 68 2 46 Z" stroke="#C9A84C" stroke-width="1.1" fill="none"/><path d="M7 7 H55 V46 Q55 63 31 69 Q7 63 7 46 Z" stroke="#C9A84C" stroke-width="0.4" fill="none" opacity="0.3"/><line x1="2" y1="22" x2="60" y2="22" stroke="#C9A84C" stroke-width="0.7" opacity="0.65"/><text x="31" y="18" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="12" font-style="italic" font-weight="300" fill="#C9A84C" letter-spacing="1">my</text><text x="31" y="55" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="40" font-weight="600" fill="#0D2B1F">P</text></svg><div class="nav-wordmark nav-wordmark-dark"><span class="nav-wm-my">my</span><span class="nav-wm-priv">Private</span><div class="nav-wm-rule"></div><span class="nav-wm-cli">Clinic</span></div></a>
+    <button class="nav-drawer-close" aria-label="Close navigation">&#x2715;</button>
+  </div>
+  <ul class="nav-drawer-links">
+    <li><a href="../index.html">Home</a></li>
+    <li>
+      <button class="sub-toggle" aria-expanded="false">Services <span class="sub-icon">+</span></button>
+      <ul class="sub-menu">
+        <li><a href="../services/gp-consultations.html">GP Consultations</a></li>
+        <li><a href="../services/womens-health.html">Women's Health</a></li>
+        <li><a href="../services/mens-health.html">Men's Health</a></li>
+        <li><a href="../services/childrens-health.html">Children's Health</a></li>
+        <li><a href="../services/blood-tests.html">Blood Tests</a></li>
+        <li><a href="../services/weight-loss.html">Weight Loss</a></li>
+        <li><a href="../services/sexual-health.html">Sexual Health</a></li>
+        <li><a href="../services/travel-health.html">Travel Health</a></li>
+        <li><a href="../services/sick-notes.html">Sick Notes</a></li>
+        <li><a href="../services/home-visits.html">Home Visits</a></li>
+        <li><a href="../services/allergy-testing.html">Allergy Testing</a></li>
+        <li><a href="../services/iv-drips.html">IV Drips</a></li>
+        <li><a href="../services/joint-injections.html">Joint Injections</a></li>
+        <li><a href="../services/minor-surgery.html">Minor Surgery</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="sub-toggle" aria-expanded="false">About <span class="sub-icon">+</span></button>
+      <ul class="sub-menu">
+        <li><a href="../about/our-story.html">Our Story</a></li>
+        <li><a href="../about/meet-the-doctor.html">Meet the Doctor</a></li>
+        <li><a href="../about/reviews.html">Patient Reviews</a></li>
+        <li><a href="../about/blog.html">Blog</a></li>
+        <li><a href="../about/contact.html">Contact Us</a></li>
+      </ul>
+    </li>
+    <li><a href="../pricing.html">Pricing</a></li>
+    <li><a href="../services/nhs-records.html">NHS Records</a></li>
+    <li><a href="../faq.html">FAQ</a></li>
+  </ul>
+  <div class="nav-drawer-cta">
+    <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" class="btn-primary">Book an Appointment</a>
+    <p class="nav-drawer-cta-phone">Call or WhatsApp: <a href="tel:07424172034">07424 172034</a></p>
+  </div>
+</div>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+<!-- HERO -->
+<section class="page-hero" aria-labelledby="page-heading">
+  <div class="half-hero-left">
+    <div class="page-hero-inner">
+      <span class="gold-tag">Our Story</span>
+      <h1 id="page-heading">More Than a GP Clinic</h1>
+      <p class="hero-sub">My Private Clinic was founded on a simple belief — that people deserve more than just enough care to survive. They deserve care that helps them live better.</p>
+    </div>
+  </div>
+  <div class="half-hero-right">
+    <img src="../assets/images/about/about-hero.jpeg" alt="My Private Clinic — our story">
+  </div>
+</section>
+
+<!-- SECTION 1 — The Beginning (image right) -->
+<section class="section-cream">
+  <div class="section-inner">
+    <div class="story-split fade-up">
+      <div class="story-text">
+        <span class="gold-tag">The Beginning</span>
+        <h2 style="color:var(--royal-deep);">The Moment Everything Became Clear</h2>
+        <div class="gold-rule" style="margin-top:20px;margin-bottom:28px;"></div>
+        <p>Dr Faizal Secretary has spent his career in the NHS. He knows it from the inside — its dedication, its brilliance, and the impossible pressure it is under.</p>
+        <p>And he knows what that pressure costs patients. Waiting weeks for a diagnosis that should take days. Leaving a 10-minute appointment with half your concerns unaddressed. Being managed, not listened to. Receiving enough care to get by — but never quite enough to get ahead.</p>
+        <p>That gap between the care people receive and the care they deserve is what My Private Clinic exists to close.</p>
+      </div>
+      <div class="story-img fade-up">
+        <img src="../assets/images/about/story-beginning.jpeg" alt="Doctor walking hospital wards — the beginning of Dr Faizal's medical journey" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 — A Different Practice (image left) -->
+<section class="section-white">
+  <div class="section-inner">
+    <div class="story-split reverse fade-up">
+      <div class="story-text">
+        <span class="gold-tag">Our Philosophy</span>
+        <h2 style="color:var(--royal-deep);">A Different Kind of Practice</h2>
+        <div class="gold-rule" style="margin-top:20px;margin-bottom:28px;"></div>
+        <p>This is not a walk-in centre. It is not a corporate clinic built by investors. It is a doctor-led, evidence-based, modern medical practice — built by one GP, for his community.</p>
+        <p>At My Private Clinic, we believe that the purpose of healthcare is not simply to treat illness. It is to prevent it. To educate. To empower. To give people the tools, the time and the information they need to live healthier, happier, longer lives.</p>
+        <p>Prevention over cure. Education over guesswork. Joint decision-making over being told what to do. These are not slogans. They are the principles that shape every appointment, every conversation, every decision made within these walls.</p>
+      </div>
+      <div class="story-img fade-up">
+        <img src="../assets/images/about/story-practice.jpeg" alt="A welcoming private GP consultation room" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 — Accessibility (image right) -->
+<section class="section-dark">
+  <div class="section-inner">
+    <div class="story-split fade-up">
+      <div class="story-text">
+        <span class="gold-tag">Accessibility</span>
+        <h2>We Believe Healthcare Should Be Accessible</h2>
+        <div class="gold-rule" style="margin-top:20px;margin-bottom:28px;"></div>
+        <p>Private care has a reputation for being out of reach. We reject that.</p>
+        <p>Good healthcare should not come with a prohibitive price tag. It should not require a postcode, a salary bracket or a private health insurance policy. Our pricing is set deliberately — to make the standard of care that every person deserves genuinely accessible to the people of Preston.</p>
+        <p>We treat people as people. Not patients. Not numbers. Not ten-minute slots. We will give you the time. We will take you seriously. We will be honest with you. And we will work with you — not for you — to build a plan for your health that actually fits your life.</p>
+      </div>
+      <div class="story-img fade-up">
+        <img src="../assets/images/about/dr-office.jpeg" alt="The consultation room at My Private Clinic" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — Preston (image left) -->
+<section class="section-cream">
+  <div class="section-inner">
+    <div class="story-split reverse fade-up">
+      <div class="story-text">
+        <span class="gold-tag">Roots</span>
+        <h2 style="color:var(--royal-deep);">Why Preston. Why Fulwood. Why Now.</h2>
+        <div class="gold-rule" style="margin-top:20px;margin-bottom:28px;"></div>
+        <p>Dr Faizal Secretary's story begins in Preston. His family arrived here in the 1960s, drawn by the opportunity this city offered. Preston gave them a home, an education, a community, a life. It gave Dr Faizal everything. He has had opportunities — locally, nationally, internationally — to take his career elsewhere. He has chosen, every time, to come back.</p>
+        <p>At the age of 16, he was walking the wards of Royal Preston Hospital as a clinical observer — the moment he knew medicine was his calling. He went on to study at the University of Manchester, one of the country's leading medical schools. He returned to complete his foundation and GP training across Preston and Chorley.</p>
+        <p>He came back to Preston because Preston is home. And because home needed this.</p>
+      </div>
+      <div class="story-img fade-up">
+        <img src="../assets/images/about/story-preston.jpeg" alt="Fulwood, Preston — the community My Private Clinic serves" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 — Fatima Health Centre (image right) -->
+<section class="section-white">
+  <div class="section-inner">
+    <div class="story-split fade-up">
+      <div class="story-text">
+        <span class="gold-tag">Our Home</span>
+        <h2 style="color:var(--royal-deep);">Fatima Health Centre — A Fitting Home</h2>
+        <div class="gold-rule" style="margin-top:20px;margin-bottom:28px;"></div>
+        <p>My Private Clinic is based at Fatima Health Centre on Garstang Road in Fulwood — a newly built, beautifully equipped facility in one of Preston's most welcoming neighbourhoods.</p>
+        <p>Fatima Health Centre is less than a mile from where Dr Faizal went to primary school. Less than a mile from where he went to high school. Less than a mile from where he lives today. This is not a coincidence. This is intentional.</p>
+        <p>The clinic sits within a centre that brings multiple health and wellbeing services under one roof. We are building partnerships with those services — not competing with them — because we believe that truly good primary care is holistic. It takes a community to build better health.</p>
+      </div>
+      <div class="story-img fade-up">
+        <img src="../assets/images/about/clinic-exterior.jpeg" alt="Fatima Health Centre, 228 Garstang Road, Fulwood, Preston" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 — What Comes Next (image left) -->
+<section class="section-dark">
+  <div class="section-inner">
+    <div class="story-split reverse fade-up">
+      <div class="story-text">
+        <span class="gold-tag">The Vision</span>
+        <h2>What Comes Next</h2>
+        <div class="gold-rule" style="margin-top:20px;margin-bottom:28px;"></div>
+        <p>Right now, My Private Clinic is Dr Faizal. He runs the clinic, the governance, the clinical care, and the vision — because he believes that if you want something done right, you begin it yourself.</p>
+        <p>But this is just the beginning. The vision is to grow — carefully, deliberately, without compromising on quality — into a practice that includes nurses, healthcare assistants, podiatrists, consultants, radiographers, and more.</p>
+        <p>To build, together with the people of Preston, something that this city has not had before: genuinely accessible, genuinely excellent, community-rooted private healthcare.</p>
+        <p>Preston gave us everything. We're giving it back.</p>
+      </div>
+      <div class="story-img fade-up">
+        <img src="../assets/images/about/story-future.jpeg" alt="The future of My Private Clinic — growing to serve Preston" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7 — VALUES -->
+<section class="section-cream">
+  <div class="section-inner">
+    <div class="section-header fade-up">
+      <span class="gold-tag">What We Stand For</span>
+      <h2 style="color:var(--royal-deep);">Our Values</h2>
+      <div class="gold-rule"></div>
+    </div>
+    <div class="values-grid">
+      <div class="value-card fade-up">
+        <h3>Prevention over cure</h3>
+        <p>We would rather help you avoid illness than treat it. Early detection, health screening and lifestyle medicine are central to what we do.</p>
+      </div>
+      <div class="value-card fade-up">
+        <h3>Education and empowerment</h3>
+        <p>You make better decisions about your health when you understand it. We explain. We inform. We involve you.</p>
+      </div>
+      <div class="value-card fade-up">
+        <h3>Joint decision-making</h3>
+        <p>Your health, your body, your choices. We advise — you decide. Together.</p>
+      </div>
+      <div class="value-card fade-up">
+        <h3>Compassion and kindness</h3>
+        <p>Every person who walks through our door deserves to be treated with dignity, warmth and respect. Always.</p>
+      </div>
+      <div class="value-card fade-up">
+        <h3>Teamwork</h3>
+        <p>We work with you, with other services, and with the wider healthcare community — because no one person or practice can do this alone.</p>
+      </div>
+      <div class="value-card fade-up">
+        <h3>Accessibility</h3>
+        <p>Good healthcare for all. Not just for some.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING CTA -->
+<section class="booking-cta">
+  <div class="booking-cta-inner fade-up">
+    <span class="gold-tag" style="text-align:center;display:block;">Book an Appointment</span>
+    <h2>Ready to Be Seen?</h2>
+    <div class="gold-rule gold-rule-center"></div>
+    <p>Every Friday, 9am–8pm. Other days by appointment. Same-day appointments often available.</p>
+    <div class="booking-cta-actions">
+      <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" class="btn-primary">Book an Appointment</a>
+      <a href="contact.html" class="btn-outline-dark">Contact Us</a>
+    </div>
+    <p class="booking-cta-phone">Or call / WhatsApp: <a href="tel:07424172034">07424 172034</a></p>
+  </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo-wrap" href="../index.html">
+          <svg width="28" height="34" viewBox="0 0 62 76" fill="none" aria-hidden="true"><path d="M2 2 H60 V46 Q60 68 31 74 Q2 68 2 46 Z" stroke="#C9A84C" stroke-width="1.1" fill="none"/><text x="31" y="55" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="40" font-weight="600" fill="#F7F3EB">P</text></svg>
+          <div class="nav-wordmark"><span class="nav-wm-my">my</span><span class="nav-wm-priv">Private</span><div class="nav-wm-rule"></div><span class="nav-wm-cli">Clinic</span></div>
+        </a>
+        <p>Ground Floor, Fatima Health Centre<br>228 Garstang Road, Fulwood<br>Preston, PR2 9QB</p>
+        <p class="footer-cqc">CQC Registered · GMC Certified</p>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="../services/gp-consultations.html">GP Consultations</a></li>
+        <li><a href="../services/womens-health.html">Women's Health</a></li>
+        <li><a href="../services/mens-health.html">Men's Health</a></li>
+        <li><a href="../services/blood-tests.html">Blood Tests</a></li>
+        <li><a href="../services/weight-loss.html">Weight Loss</a></li>
+        <li><a href="../services/sexual-health.html">Sexual Health</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>About</h4><ul>
+        <li><a href="our-story.html" class="active">Our Story</a></li>
+        <li><a href="meet-the-team.html">Meet the Team</a></li>
+        <li><a href="reviews.html">Patient Reviews</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4>
+        <p class="footer-contact-item"><a href="tel:07424172034">07424 172034</a></p>
+        <p class="footer-contact-item"><a href="mailto:hello@myprivate.clinic">hello@myprivate.clinic</a></p>
+        <p class="footer-contact-item">Friday 9am–8pm<br>Other days by appointment</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 My Private Clinic · All rights reserved</p>
+      <ul class="footer-legal"><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+const navToggle=document.querySelector('.nav-toggle'),navDrawer=document.getElementById('navDrawer'),navOverlay=document.getElementById('navOverlay'),navClose=document.querySelector('.nav-drawer-close');
+function openNav(){if(!navDrawer)return;navDrawer.classList.add('open');navOverlay.classList.add('open');navDrawer.setAttribute('aria-hidden','false');navToggle.setAttribute('aria-expanded','true');document.body.classList.add('nav-open');}
+function closeNav(){if(!navDrawer)return;navDrawer.classList.remove('open');navOverlay.classList.remove('open');navDrawer.setAttribute('aria-hidden','true');navToggle.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open');}
+if(navToggle)navToggle.addEventListener('click',openNav);
+if(navClose)navClose.addEventListener('click',closeNav);
+if(navOverlay)navOverlay.addEventListener('click',closeNav);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav();});
+document.querySelectorAll('.sub-toggle').forEach(btn=>{btn.addEventListener('click',()=>{const exp=btn.getAttribute('aria-expanded')==='true';document.querySelectorAll('.sub-toggle').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.classList.remove('open');b.querySelector('.sub-icon').textContent='+';});if(!exp){btn.setAttribute('aria-expanded','true');btn.nextElementSibling.classList.add('open');btn.querySelector('.sub-icon').textContent='−';}});});
+const fadeEls=document.querySelectorAll('.fade-up');
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1});
+fadeEls.forEach(el=>observer.observe(el));
+</script>
+<script src="../assets/js/widgets.js"></script>
+</body>
+</html>

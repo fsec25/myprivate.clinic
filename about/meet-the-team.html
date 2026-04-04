@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="canonical" href="https://myprivate.clinic/about/meet-the-team.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meet the Team | My Private Clinic</title>
+<meta name="description" content="Meet Dr Faizal Secretary, founder and lead GP at My Private Clinic in Fulwood, Preston. NHS-trained, GMC registered, CQC approved.">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://myprivate.clinic/about/meet-the-team.html">
+<meta property="og:title" content="Meet the Team | My Private Clinic">
+<meta property="og:description" content="Meet Dr Faizal Secretary, founder and lead GP at My Private Clinic in Fulwood, Preston. NHS-trained, GMC registered, CQC approved.">
+<meta property="og:image" content="https://myprivate.clinic/assets/images/dr-secretary-v1.jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/main.css">
+<style>
+.page-hero{display:grid;grid-template-columns:1fr 1fr;min-height:520px;padding:0;background:none;}
+.page-hero::before,.page-hero::after{display:none;}
+.half-hero-left{display:flex;align-items:center;background:var(--royal-deep);padding:calc(var(--nav-h) + 60px) 7% 60px;}
+.half-hero-left .page-hero-inner{max-width:100%;}
+.half-hero-right{position:relative;overflow:hidden;}
+.half-hero-right img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+@media(max-width:900px){.page-hero{grid-template-columns:1fr;min-height:auto;}.half-hero-right{height:75vw;min-height:280px;}}
+
+.team-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 72px;
+  align-items: start;
+}
+.photo-placeholder {
+  background: var(--royal-deep);
+  border: 1px solid rgba(201,168,76,0.2);
+  aspect-ratio: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.photo-placeholder-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-style: italic;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  text-align: center;
+  padding: 0 20px;
+}
+.photo-placeholder-sub {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(201,168,76,0.4);
+}
+
+.dr-subtitle {
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--mid-grey);
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.pull-quote-dark {
+  background: var(--royal-deep);
+  border-left: 2px solid var(--gold);
+  padding: 28px 32px;
+  margin: 32px 0;
+}
+.pull-quote-dark p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--cream) !important;
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+}
+.pull-quote-dark cite {
+  display: block;
+  margin-top: 12px;
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-style: normal;
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-top: 28px;
+  border-top: 1px solid rgba(27,67,50,0.2);
+}
+.credential-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 11px 0;
+  border-bottom: 1px solid rgba(27,67,50,0.2);
+  font-size: 13px;
+  color: var(--mid-grey);
+  font-weight: 300;
+  line-height: 1.5;
+}
+.credential-item::before {
+  content: '';
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  margin-top: 7px;
+}
+
+.team-body-para {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--mid-grey);
+  font-weight: 300;
+  margin-bottom: 18px;
+}
+.team-body-para:last-of-type { margin-bottom: 0; }
+
+/* Growing Together section */
+.coming-soon-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  margin-top: 48px;
+}
+.coming-soon-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(201,168,76,0.12);
+  padding: 40px 32px;
+  position: relative;
+}
+.coming-soon-label {
+  display: inline-block;
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(201,168,76,0.5);
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 4px 10px;
+  margin-bottom: 16px;
+}
+.coming-soon-card h3 { color: var(--cream); font-size: 20px; margin-bottom: 10px; }
+.coming-soon-card p { color: rgba(247,243,235,0.4); font-size: 13px; font-weight: 300; }
+
+@media (max-width: 900px) {
+  .team-two-col { grid-template-columns: 1fr; gap: 40px; }
+  .coming-soon-cards { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .coming-soon-cards { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Site navigation">
+  <a class="nav-logo" href="../index.html" aria-label="My Private Clinic — home"><svg width="32" height="39" viewBox="0 0 62 76" fill="none" aria-hidden="true"><path d="M2 2 H60 V46 Q60 68 31 74 Q2 68 2 46 Z" stroke="#C9A84C" stroke-width="1.1" fill="none"/><path d="M7 7 H55 V46 Q55 63 31 69 Q7 63 7 46 Z" stroke="#C9A84C" stroke-width="0.4" fill="none" opacity="0.3"/><line x1="2" y1="22" x2="60" y2="22" stroke="#C9A84C" stroke-width="0.7" opacity="0.65"/><text x="31" y="18" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="12" font-style="italic" font-weight="300" fill="#C9A84C" letter-spacing="1">my</text><text x="31" y="55" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="40" font-weight="600" fill="#F7F3EB">P</text></svg><div class="nav-wordmark"><span class="nav-wm-my">my</span><span class="nav-wm-priv">Private</span><div class="nav-wm-rule"></div><span class="nav-wm-cli">Clinic</span></div></a>
+  <div class="nav-right">
+    <a href="tel:07424172034" class="nav-phone">07424 172034</a>
+    <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" class="nav-book">Book an Appointment</a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navDrawer"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-drawer" id="navDrawer" aria-hidden="true">
+  <div class="nav-drawer-top">
+    <a class="nav-logo" href="../index.html" aria-label="My Private Clinic — home"><svg width="32" height="39" viewBox="0 0 62 76" fill="none" aria-hidden="true"><path d="M2 2 H60 V46 Q60 68 31 74 Q2 68 2 46 Z" stroke="#C9A84C" stroke-width="1.1" fill="none"/><path d="M7 7 H55 V46 Q55 63 31 69 Q7 63 7 46 Z" stroke="#C9A84C" stroke-width="0.4" fill="none" opacity="0.3"/><line x1="2" y1="22" x2="60" y2="22" stroke="#C9A84C" stroke-width="0.7" opacity="0.65"/><text x="31" y="18" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="12" font-style="italic" font-weight="300" fill="#C9A84C" letter-spacing="1">my</text><text x="31" y="55" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="40" font-weight="600" fill="#0D2B1F">P</text></svg><div class="nav-wordmark nav-wordmark-dark"><span class="nav-wm-my">my</span><span class="nav-wm-priv">Private</span><div class="nav-wm-rule"></div><span class="nav-wm-cli">Clinic</span></div></a>
+    <button class="nav-drawer-close" aria-label="Close navigation">&#x2715;</button>
+  </div>
+  <ul class="nav-drawer-links">
+    <li><a href="../index.html">Home</a></li>
+    <li>
+      <button class="sub-toggle" aria-expanded="false">Services <span class="sub-icon">+</span></button>
+      <ul class="sub-menu">
+        <li><a href="../services/gp-consultations.html">GP Consultations</a></li>
+        <li><a href="../services/womens-health.html">Women's Health</a></li>
+        <li><a href="../services/mens-health.html">Men's Health</a></li>
+        <li><a href="../services/childrens-health.html">Children's Health</a></li>
+        <li><a href="../services/blood-tests.html">Blood Tests</a></li>
+        <li><a href="../services/weight-loss.html">Weight Loss</a></li>
+        <li><a href="../services/sexual-health.html">Sexual Health</a></li>
+        <li><a href="../services/travel-health.html">Travel Health</a></li>
+        <li><a href="../services/sick-notes.html">Sick Notes</a></li>
+        <li><a href="../services/home-visits.html">Home Visits</a></li>
+        <li><a href="../services/allergy-testing.html">Allergy Testing</a></li>
+        <li><a href="../services/iv-drips.html">IV Drips</a></li>
+        <li><a href="../services/joint-injections.html">Joint Injections</a></li>
+        <li><a href="../services/minor-surgery.html">Minor Surgery</a></li>
+      </ul>
+    </li>
+    <li>
+      <button class="sub-toggle" aria-expanded="false">About <span class="sub-icon">+</span></button>
+      <ul class="sub-menu">
+        <li><a href="../about/our-story.html">Our Story</a></li>
+        <li><a href="../about/meet-the-doctor.html">Meet the Doctor</a></li>
+        <li><a href="../about/reviews.html">Patient Reviews</a></li>
+        <li><a href="../about/blog.html">Blog</a></li>
+        <li><a href="../about/contact.html">Contact Us</a></li>
+      </ul>
+    </li>
+    <li><a href="../pricing.html">Pricing</a></li>
+    <li><a href="../services/nhs-records.html">NHS Records</a></li>
+    <li><a href="../faq.html">FAQ</a></li>
+  </ul>
+  <div class="nav-drawer-cta">
+    <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" class="btn-primary">Book an Appointment</a>
+    <p class="nav-drawer-cta-phone">Call or WhatsApp: <a href="tel:07424172034">07424 172034</a></p>
+  </div>
+</div>
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+<!-- HERO -->
+<section class="page-hero" aria-labelledby="page-heading">
+  <div class="half-hero-left">
+    <div class="page-hero-inner">
+      <span class="gold-tag">Meet the Team</span>
+      <h1 id="page-heading">The People Behind My Private Clinic</h1>
+      <p class="hero-sub">Every person at My Private Clinic is here because they believe in what we're building — accessible, compassionate, expert-led healthcare for the people of Preston.</p>
+    </div>
+  </div>
+  <div class="half-hero-right">
+    <img src="../assets/images/about/about-hero.jpeg" alt="My Private Clinic team — Fulwood, Preston">
+  </div>
+</section>
+
+<!-- DR FAIZAL -->
+<section class="section-cream">
+  <div class="section-inner">
+    <div class="team-two-col">
+      <div class="fade-up">
+        <div class="photo-placeholder" aria-label="Photo of Dr Faizal Secretary — coming soon">
+          <span class="photo-placeholder-text">Photo coming soon</span>
+          <span class="photo-placeholder-sub">Dr Faizal Secretary</span>
+        </div>
+      </div>
+      <div class="fade-up">
+        <span class="gold-tag">Founder &amp; Lead GP</span>
+        <h2>Dr Faizal Secretary</h2>
+        <p class="dr-subtitle">MBChB, University of Manchester</p>
+        <div class="gold-rule"></div>
+        <p class="team-body-para">Dr Faizal Secretary founded My Private Clinic in 2026 after a career spanning NHS general practice, urgent care, out-of-hours medicine and hospital specialties across Preston, Blackpool, Blackburn and Manchester.</p>
+        <p class="team-body-para">His medical journey began at the age of 16 as a clinical observer at Royal Preston Hospital — an experience that confirmed what he already suspected: medicine was his purpose. He went on to study at the University of Manchester before returning to complete his foundation and GP training across the Preston and Chorley area.</p>
+        <p class="team-body-para">His hospital experience is unusually broad for a GP, having worked across cardiology, urology, paediatrics, accident and emergency, gynaecology, dermatology, ophthalmology, ear, nose and throat, respiratory medicine, gastroenterology, stroke medicine and general surgery. This depth of experience informs every consultation he carries out.</p>
+        <p class="team-body-para">He founded My Private Clinic not to leave the NHS behind — but to build something alongside it. A practice where prevention matters as much as treatment. Where patients are partners, not recipients. Where the people of Preston get the standard of care they deserve.</p>
+        <div class="pull-quote-dark">
+          <p>"Preston gave my family everything. My education, my career, my home. Building this clinic here isn't a business decision — it's a personal one."</p>
+          <cite>— Dr Faizal Secretary</cite>
+        </div>
+        <div class="credentials-grid">
+          <div class="credential-item">MBChB — University of Manchester</div>
+          <div class="credential-item">GMC Registered</div>
+          <div class="credential-item">NHS-trained — Foundation &amp; GP Training, Preston &amp; Chorley</div>
+          <div class="credential-item">Experience across GP, Urgent Care &amp; Out-of-Hours</div>
+          <div class="credential-item">Hospital experience: Cardiology, Urology, Paediatrics, A&amp;E, Gynaecology, Dermatology, Ophthalmology, ENT, Respiratory, Gastroenterology, Stroke Medicine, General Surgery</div>
+          <div class="credential-item">CQC Registered Provider</div>
+          <div class="credential-item">Member, Royal College of General Practitioners</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GROWING TOGETHER -->
+<section class="section-dark">
+  <div class="section-inner">
+    <div class="fade-up" style="max-width:800px;margin-bottom:40px;">
+      <span class="gold-tag">The Future</span>
+      <h2>Growing Together</h2>
+      <div class="gold-rule" style="margin-top:20px;margin-bottom:28px;"></div>
+      <p style="color:rgba(247,243,235,0.6);font-size:16px;line-height:1.9;font-weight:300;margin-bottom:24px;">My Private Clinic is one doctor today. It will not always be. As the practice grows, Dr Faizal is building a team — nurses, healthcare assistants, podiatrists, consultants, radiographers and more — with the same commitment to compassionate, expert, accessible care. If you'd like to be part of what we're building, we'd love to hear from you.</p>
+      <a href="contact.html" class="btn-primary">Get In Touch</a>
+    </div>
+    <div class="coming-soon-cards">
+      <div class="coming-soon-card fade-up">
+        <span class="coming-soon-label">Coming Soon</span>
+        <h3>Nurse / Healthcare Assistant</h3>
+        <p>To be announced</p>
+      </div>
+      <div class="coming-soon-card fade-up">
+        <span class="coming-soon-label">Coming Soon</span>
+        <h3>Visiting Consultants</h3>
+        <p>To be announced</p>
+      </div>
+      <div class="coming-soon-card fade-up">
+        <span class="coming-soon-label">Coming Soon</span>
+        <h3>Allied Health Professionals</h3>
+        <p>To be announced</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING CTA -->
+<section class="booking-cta">
+  <div class="booking-cta-inner fade-up">
+    <span class="gold-tag" style="text-align:center;display:block;">Book an Appointment</span>
+    <h2>Ready to Be Seen?</h2>
+    <div class="gold-rule gold-rule-center"></div>
+    <p>Every Friday, 9am–8pm. Other days by appointment. Same-day appointments often available.</p>
+    <div class="booking-cta-actions">
+      <a href="https://ehr.usejump.co.uk/patient/book/HWPXF87Q/in-person-appointments-fatima--ox2khu" class="btn-primary">Book an Appointment</a>
+      <a href="contact.html" class="btn-outline-dark">Contact Us</a>
+    </div>
+    <p class="booking-cta-phone">Or call / WhatsApp: <a href="tel:07424172034">07424 172034</a></p>
+  </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo-wrap" href="../index.html">
+          <svg width="28" height="34" viewBox="0 0 62 76" fill="none" aria-hidden="true"><path d="M2 2 H60 V46 Q60 68 31 74 Q2 68 2 46 Z" stroke="#C9A84C" stroke-width="1.1" fill="none"/><text x="31" y="55" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="40" font-weight="600" fill="#F7F3EB">P</text></svg>
+          <div class="nav-wordmark"><span class="nav-wm-my">my</span><span class="nav-wm-priv">Private</span><div class="nav-wm-rule"></div><span class="nav-wm-cli">Clinic</span></div>
+        </a>
+        <p>Ground Floor, Fatima Health Centre<br>228 Garstang Road, Fulwood<br>Preston, PR2 9QB</p>
+        <p class="footer-cqc">CQC Registered · GMC Certified</p>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul>
+        <li><a href="../services/gp-consultations.html">GP Consultations</a></li>
+        <li><a href="../services/womens-health.html">Women's Health</a></li>
+        <li><a href="../services/mens-health.html">Men's Health</a></li>
+        <li><a href="../services/blood-tests.html">Blood Tests</a></li>
+        <li><a href="../services/weight-loss.html">Weight Loss</a></li>
+        <li><a href="../services/sexual-health.html">Sexual Health</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>About</h4><ul>
+        <li><a href="our-story.html">Our Story</a></li>
+        <li><a href="meet-the-team.html">Meet the Team</a></li>
+        <li><a href="reviews.html">Patient Reviews</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4>
+        <p class="footer-contact-item"><a href="tel:07424172034">07424 172034</a></p>
+        <p class="footer-contact-item"><a href="mailto:hello@myprivate.clinic">hello@myprivate.clinic</a></p>
+        <p class="footer-contact-item">Friday 9am–8pm<br>Other days by appointment</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 My Private Clinic · All rights reserved</p>
+      <ul class="footer-legal"><li><a href="../privacy.html">Privacy Policy</a></li><li><a href="../terms.html">Terms</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+const navToggle=document.querySelector('.nav-toggle'),navDrawer=document.getElementById('navDrawer'),navOverlay=document.getElementById('navOverlay'),navClose=document.querySelector('.nav-drawer-close');
+function openNav(){if(!navDrawer)return;navDrawer.classList.add('open');navOverlay.classList.add('open');navDrawer.setAttribute('aria-hidden','false');navToggle.setAttribute('aria-expanded','true');document.body.classList.add('nav-open');}
+function closeNav(){if(!navDrawer)return;navDrawer.classList.remove('open');navOverlay.classList.remove('open');navDrawer.setAttribute('aria-hidden','true');navToggle.setAttribute('aria-expanded','false');document.body.classList.remove('nav-open');}
+if(navToggle)navToggle.addEventListener('click',openNav);
+if(navClose)navClose.addEventListener('click',closeNav);
+if(navOverlay)navOverlay.addEventListener('click',closeNav);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeNav();});
+document.querySelectorAll('.sub-toggle').forEach(btn=>{btn.addEventListener('click',()=>{const exp=btn.getAttribute('aria-expanded')==='true';document.querySelectorAll('.sub-toggle').forEach(b=>{b.setAttribute('aria-expanded','false');b.nextElementSibling.classList.remove('open');b.querySelector('.sub-icon').textContent='+';});if(!exp){btn.setAttribute('aria-expanded','true');btn.nextElementSibling.classList.add('open');btn.querySelector('.sub-icon').textContent='−';}});});
+const fadeEls=document.querySelectorAll('.fade-up');
+const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}})},{threshold:0.1});
+fadeEls.forEach(el=>observer.observe(el));
+</script>
+<script src="../assets/js/widgets.js"></script>
+</body>
+</html>
