@@ -1,0 +1,82 @@
+backend:
+  name: github
+  repo: YOUR_GITHUB_USERNAME/myprivateclinic
+  branch: main
+  base_url: https://myprivateclinic.vercel.app
+  auth_endpoint: /api/auth
+
+media_folder: assets/images/uploads
+public_folder: /assets/images/uploads
+
+site_url: https://myprivateclinic.vercel.app
+
+collections:
+
+  # ── Blog Posts ──────────────────────────────────────
+  - name: blog
+    label: Blog Posts
+    folder: blog/posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Title,           name: title,       widget: string }
+      - { label: Publish Date,    name: date,        widget: datetime }
+      - { label: Meta Title,      name: meta_title,  widget: string,   required: false, hint: "SEO title — 50–60 chars" }
+      - { label: Meta Description,name: meta_desc,   widget: text,     required: false, hint: "SEO description — 150–160 chars" }
+      - { label: Featured Image,  name: image,       widget: image,    required: false }
+      - { label: Body,            name: body,        widget: markdown }
+
+  # ── Pages — SEO fields ──────────────────────────────
+  - name: pages
+    label: Pages
+    files:
+
+      - label: Home
+        name: home
+        file: _content/home.json
+        fields:
+          - { label: Meta Title,        name: meta_title,       widget: string, hint: "50–60 chars" }
+          - { label: Meta Description,  name: meta_description, widget: text,   hint: "150–160 chars" }
+          - { label: Hero Heading,      name: hero_heading,     widget: string }
+          - { label: Hero Subtext,      name: hero_sub,         widget: text }
+
+      - label: About
+        name: about
+        file: _content/about.json
+        fields:
+          - { label: Meta Title,        name: meta_title,       widget: string }
+          - { label: Meta Description,  name: meta_description, widget: text }
+
+      - label: Services
+        name: services
+        file: _content/services.json
+        fields:
+          - { label: Meta Title,        name: meta_title,       widget: string }
+          - { label: Meta Description,  name: meta_description, widget: text }
+
+      - label: Pricing
+        name: pricing
+        file: _content/pricing.json
+        fields:
+          - { label: Meta Title,        name: meta_title,       widget: string }
+          - { label: Meta Description,  name: meta_description, widget: text }
+
+      - label: Contact
+        name: contact
+        file: _content/contact.json
+        fields:
+          - { label: Meta Title,        name: meta_title,       widget: string }
+          - { label: Meta Description,  name: meta_description, widget: text }
+
+      - label: FAQ
+        name: faq
+        file: _content/faq.json
+        fields:
+          - { label: Meta Title,        name: meta_title,       widget: string }
+          - { label: Meta Description,  name: meta_description, widget: text }
+          - label: Questions
+            name: questions
+            widget: list
+            fields:
+              - { label: Question, name: question, widget: string }
+              - { label: Answer,   name: answer,   widget: text }
