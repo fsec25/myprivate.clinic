@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: YOUR_GITHUB_USERNAME/myprivateclinic
+  repo: fsec25/myprivate.clinic
   branch: main
   base_url: https://myprivateclinic.vercel.app
   auth_endpoint: /api/auth
