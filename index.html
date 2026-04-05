@@ -1286,36 +1286,6 @@
       });
     });
   }
-
-  // ── Fix sticky range: extend grid height once, clip wrap visually ──────────
-  // position:sticky is constrained to its containing block (magazine-inner).
-  // With 14 items the list is ~1313px and the panel is ~909px → only ~404px of
-  // sticky travel, but you need ~485px to reach all items. Fix: add paddingBottom
-  // to magazine-inner so sticky has enough room, then constrain magazine-wrap to
-  // the natural list height so no empty space shows. overflow:clip hides the
-  // overflow without creating a scroll container (which would break sticky).
-  (function () {
-    var magList  = document.querySelector('.mag-list');
-    var magFeat  = document.querySelector('.mag-feature');
-    var magInner = document.querySelector('.magazine-inner');
-    var magWrap  = document.querySelector('.magazine-wrap');
-    if (!magList || !magFeat || !magInner || !magWrap) return;
-    function setup() {
-      if (window.innerWidth <= 900) {
-        magInner.style.paddingBottom = '';
-        magWrap.style.height = '';
-        magWrap.style.overflow = '';
-        return;
-      }
-      var listH = magList.offsetHeight;
-      var featH = magFeat.offsetHeight;
-      magInner.style.paddingBottom = featH + 'px';        // extends containing block
-      magWrap.style.height = (listH + 100) + 'px';        // 100 = existing CSS bottom padding
-      magWrap.style.overflow = 'clip';                    // clips overflow, never breaks sticky
-    }
-    setup();
-    window.addEventListener('resize', setup);
-  }());
 </script>
 <script src="assets/js/widgets.js"></script>
 <script>
