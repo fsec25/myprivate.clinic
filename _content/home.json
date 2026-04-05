@@ -1,74 +1,190 @@
 {
-  "meta_title": "Private GP in Fulwood, Preston | My Private Clinic",
-  "meta_description": "Same-day private GP appointments in Fulwood, Preston. See Dr Faizal Secretary today — from £49. NHS records accessed. No referral needed.",
-  "hero_badge": "Now Open · Fulwood, Preston",
-  "hero_h1": "Private GP in Preston",
-  "hero_rotating_words": ["Same-Day.", "Unhurried.", "Attentive.", "Thorough.", "Personal."],
-  "hero_sub_1": "15 minutes to an hour with the same doctor, every time.",
-  "hero_sub_2": "Same-day access. Your NHS records in the room. From £49.",
-  "hero_nhs_note": "We work alongside your NHS GP — not instead of them.",
-  "hero_next_avail": "Next Available: Friday 10th April — Book Online, Call, or WhatsApp",
-  "why_tag": "Why My Private Clinic",
-  "why_heading": "Private GP Care, Done Properly",
-  "why_intro": "The average NHS GP appointment is 10 minutes. The average wait for one is 3 weeks. There's a better way.",
-  "why_cards": [
-    { "title": "Same Day", "text": "Call us in the morning, see a doctor today. In-person at the clinic, by telephone, or at your home — whichever suits you." },
-    { "title": "The Same Doctor, Every Time", "text": "You'll always see Dr Faizal Secretary — not whoever happens to be free. He knows your history, your concerns, and your name." },
-    { "title": "You Choose the Length", "text": "15 minutes for a quick follow-up, up to an hour if you need it. No rushing, no clock-watching — your appointment, your pace." },
-    { "title": "Your NHS Records, In the Room", "text": "With your consent, Dr Secretary can access your NHS records during your appointment. No repeating your history. No starting from scratch." }
-  ],
-  "services_tag": "What We Offer",
   "services_heading": "Comprehensive Private GP Care",
-  "services_intro": "From everyday illness to specialist referrals — all under one roof, without the wait.",
-  "services": [
-    { "name": "GP Consultations", "desc": "Same-day appointments in person, by phone or video. 15, 30 or 60-minute slots available. No NHS referral needed to book.", "price": "Adults from £69 · Children from £49" },
-    { "name": "Women's Health", "desc": "Smear tests, HRT, menopause, contraception, UTIs, PCOS and fertility concerns — handled with care and complete confidentiality.", "price": "From £119" },
-    { "name": "Men's Health", "desc": "Prostate checks, testosterone, erectile dysfunction, cardiovascular screening and male menopause — conversations worth having.", "price": "From £119" },
-    { "name": "Children's Health", "desc": "Same-day appointments for children of all ages, from infants to teenagers. No child should wait weeks to be seen.", "price": "From £49" },
-    { "name": "Blood Tests & Health Screening", "desc": "Comprehensive panels, Well Man and Well Woman checks. Results explained personally by the doctor — not just emailed over.", "price": "From £119" },
-    { "name": "Allergy Testing", "desc": "Targeted IgE blood testing for food and environmental allergens. Results interpreted personally by the doctor.", "price": "From £119" },
-    { "name": "Weight Loss Management", "desc": "Medical assessment, clinical support and prescription weight loss medication. Wegovy and Mounjaro available.", "price": "From £119" },
-    { "name": "Sexual Health Screening", "desc": "Confidential STI testing and treatment. Results never shared without your consent. No judgement. No fuss.", "price": "From £119" },
-    { "name": "Travel Health & Vaccinations", "desc": "Pre-travel consultations and country-specific vaccinations. Coming soon — register your interest today.", "price": "Launching Spring 2026" },
-    { "name": "Joint Injections", "desc": "Corticosteroid injections for knee, shoulder, hip, elbow, ankle and wrist. Fast-acting relief — launching soon.", "price": "Launching Spring 2026" },
-    { "name": "Minor Surgery", "desc": "Mole removal, cyst removal, lipoma removal, skin tag removal and ingrown toenail treatment. No NHS waiting list.", "price": "Launching Spring 2026" },
-    { "name": "IV Drips", "desc": "Seven intravenous vitamin and hydration formulas, administered personally by the doctor. Launching soon.", "price": "Launching Spring 2026" },
-    { "name": "Sick Notes & Medical Reports", "desc": "Same-day fit notes, employer letters, insurance reports, DVLA medicals and visa medicals — issued promptly.", "price": "From £69" },
-    { "name": "Home Visits", "desc": "Can't come to us? We'll come to you. Available across Fulwood and central Preston by appointment.", "price": "From £150" }
-  ],
-  "doctor_tag": "Your Doctor",
-  "doctor_h2": "Dr Faizal Secretary",
-  "doctor_role": "Founder & Lead GP, My Private Clinic",
-  "doctor_bio_1": "Dr Secretary trained at the University of Manchester and spent years working within the NHS across general practice and acute medicine. He founded My Private Clinic to offer something straightforward: longer appointments, the same doctor every time, and space to actually talk.",
-  "doctor_bio_2": "Every patient at My Private Clinic is seen by Dr Secretary directly. No locums, no rotation. The same doctor who sees you today will know your history next time.",
-  "doctor_quote": "Good medicine takes time. That's what we're here to give you.",
-  "doctor_quote_cite": "— Dr Faizal Secretary, MBChB, University of Manchester",
-  "reviews_tag": "Patient Stories",
-  "reviews_heading": "What Our Patients Say",
-  "reviews": [
-    { "text": "\"I'd been putting off a conversation about my blood pressure for months. Dr Secretary gave me 30 minutes and went through everything properly. I left with my prescription and a referral already sorted.\"", "author": "Sarah M. — Fulwood · February 2026" },
-    { "text": "\"My son had a high temperature on a Saturday morning. We were seen the same day. The doctor was calm, thorough, and explained everything clearly. At £49, absolutely worth it for the peace of mind alone.\"", "author": "James T. — Preston · January 2026" },
-    { "text": "\"The doctor didn't make me feel stupid for leaving things. He was straightforward, ran some bloods, and when I needed referring on, the letter was ready before I left the room. No extra charge.\"", "author": "David R. — Longridge · March 2026" }
-  ],
-  "how_tag": "Getting Started",
-  "how_heading": "See a Doctor in Three Simple Steps",
-  "how_steps": [
-    { "title": "Book", "text": "Call us or send a WhatsApp. We're open every Friday 9am–8pm, with all other days available by appointment. We'll find a time that works." },
-    { "title": "Be Seen", "text": "Come to our clinic at Fatima Health Centre in Fulwood, join by phone or video, or we can come to you. You get the time you need." },
-    { "title": "Leave With a Plan", "text": "Prescription writing and referral letters included if needed — sorted before you leave. The doctor follows up personally on any outstanding results." }
-  ],
   "pricing_tag": "Transparent Pricing",
-  "pricing_heading": "Clear Prices. No Surprises.",
+  "meta_description": "Same-day private GP appointments in Fulwood, Preston. See Dr Faizal Secretary today — from £49. NHS records accessed. No referral needed.",
+  "why_tag": "Why My Private Clinic",
   "pricing_intro_1": "Know exactly what you're paying before you book. No registration fee, no hidden extras.",
   "pricing_intro_2": "Prescription writing and referral letters are included in every appointment. If medication is prescribed, you take it to any UK pharmacy and pay the standard dispensing cost there — the same as an NHS prescription. Blood tests and scans are quoted separately if needed.",
-  "pricing_rows": [
-    { "label": "Child (under 16)", "note": "15-minute consultation", "price": "£49" },
-    { "label": "Adult", "note": "15-minute consultation — minor issues & follow-ups", "price": "£69" },
-    { "label": "Adult", "note": "30-minute consultation — recommended for most concerns", "price": "£119" },
-    { "label": "Adult", "note": "60-minute consultation — health checks, complex or multiple concerns", "price": "£199" },
-    { "label": "Telephone / Video", "note": "New & existing patients", "price": "£49" },
-    { "label": "Home Visit", "note": "Fulwood & central Preston", "price": "from £150" }
+  "hero_rotating_words": [
+    "Same-Day.",
+    "Unhurried.",
+    "Attentive.",
+    "Thorough.",
+    "Personal."
   ],
+  "hero_next_avail": "Next Available: Friday 10th April — Book Online, Call, or WhatsApp",
+  "pricing_heading": "Clear Prices. No Surprises.",
+  "doctor_h2": "Dr Faizal Secretary",
+  "why_heading": "Private GP Care, Done Properly",
+  "how_tag": "Getting Started",
+  "services_intro": "From everyday illness to specialist referrals — all under one roof, without the wait.",
+  "why_cards": [
+    {
+      "title": "Same Day",
+      "text": "Call us in the morning, see a doctor today. In-person at the clinic, by telephone, or at your home — whichever suits you."
+    },
+    {
+      "title": "The Same Doctor, Every Time",
+      "text": "You'll always see Dr Faizal Secretary — not whoever happens to be free. He knows your history, your concerns, and your name."
+    },
+    {
+      "title": "You Choose the Length",
+      "text": "15 minutes for a quick follow-up, up to an hour if you need it. No rushing, no clock-watching — your appointment, your pace."
+    },
+    {
+      "title": "Your NHS Records, In the Room",
+      "text": "With your consent, Dr Secretary can access your NHS records during your appointment. No repeating your history. No starting from scratch."
+    }
+  ],
+  "hero_sub_1": "15 minutes to an hour with the same doctor, every time.!!!!",
+  "hero_sub_2": "Same-day access. Your NHS records in the room. From £49.",
+  "hero_h1": "Private GP in Preston",
+  "pricing_rows": [
+    {
+      "label": "Child (under 16)",
+      "note": "15-minute consultation",
+      "price": "£49"
+    },
+    {
+      "label": "Adult",
+      "note": "15-minute consultation — minor issues & follow-ups",
+      "price": "£69"
+    },
+    {
+      "label": "Adult",
+      "note": "30-minute consultation — recommended for most concerns",
+      "price": "£119"
+    },
+    {
+      "label": "Adult",
+      "note": "60-minute consultation — health checks, complex or multiple concerns",
+      "price": "£199"
+    },
+    {
+      "label": "Telephone / Video",
+      "note": "New & existing patients",
+      "price": "£49"
+    },
+    {
+      "label": "Home Visit",
+      "note": "Fulwood & central Preston",
+      "price": "from £150"
+    }
+  ],
+  "how_heading": "See a Doctor in Three Simple Steps",
   "cta_heading": "Ready to Be Seen?",
-  "cta_text": "Same-day appointments, every Friday. Other days by appointment. Call or WhatsApp 07424 172034."
+  "why_intro": "The average NHS GP appointment is 10 minutes. The average wait for one is 3 weeks. There's a better way.",
+  "reviews_tag": "Patient Stories",
+  "doctor_role": "Founder & Lead GP, My Private Clinic",
+  "how_steps": [
+    {
+      "title": "Book",
+      "text": "Call us or send a WhatsApp. We're open every Friday 9am–8pm, with all other days available by appointment. We'll find a time that works."
+    },
+    {
+      "title": "Be Seen",
+      "text": "Come to our clinic at Fatima Health Centre in Fulwood, join by phone or video, or we can come to you. You get the time you need."
+    },
+    {
+      "title": "Leave With a Plan",
+      "text": "Prescription writing and referral letters included if needed — sorted before you leave. The doctor follows up personally on any outstanding results."
+    }
+  ],
+  "services_tag": "What We Offer",
+  "doctor_quote_cite": "— Dr Faizal Secretary, MBChB, University of Manchester",
+  "doctor_tag": "Your Doctor",
+  "doctor_bio_1": "Dr Secretary trained at the University of Manchester and spent years working within the NHS across general practice and acute medicine. He founded My Private Clinic to offer something straightforward: longer appointments, the same doctor every time, and space to actually talk.",
+  "reviews": [
+    {
+      "text": "\"I'd been putting off a conversation about my blood pressure for months. Dr Secretary gave me 30 minutes and went through everything properly. I left with my prescription and a referral already sorted.\"",
+      "author": "Sarah M. — Fulwood · February 2026"
+    },
+    {
+      "text": "\"My son had a high temperature on a Saturday morning. We were seen the same day. The doctor was calm, thorough, and explained everything clearly. At £49, absolutely worth it for the peace of mind alone.\"",
+      "author": "James T. — Preston · January 2026"
+    },
+    {
+      "text": "\"The doctor didn't make me feel stupid for leaving things. He was straightforward, ran some bloods, and when I needed referring on, the letter was ready before I left the room. No extra charge.\"",
+      "author": "David R. — Longridge · March 2026"
+    }
+  ],
+  "doctor_bio_2": "Every patient at My Private Clinic is seen by Dr Secretary directly. No locums, no rotation. The same doctor who sees you today will know your history next time.",
+  "cta_text": "Same-day appointments, every Friday. Other days by appointment. Call or WhatsApp 07424 172034.",
+  "doctor_quote": "Good medicine takes time. That's what we're here to give you.",
+  "hero_nhs_note": "We work alongside your NHS GP — not instead of them.",
+  "services": [
+    {
+      "name": "GP Consultations",
+      "desc": "Same-day appointments in person, by phone or video. 15, 30 or 60-minute slots available. No NHS referral needed to book.",
+      "price": "Adults from £69 · Children from £49"
+    },
+    {
+      "name": "Women's Health",
+      "desc": "Smear tests, HRT, menopause, contraception, UTIs, PCOS and fertility concerns — handled with care and complete confidentiality.",
+      "price": "From £119"
+    },
+    {
+      "name": "Men's Health",
+      "desc": "Prostate checks, testosterone, erectile dysfunction, cardiovascular screening and male menopause — conversations worth having.",
+      "price": "From £119"
+    },
+    {
+      "name": "Children's Health",
+      "desc": "Same-day appointments for children of all ages, from infants to teenagers. No child should wait weeks to be seen.",
+      "price": "From £49"
+    },
+    {
+      "name": "Blood Tests & Health Screening",
+      "desc": "Comprehensive panels, Well Man and Well Woman checks. Results explained personally by the doctor — not just emailed over.",
+      "price": "From £119"
+    },
+    {
+      "name": "Allergy Testing",
+      "desc": "Targeted IgE blood testing for food and environmental allergens. Results interpreted personally by the doctor.",
+      "price": "From £119"
+    },
+    {
+      "name": "Weight Loss Management",
+      "desc": "Medical assessment, clinical support and prescription weight loss medication. Wegovy and Mounjaro available.",
+      "price": "From £119"
+    },
+    {
+      "name": "Sexual Health Screening",
+      "desc": "Confidential STI testing and treatment. Results never shared without your consent. No judgement. No fuss.",
+      "price": "From £119"
+    },
+    {
+      "name": "Travel Health & Vaccinations",
+      "desc": "Pre-travel consultations and country-specific vaccinations. Coming soon — register your interest today.",
+      "price": "Launching Spring 2026"
+    },
+    {
+      "name": "Joint Injections",
+      "desc": "Corticosteroid injections for knee, shoulder, hip, elbow, ankle and wrist. Fast-acting relief — launching soon.",
+      "price": "Launching Spring 2026"
+    },
+    {
+      "name": "Minor Surgery",
+      "desc": "Mole removal, cyst removal, lipoma removal, skin tag removal and ingrown toenail treatment. No NHS waiting list.",
+      "price": "Launching Spring 2026"
+    },
+    {
+      "name": "IV Drips",
+      "desc": "Seven intravenous vitamin and hydration formulas, administered personally by the doctor. Launching soon.",
+      "price": "Launching Spring 2026"
+    },
+    {
+      "name": "Sick Notes & Medical Reports",
+      "desc": "Same-day fit notes, employer letters, insurance reports, DVLA medicals and visa medicals — issued promptly.",
+      "price": "From £69"
+    },
+    {
+      "name": "Home Visits",
+      "desc": "Can't come to us? We'll come to you. Available across Fulwood and central Preston by appointment.",
+      "price": "From £150"
+    }
+  ],
+  "reviews_heading": "What Our Patients Say",
+  "hero_badge": "Now Open · Fulwood, Preston",
+  "meta_title": "Private GP in Fulwood, Preston | My Private Clinic"
 }
