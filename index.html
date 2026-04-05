@@ -332,8 +332,8 @@
   /* ── SERVICES ── */
   .services { background:var(--parchment); }
   .services-inner { max-width:1200px; margin:0 auto; padding:120px 5% 60px; }
-  .magazine-wrap { background:var(--royal-deep); padding:0 5% 100px; }
-  .magazine-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:0; min-height:700px; }
+  .magazine-wrap { background:var(--royal-deep); padding:0 5% 100px; overflow:clip; }
+  .magazine-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:0; min-height:700px; padding-bottom:calc(100vh - var(--nav-h)); }
   .mag-feature { position:sticky; top:var(--nav-h); height:calc(100vh - var(--nav-h)); overflow:hidden; }
   .mag-feature-img { position:absolute; inset:0; background-size:cover; background-position:center; transition:opacity 0.3s ease; }
   .mag-feature-img::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(13,43,31,0.95) 0%,rgba(13,43,31,0.5) 50%,rgba(13,43,31,0.15) 100%); }
