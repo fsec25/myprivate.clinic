@@ -332,7 +332,7 @@
   /* ── SERVICES ── */
   .services { background:var(--parchment); }
   .services-inner { max-width:1200px; margin:0 auto; padding:120px 5% 60px; }
-  .magazine-wrap { background:var(--royal-deep); padding:0 5% 100px; overflow:clip; }
+  .magazine-wrap { background:var(--royal-deep); padding:0 5% 100px; }
   .magazine-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:0; min-height:700px; }
   .mag-feature { position:sticky; top:var(--nav-h); height:calc(100vh - var(--nav-h)); overflow:hidden; }
   .mag-feature-img { position:absolute; inset:0; background-size:cover; background-position:center; transition:opacity 0.3s ease; }
@@ -1286,32 +1286,6 @@
       });
     });
   }
-
-  // ── Extend magazine-inner so CSS sticky covers the full list (runs once, not on scroll) ──
-  (function () {
-    var magList  = document.querySelector('.mag-list');
-    var magInner = document.querySelector('.magazine-inner');
-    var magWrap  = document.querySelector('.magazine-wrap');
-    var magFeat  = document.querySelector('.mag-feature');
-    if (!magList || !magInner || !magWrap || !magFeat) return;
-    function setup() {
-      if (window.innerWidth <= 900) {
-        magInner.style.paddingBottom = '';
-        magWrap.style.height = '';
-        return;
-      }
-      // Add feature-height of padding to the grid's containing block so sticky
-      // has enough room to travel the full list. overflow:clip on .magazine-wrap
-      // hides the extra space without creating a scroll container (which would
-      // break sticky — overflow:clip explicitly does not create one).
-      var featH = magFeat.offsetHeight;
-      var listH = magList.offsetHeight;
-      magInner.style.paddingBottom = featH + 'px';
-      magWrap.style.height = listH + 'px';  // content height; CSS adds 100px padding
-    }
-    setup();
-    window.addEventListener('resize', setup);
-  }());
 </script>
 <script src="assets/js/widgets.js"></script>
 <script>
