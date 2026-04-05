@@ -70,7 +70,7 @@
 @media(max-width:900px){.page-hero{grid-template-columns:1fr;min-height:auto;}.half-hero-right{height:75vw;min-height:280px;}}
 </style>
 </head>
-<body>
+<body data-content-src="/_content/services/blood-tests.json">
 
 <!-- ═══ NAV ═══ -->
 <nav class="site-nav" aria-label="Site navigation">
@@ -385,5 +385,6 @@ const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isI
 fadeEls.forEach(el=>observer.observe(el));
 </script>
 <script src="../assets/js/widgets.js"></script>
+<script src="../assets/js/page-hydrate.js"></script>
 </body>
 </html>

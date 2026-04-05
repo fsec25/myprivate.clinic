@@ -211,7 +211,7 @@
   }
 </style>
 </head>
-<body>
+<body data-content-src="/_content/about/meet-the-doctor.json">
 
 <!-- ═══ NAV ═══ -->
 <nav class="site-nav" aria-label="Site navigation">
@@ -471,5 +471,6 @@ const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isI
 fadeEls.forEach(el=>observer.observe(el));
 </script>
 <script src="../assets/js/widgets.js"></script>
+<script src="../assets/js/page-hydrate.js"></script>
 </body>
 </html>

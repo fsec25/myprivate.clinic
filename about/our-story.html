@@ -89,7 +89,7 @@
 }
 </style>
 </head>
-<body>
+<body data-content-src="/_content/about/our-story.json">
 
 <nav class="site-nav" aria-label="Site navigation">
   <a class="nav-logo" href="../index.html" aria-label="My Private Clinic — home"><svg width="32" height="39" viewBox="0 0 62 76" fill="none" aria-hidden="true"><path d="M2 2 H60 V46 Q60 68 31 74 Q2 68 2 46 Z" stroke="#C9A84C" stroke-width="1.1" fill="none"/><path d="M7 7 H55 V46 Q55 63 31 69 Q7 63 7 46 Z" stroke="#C9A84C" stroke-width="0.4" fill="none" opacity="0.3"/><line x1="2" y1="22" x2="60" y2="22" stroke="#C9A84C" stroke-width="0.7" opacity="0.65"/><text x="31" y="18" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="12" font-style="italic" font-weight="300" fill="#C9A84C" letter-spacing="1">my</text><text x="31" y="55" text-anchor="middle" font-family="Cormorant Garamond,serif" font-size="40" font-weight="600" fill="#F7F3EB">P</text></svg><div class="nav-wordmark"><span class="nav-wm-my">my</span><span class="nav-wm-priv">Private</span><div class="nav-wm-rule"></div><span class="nav-wm-cli">Clinic</span></div></a>
@@ -380,5 +380,6 @@ const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isI
 fadeEls.forEach(el=>observer.observe(el));
 </script>
 <script src="../assets/js/widgets.js"></script>
+<script src="../assets/js/page-hydrate.js"></script>
 </body>
 </html>
