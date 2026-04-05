@@ -95,6 +95,27 @@
         });
       }
 
+      // ── Magazine service list (home page) ──
+      if (Array.isArray(d.services)) {
+        document.querySelectorAll('.mag-list-item').forEach(function (el, i) {
+          var svc = d.services[i];
+          if (!svc) return;
+          if (svc.name  != null) { el.dataset.title = svc.name;  var n = el.querySelector('.mag-item-name');  if (n) n.textContent = svc.name; }
+          if (svc.desc  != null)   el.dataset.desc  = svc.desc;
+          if (svc.price != null) { el.dataset.price = svc.price; var p = el.querySelector('.mag-item-price'); if (p) p.textContent = svc.price; }
+        });
+        // Refresh the left panel with updated data from the active item
+        var activeItem = document.querySelector('.mag-list-item.active');
+        if (activeItem) {
+          var fTitle = document.getElementById('featureTitle');
+          var fDesc  = document.getElementById('featureDesc');
+          var fPrice = document.getElementById('featurePrice');
+          if (fTitle) fTitle.textContent = activeItem.dataset.title;
+          if (fDesc)  fDesc.textContent  = activeItem.dataset.desc;
+          if (fPrice) fPrice.textContent = activeItem.dataset.price;
+        }
+      }
+
       // ── Our Story: values cards ──
       if (Array.isArray(d.values)) {
         document.querySelectorAll('[data-value-index]').forEach(function (el) {

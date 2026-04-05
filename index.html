@@ -332,9 +332,9 @@
   /* ── SERVICES ── */
   .services { background:var(--parchment); }
   .services-inner { max-width:1200px; margin:0 auto; padding:120px 5% 60px; }
-  .magazine-wrap { background:var(--royal-deep); padding:0 5% 100px; }
-  .magazine-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:0; min-height:700px; }
-  .mag-feature { position:sticky; top:var(--nav-h); height:calc(100vh - var(--nav-h)); overflow:hidden; }
+  .magazine-wrap { background:var(--royal-deep); }
+  .magazine-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:0; height:calc(100vh - var(--nav-h)); }
+  .mag-feature { position:relative; overflow:hidden; }
   .mag-feature-img { position:absolute; inset:0; background-size:cover; background-position:center; transition:opacity 0.3s ease; }
   .mag-feature-img::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(13,43,31,0.95) 0%,rgba(13,43,31,0.5) 50%,rgba(13,43,31,0.15) 100%); }
   .mag-feature-content { position:absolute; bottom:0; left:0; right:0; padding:52px 48px; z-index:1; }
@@ -344,7 +344,8 @@
   .mag-feature-price { font-family:'Jost',sans-serif; font-size: 14px; font-weight:500; letter-spacing:.2em; color:var(--gold); text-transform:uppercase; margin-bottom:20px; }
   .mag-feature-link { display:inline-flex; align-items:center; gap:10px; font-family:'Jost',sans-serif; font-size: 14px; font-weight:500; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); text-decoration:none; transition:gap .2s; }
   .mag-feature-link:hover { gap:18px; }
-  .mag-list { border-left:1px solid rgba(201,168,76,0.12); }
+  .mag-list { border-left:1px solid rgba(201,168,76,0.12); overflow-y:auto; scrollbar-width:none; -ms-overflow-style:none; }
+  .mag-list::-webkit-scrollbar { display:none; }
   .mag-list-item { display:block; text-decoration:none; padding:32px 40px; border-bottom:1px solid rgba(201,168,76,0.1); transition:background .25s; cursor:pointer; }
   .mag-list-item:hover, .mag-list-item.active { background:rgba(201,168,76,0.06); }
   .mag-list-item.active { border-left:2px solid var(--gold); }
@@ -495,9 +496,9 @@
     .contact-top { grid-template-columns:1fr; }
     .nav-links { display:none; }
     .pricing-pillars { grid-template-columns:1fr; }
-    .magazine-inner { grid-template-columns:1fr; }
+    .magazine-inner { grid-template-columns:1fr; height:auto; }
     .mag-feature { display:none; }
-    .mag-list { border-left:none; border-top:1px solid rgba(201,168,76,0.12); }
+    .mag-list { border-left:none; border-top:1px solid rgba(201,168,76,0.12); overflow-y:visible; }
     .mag-list-item { padding:24px 28px; }
     .mag-item-expand { display:block; max-height:0; overflow:hidden; transition:max-height 0.45s ease; }
     .mag-list-item.active .mag-item-expand { max-height:600px; }
@@ -1249,12 +1250,11 @@
       item.appendChild(expand);
     });
 
-    // Desktop: update sticky left panel
-    if (featureImg) {
-      featureImg.style.transition = 'opacity 0.3s ease';
-      function activateMag(item) {
-        magItems.forEach(i => i.classList.remove('active'));
-        item.classList.add('active');
+    // Desktop: click to update left panel. Mobile: click to accordion expand.
+    function activateMag(item) {
+      magItems.forEach(i => i.classList.remove('active'));
+      item.classList.add('active');
+      if (featureImg) {
         featureImg.style.opacity = '0';
         setTimeout(() => {
           featureImg.style.backgroundImage = `url('${item.dataset.img}')`;
@@ -1267,15 +1267,12 @@
           featureImg.style.opacity = '1';
         }, 200);
       }
-      magItems.forEach(item => {
-        item.addEventListener('mouseenter', () => { if (window.innerWidth > 900) activateMag(item); });
-      });
     }
-
-    // Mobile: accordion — tap to expand inline, tap again or tap another to close
     magItems.forEach(item => {
       item.addEventListener('click', () => {
-        if (window.innerWidth <= 900) {
+        if (window.innerWidth > 900) {
+          activateMag(item);
+        } else {
           const isActive = item.classList.contains('active');
           magItems.forEach(i => i.classList.remove('active'));
           if (!isActive) item.classList.add('active');
@@ -1285,6 +1282,7 @@
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); item.click(); }
       });
     });
+    if (featureImg) featureImg.style.transition = 'opacity 0.3s ease';
   }
 </script>
 <script src="assets/js/widgets.js"></script>
