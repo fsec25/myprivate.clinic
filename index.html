@@ -332,9 +332,9 @@
   /* ── SERVICES ── */
   .services { background:var(--parchment); }
   .services-inner { max-width:1200px; margin:0 auto; padding:120px 5% 60px; }
-  .magazine-wrap { background:var(--royal-deep); padding:0 5% 100px; overflow:clip; }
-  .magazine-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:0; min-height:700px; padding-bottom:calc(100vh - var(--nav-h)); }
-  .mag-feature { position:sticky; top:var(--nav-h); height:calc(100vh - var(--nav-h)); overflow:hidden; }
+  .magazine-wrap { background:var(--royal-deep); padding:0 5% 100px; }
+  .magazine-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:0; min-height:700px; }
+  .mag-feature { position:relative; height:calc(100vh - var(--nav-h)); overflow:hidden; will-change:transform; }
   .mag-feature-img { position:absolute; inset:0; background-size:cover; background-position:center; transition:opacity 0.3s ease; }
   .mag-feature-img::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(13,43,31,0.95) 0%,rgba(13,43,31,0.5) 50%,rgba(13,43,31,0.15) 100%); }
   .mag-feature-content { position:absolute; bottom:0; left:0; right:0; padding:52px 48px; z-index:1; }
@@ -1286,6 +1286,28 @@
       });
     });
   }
+
+  // ── JS-driven sticky for mag-feature (CSS sticky can't cover the full list height) ──
+  (function () {
+    var feature = document.querySelector('.mag-feature');
+    var list    = document.querySelector('.mag-list');
+    if (!feature || !list) return;
+    function tick() {
+      if (window.innerWidth <= 900) { feature.style.transform = ''; return; }
+      var navH    = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 72;
+      var listTop = list.getBoundingClientRect().top;
+      var maxShift = list.offsetHeight - feature.offsetHeight;
+      var shift = 0;
+      if (listTop < navH) {
+        shift = Math.min(navH - listTop, maxShift);
+        if (shift < 0) shift = 0;
+      }
+      feature.style.transform = 'translateY(' + shift + 'px)';
+    }
+    window.addEventListener('scroll', tick, { passive: true });
+    window.addEventListener('resize', tick);
+    tick();
+  }());
 </script>
 <script src="assets/js/widgets.js"></script>
 <script>
