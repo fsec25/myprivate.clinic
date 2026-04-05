@@ -1,0 +1,57 @@
+{
+  "meta_title": "Our Story | My Private Clinic",
+  "meta_description": "The story behind My Private Clinic — why Dr Faizal Secretary founded a private GP practice in Fulwood, Preston, and what drives everything we do.",
+  "hero_tag": "Our Story",
+  "hero_h1": "More Than a GP Clinic",
+  "hero_sub": "My Private Clinic was founded on a simple belief — that people deserve more than just enough care to survive. They deserve care that helps them live better.",
+  "sections": [
+    {
+      "tag": "The Beginning",
+      "heading": "The Moment Everything Became Clear",
+      "para_1": "Dr Faizal Secretary has spent his career in the NHS. He knows it from the inside — its dedication, its brilliance, and the impossible pressure it is under.",
+      "para_2": "And he knows what that pressure costs patients. Waiting weeks for a diagnosis that should take days. Leaving a 10-minute appointment with half your concerns unaddressed. Being managed, not listened to. Receiving enough care to get by — but never quite enough to get ahead.",
+      "para_3": "That gap between the care people receive and the care they deserve is what My Private Clinic exists to close."
+    },
+    {
+      "tag": "Our Philosophy",
+      "heading": "A Different Kind of Practice",
+      "para_1": "This is not a walk-in centre. It is not a corporate clinic built by investors. It is a doctor-led, evidence-based, modern medical practice — built by one GP, for his community.",
+      "para_2": "At My Private Clinic, we believe that the purpose of healthcare is not simply to treat illness. It is to prevent it. To educate. To empower. To give people the tools, the time and the information they need to live healthier, happier, longer lives.",
+      "para_3": "Prevention over cure. Education over guesswork. Joint decision-making over being told what to do. These are not slogans. They are the principles that shape every appointment, every conversation, every decision made within these walls."
+    },
+    {
+      "tag": "Accessibility",
+      "heading": "We Believe Healthcare Should Be Accessible",
+      "para_1": "Private care has a reputation for being out of reach. We reject that.",
+      "para_2": "Good healthcare should not come with a prohibitive price tag. It should not require a postcode, a salary bracket or a private health insurance policy. Our pricing is set deliberately — to make the standard of care that every person deserves genuinely accessible to the people of Preston.",
+      "para_3": "We treat people as people. Not patients. Not numbers. Not ten-minute slots. We will give you the time. We will take you seriously. We will be honest with you. And we will work with you — not for you — to build a plan for your health that actually fits your life."
+    },
+    {
+      "tag": "Roots",
+      "heading": "Why Preston. Why Fulwood. Why Now.",
+      "para_1": "Dr Faizal Secretary's story begins in Preston. His family arrived here in the 1960s, drawn by the opportunity this city offered. Preston gave them a home, an education, a community, a life. It gave Dr Faizal everything. He has had opportunities — locally, nationally, internationally — to take his career elsewhere. He has chosen, every time, to come back.",
+      "para_2": "At the age of 16, he was walking the wards of Royal Preston Hospital as a clinical observer — the moment he knew medicine was his calling. He went on to study at the University of Manchester, one of the country's leading medical schools. He returned to complete his foundation and GP training across Preston and Chorley.",
+      "para_3": "He came back to Preston because Preston is home. And because home needed this."
+    },
+    {
+      "tag": "Our Home",
+      "heading": "Fatima Health Centre — A Fitting Home",
+      "para_1": "My Private Clinic is based at Fatima Health Centre on Garstang Road in Fulwood — a newly built, beautifully equipped facility in one of Preston's most welcoming neighbourhoods.",
+      "para_2": "Fatima Health Centre is less than a mile from where Dr Faizal went to primary school. Less than a mile from where he went to high school. Less than a mile from where he lives today. This is not a coincidence. This is intentional.",
+      "para_3": "The clinic sits within a centre that brings multiple health and wellbeing services under one roof. We are building partnerships with those services — not competing with them — because we believe that truly good primary care is holistic. It takes a community to build better health."
+    },
+    {
+      "tag": "The Vision",
+      "heading": "What Comes Next",
+      "para_1": "Right now, My Private Clinic is Dr Faizal. He runs the clinic, the governance, the clinical care, and the vision — because he believes that if you want something done right, you begin it yourself.",
+      "para_2": "But this is just the beginning. The vision is to grow — carefully, deliberately, without compromising on quality — into a practice that includes nurses, healthcare assistants, podiatrists, consultants, radiographers, and more.",
+      "para_3": "To build, together with the people of Preston, something that this city has not had before: genuinely accessible, genuinely excellent, community-rooted private healthcare. Preston gave us everything. We're giving it back."
+    }
+  ],
+  "values": [
+    { "title": "Prevention over cure", "text": "We would rather help you avoid illness than treat it. Early detection, health screening and lifestyle medicine are central to what we do." },
+    { "title": "Education and empowerment", "text": "You make better decisions about your health when you understand it. We explain. We inform. We involve you." },
+    { "title": "Joint decision-making", "text": "Your health, your body, your choices. We advise — you decide. Together." },
+    { "title": "Continuity of care", "text": "The same doctor, every time. He knows your history. He remembers your name. He follows up." }
+  ]
+}

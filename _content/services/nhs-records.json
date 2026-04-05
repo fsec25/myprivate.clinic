@@ -1,0 +1,18 @@
+{
+  "meta_title": "NHS Record Access at My Private Clinic Preston | Full Medical History",
+  "meta_description": "My Private Clinic can access your NHS records with your consent — consultations, blood results, letters, allergies and medications. Private GP in Fulwood, Preston.",
+  "hero_tag": "A Rare Capability in Private Healthcare",
+  "hero_h1": "We Can See Your NHS Records. With Your Permission.",
+  "hero_sub": "Most private clinics start from a blank page. We don't have to. With your consent, we can access your NHS record — so your appointment begins fully informed.",
+  "hero_trust": "Consent Required · GP Systems Access · Fully Confidential",
+  "intro_quote": "You've explained your history three times to three different doctors.",
+  "intro_heading": "NHS Record Access at My Private Clinic, Preston",
+  "intro_para_1": "Dr Faizal Secretary is able to access your NHS GP records with your consent — including past consultations, blood results, medications, allergies, referral letters and more.",
+  "intro_para_2": "This means your appointment starts with the full picture. No repeating yourself. No gaps in your history. No starting from scratch.",
+  "faqs": [
+    { "question": "How does NHS record access work?", "answer": "With your consent, Dr Secretary can log in to the NHS GP systems to view your records during your appointment. You control access at all times." },
+    { "question": "Is this available at other private clinics?", "answer": "No — most private GPs do not have access to NHS records. Dr Secretary retains this access as a registered NHS GP, and uses it with your permission to provide better-informed care." },
+    { "question": "What information can be accessed?", "answer": "Past consultations, blood test results, prescribed medications, allergies, referral letters, immunisations and more — the same records your NHS GP can see." },
+    { "question": "Can I refuse access to my NHS records?", "answer": "Of course. Access is always with your explicit consent. You can decline at any point." }
+  ]
+}

@@ -272,14 +272,420 @@
                 ]
               },
 
-              // ── SERVICES ────────────────────────────────────────────
+              // ── SERVICES OVERVIEW ────────────────────────────────────
               {
-                label: 'Services',
+                label: 'Services Overview',
                 name: 'services',
                 file: '_content/services.json',
                 fields: [
                   { label: 'Meta Title',       name: 'meta_title',       widget: 'string' },
                   { label: 'Meta Description', name: 'meta_description', widget: 'text' }
+                ]
+              }
+            ]
+          },
+
+          // ── ABOUT PAGES ──────────────────────────────────────────────
+          {
+            name: 'about_pages',
+            label: 'About Pages',
+            files: [
+              {
+                label: 'Our Story',
+                name: 'our_story',
+                file: '_content/about/our-story.json',
+                fields: [
+                  { label: 'Meta Title',       name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description', name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',         name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading',     name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',    name: 'hero_sub',         widget: 'text' },
+                  {
+                    label: 'Story Sections',
+                    name: 'sections',
+                    widget: 'list',
+                    fields: [
+                      { label: 'Section Tag',   name: 'tag',    widget: 'string' },
+                      { label: 'Heading',        name: 'heading', widget: 'string' },
+                      { label: 'Paragraph 1',   name: 'para_1', widget: 'text' },
+                      { label: 'Paragraph 2',   name: 'para_2', widget: 'text' },
+                      { label: 'Paragraph 3',   name: 'para_3', widget: 'text', required: false }
+                    ]
+                  },
+                  {
+                    label: 'Values',
+                    name: 'values',
+                    widget: 'list',
+                    fields: [
+                      { label: 'Title', name: 'title', widget: 'string' },
+                      { label: 'Text',  name: 'text',  widget: 'text' }
+                    ]
+                  }
+                ]
+              },
+              {
+                label: 'Meet the Doctor',
+                name: 'meet_the_doctor',
+                file: '_content/about/meet-the-doctor.json',
+                fields: [
+                  { label: 'Meta Title',          name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',    name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',            name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading',        name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',       name: 'hero_sub',         widget: 'text' },
+                  { label: 'Doctor Name',         name: 'name',             widget: 'string' },
+                  { label: 'Doctor Role',         name: 'role',             widget: 'string' },
+                  { label: 'Quote',               name: 'quote',            widget: 'string' },
+                  { label: 'Bio Paragraph 1',     name: 'bio_1',            widget: 'text' },
+                  { label: 'Bio Paragraph 2',     name: 'bio_2',            widget: 'text' },
+                  { label: 'Bio Paragraph 3',     name: 'bio_3',            widget: 'text' },
+                  {
+                    label: 'Qualifications',
+                    name: 'qualifications',
+                    widget: 'list',
+                    field: { label: 'Qualification', name: 'item', widget: 'string' }
+                  }
+                ]
+              },
+              {
+                label: 'Patient Reviews',
+                name: 'reviews',
+                file: '_content/about/reviews.json',
+                fields: [
+                  { label: 'Meta Title',       name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description', name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',         name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading',     name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',    name: 'hero_sub',         widget: 'text' }
+                ]
+              },
+              {
+                label: 'Blog Listing',
+                name: 'blog_listing',
+                file: '_content/about/blog.json',
+                fields: [
+                  { label: 'Meta Title',       name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description', name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',         name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading',     name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',    name: 'hero_sub',         widget: 'text' }
+                ]
+              }
+            ]
+          },
+
+          // ── SERVICE PAGES ────────────────────────────────────────────
+          {
+            name: 'service_pages',
+            label: 'Service Pages',
+            files: [
+              {
+                label: 'GP Consultations',
+                name: 'gp_consultations',
+                file: '_content/services/gp-consultations.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Hero Trust Line',   name: 'hero_trust',       widget: 'string' },
+                  { label: '"Sound Familiar?" Quote', name: 'intro_quote', widget: 'text' },
+                  { label: 'Intro Heading',     name: 'intro_heading',    widget: 'string' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQ Heading',       name: 'faq_heading',      widget: 'string', required: false },
+                  {
+                    label: 'FAQs',
+                    name: 'faqs',
+                    widget: 'list',
+                    fields: [
+                      { label: 'Question', name: 'question', widget: 'string' },
+                      { label: 'Answer',   name: 'answer',   widget: 'text' }
+                    ]
+                  }
+                ]
+              },
+              {
+                label: "Women's Health",
+                name: 'womens_health',
+                file: '_content/services/womens-health.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Hero Trust Line',   name: 'hero_trust',       widget: 'string' },
+                  { label: '"Sound Familiar?" Quote', name: 'intro_quote', widget: 'text' },
+                  { label: 'Intro Heading',     name: 'intro_heading',    widget: 'string' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
+                ]
+              },
+              {
+                label: "Men's Health",
+                name: 'mens_health',
+                file: '_content/services/mens-health.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Hero Trust Line',   name: 'hero_trust',       widget: 'string' },
+                  { label: '"Sound Familiar?" Quote', name: 'intro_quote', widget: 'text' },
+                  { label: 'Intro Heading',     name: 'intro_heading',    widget: 'string' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
+                ]
+              },
+              {
+                label: "Children's Health",
+                name: 'childrens_health',
+                file: '_content/services/childrens-health.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Hero Trust Line',   name: 'hero_trust',       widget: 'string' },
+                  { label: '"Sound Familiar?" Quote', name: 'intro_quote', widget: 'text' },
+                  { label: 'Intro Heading',     name: 'intro_heading',    widget: 'string' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
+                ]
+              },
+              {
+                label: 'Blood Tests & Screening',
+                name: 'blood_tests',
+                file: '_content/services/blood-tests.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Hero Trust Line',   name: 'hero_trust',       widget: 'string' },
+                  { label: '"Sound Familiar?" Quote', name: 'intro_quote', widget: 'text' },
+                  { label: 'Intro Heading',     name: 'intro_heading',    widget: 'string' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
+                ]
+              },
+              {
+                label: 'Weight Loss',
+                name: 'weight_loss',
+                file: '_content/services/weight-loss.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Hero Trust Line',   name: 'hero_trust',       widget: 'string' },
+                  { label: '"Sound Familiar?" Quote', name: 'intro_quote', widget: 'text' },
+                  { label: 'Intro Heading',     name: 'intro_heading',    widget: 'string' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
+                ]
+              },
+              {
+                label: 'Sexual Health',
+                name: 'sexual_health',
+                file: '_content/services/sexual-health.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Hero Trust Line',   name: 'hero_trust',       widget: 'string' },
+                  { label: '"Sound Familiar?" Quote', name: 'intro_quote', widget: 'text' },
+                  { label: 'Intro Heading',     name: 'intro_heading',    widget: 'string' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
+                ]
+              },
+              {
+                label: 'Allergy Testing',
+                name: 'allergy_testing',
+                file: '_content/services/allergy-testing.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Hero Trust Line',   name: 'hero_trust',       widget: 'string' },
+                  { label: '"Sound Familiar?" Quote', name: 'intro_quote', widget: 'text' },
+                  { label: 'Intro Heading',     name: 'intro_heading',    widget: 'string' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
+                ]
+              },
+              {
+                label: 'Home Visits',
+                name: 'home_visits',
+                file: '_content/services/home-visits.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Hero Trust Line',   name: 'hero_trust',       widget: 'string' },
+                  { label: '"Sound Familiar?" Quote', name: 'intro_quote', widget: 'text' },
+                  { label: 'Intro Heading',     name: 'intro_heading',    widget: 'string' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
+                ]
+              },
+              {
+                label: 'Sick Notes & Reports',
+                name: 'sick_notes',
+                file: '_content/services/sick-notes.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Hero Trust Line',   name: 'hero_trust',       widget: 'string' },
+                  { label: '"Sound Familiar?" Quote', name: 'intro_quote', widget: 'text' },
+                  { label: 'Intro Heading',     name: 'intro_heading',    widget: 'string' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
+                ]
+              },
+              {
+                label: 'NHS Records',
+                name: 'nhs_records',
+                file: '_content/services/nhs-records.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Hero Trust Line',   name: 'hero_trust',       widget: 'string' },
+                  { label: '"Sound Familiar?" Quote', name: 'intro_quote', widget: 'text' },
+                  { label: 'Intro Heading',     name: 'intro_heading',    widget: 'string' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
+                ]
+              },
+              {
+                label: 'Travel Health (Coming Soon)',
+                name: 'travel_health',
+                file: '_content/services/travel-health.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
+                ]
+              },
+              {
+                label: 'Joint Injections (Coming Soon)',
+                name: 'joint_injections',
+                file: '_content/services/joint-injections.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
+                ]
+              },
+              {
+                label: 'Minor Surgery (Coming Soon)',
+                name: 'minor_surgery',
+                file: '_content/services/minor-surgery.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
+                ]
+              },
+              {
+                label: 'IV Drips (Coming Soon)',
+                name: 'iv_drips',
+                file: '_content/services/iv-drips.json',
+                fields: [
+                  { label: 'Meta Title',        name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description',  name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',          name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',     name: 'hero_sub',         widget: 'text' },
+                  { label: 'Intro Paragraph 1', name: 'intro_para_1',     widget: 'text' },
+                  { label: 'Intro Paragraph 2', name: 'intro_para_2',     widget: 'text' },
+                  { label: 'FAQs', name: 'faqs', widget: 'list', fields: [
+                    { label: 'Question', name: 'question', widget: 'string' },
+                    { label: 'Answer',   name: 'answer',   widget: 'text' }
+                  ]}
                 ]
               }
             ]
