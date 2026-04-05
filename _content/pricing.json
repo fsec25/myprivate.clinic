@@ -1,4 +1,33 @@
 {
-  "meta_title": "Private GP Pricing in Preston | MyPrivateClinic — From £49",
-  "meta_description": "Transparent private GP pricing in Preston. Appointments from £49 with no hidden fees. See our full pricing for consultations, blood tests, and more."
+  "meta_title": "Pricing | My Private Clinic — Private GP in Fulwood, Preston",
+  "meta_description": "Transparent pricing for private GP consultations in Fulwood, Preston. No hidden fees. Prescription and referral letters included in every appointment.",
+  "hero_tag": "Transparent Pricing",
+  "hero_h1": "Honest Prices. Everything Included.",
+  "hero_sub": "We believe you should know exactly what you're paying before you book. No surprises, no administration charges, no extras you didn't ask for.",
+  "included_tag": "What's Always Included",
+  "included_heading": "No Hidden Extras",
+  "included_intro": "Every appointment at My Private Clinic is priced simply. The fee you see is the fee you pay — including things other clinics charge extra for.",
+  "included_cards": [
+    {
+      "title": "Prescription Writing Included",
+      "text": "If the doctor decides you need medication, the prescription is written as part of your appointment fee. Take it to any UK pharmacy and pay only the dispensing cost."
+    },
+    {
+      "title": "Referral Letters Included",
+      "text": "If you need referring to a specialist, the referral letter is written as part of your appointment at no extra charge. No follow-up visit needed."
+    },
+    {
+      "title": "No Registration or Joining Fee",
+      "text": "There is no registration fee or admin charge. Just book an appointment and come in."
+    }
+  ],
+  "gp_heading": "GP Consultation Fees",
+  "gp_rows": [
+    { "label": "Child (under 16)", "note": "15-minute consultation", "price": "£49" },
+    { "label": "Adult — 15 min", "note": "Minor issues & follow-ups only", "price": "£69" },
+    { "label": "Adult — 30 min", "note": "Recommended for most concerns", "price": "£119" },
+    { "label": "Adult — 60 min", "note": "Health checks, complex or multiple concerns", "price": "£199" },
+    { "label": "Telephone / Video", "note": "New & existing patients", "price": "£49" },
+    { "label": "Home Visit", "note": "Fulwood & central Preston", "price": "from £150" }
+  ]
 }

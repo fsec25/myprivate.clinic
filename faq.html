@@ -302,7 +302,7 @@
 </section>
 
 <!-- SECTION 1: About the Clinic (cream) -->
-<section class="section-cream">
+<section id="faq-s0" class="section-cream">
   <div class="section-inner">
     <p class="tag tag-gold-on-cream">About Us</p>
     <h2>About My Private Clinic</h2>
@@ -328,7 +328,7 @@
 </section>
 
 <!-- SECTION 2: Appointments & Access (dark) -->
-<section class="section-dark">
+<section id="faq-s1" class="section-dark">
   <div class="section-inner">
     <p class="tag tag-gold">Appointments</p>
     <h2>Booking &amp; Availability</h2>
@@ -354,7 +354,7 @@
 </section>
 
 <!-- SECTION 3: Prescriptions & Referrals (cream) -->
-<section class="section-cream">
+<section id="faq-s2" class="section-cream">
   <div class="section-inner">
     <p class="tag tag-gold-on-cream">Prescriptions &amp; Referrals</p>
     <h2>What's Included</h2>
@@ -380,7 +380,7 @@
 </section>
 
 <!-- SECTION 4: Pricing & Payment (dark) -->
-<section class="section-dark">
+<section id="faq-s3" class="section-dark">
   <div class="section-inner">
     <p class="tag tag-gold">Pricing</p>
     <h2>Fees &amp; Payment</h2>
@@ -406,7 +406,7 @@
 </section>
 
 <!-- SECTION 5: Medical Questions (cream) -->
-<section class="section-cream">
+<section id="faq-s4" class="section-cream">
   <div class="section-inner">
     <p class="tag tag-gold-on-cream">Clinical</p>
     <h2>Medical Questions</h2>
@@ -519,5 +519,41 @@ const observer=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isI
 fadeEls.forEach(el=>observer.observe(el));
 </script>
 <script src="assets/js/widgets.js"></script>
+<script>
+// Dynamically load FAQ content from _content/faq.json
+// When the SEO expert edits via CMS, changes appear here automatically
+(function() {
+  fetch('/_content/faq.json')
+    .then(function(r) { return r.ok ? r.json() : null; })
+    .then(function(data) {
+      if (!data || !Array.isArray(data.sections)) return;
+      data.sections.forEach(function(section, i) {
+        var el = document.getElementById('faq-s' + i);
+        if (!el) return;
+        var tagEl = el.querySelector('.tag, p.tag, .gold-tag');
+        var h2El  = el.querySelector('h2');
+        var dlEl  = el.querySelector('.faq-grid');
+        if (tagEl) tagEl.textContent = section.tag;
+        if (h2El)  h2El.textContent  = section.heading;
+        if (dlEl && Array.isArray(section.questions)) {
+          dlEl.innerHTML = section.questions.map(function(q) {
+            return '<div class="faq-item fade-up visible">'
+              + '<dt class="faq-q">' + q.question + '</dt>'
+              + '<dd class="faq-a">' + q.answer + '</dd>'
+              + '</div>';
+          }).join('');
+        }
+      });
+      // Update hero if present
+      var heroTag = document.querySelector('.page-hero .gold-tag');
+      var heroH1  = document.querySelector('.page-hero h1');
+      var heroSub = document.querySelector('.page-hero .hero-sub');
+      if (heroTag && data.hero_tag) heroTag.textContent = data.hero_tag;
+      if (heroH1  && data.hero_h1)  heroH1.textContent  = data.hero_h1;
+      if (heroSub && data.hero_sub) heroSub.textContent = data.hero_sub;
+    })
+    .catch(function() {}); // fail silently — static HTML is the fallback
+})();
+</script>
 </body>
 </html>

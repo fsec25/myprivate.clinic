@@ -22,6 +22,8 @@
         public_folder: '/assets/images/uploads',
         site_url: 'https://myprivateclinic.vercel.app',
         collections: [
+
+          // ── BLOG POSTS ──────────────────────────────────────────────
           {
             name: 'blog',
             label: 'Blog Posts',
@@ -37,21 +39,229 @@
               { label: 'Body',             name: 'body',       widget: 'markdown' }
             ]
           },
+
+          // ── PAGE CONTENT ─────────────────────────────────────────────
           {
             name: 'pages',
             label: 'Pages',
             files: [
+
+              // ── HOME ────────────────────────────────────────────────
               {
                 label: 'Home',
                 name: 'home',
                 file: '_content/home.json',
                 fields: [
-                  { label: 'Meta Title',       name: 'meta_title',       widget: 'string' },
-                  { label: 'Meta Description', name: 'meta_description', widget: 'text' },
-                  { label: 'Hero Heading',     name: 'hero_heading',     widget: 'string' },
-                  { label: 'Hero Subtext',     name: 'hero_sub',         widget: 'text' }
+                  // SEO
+                  { label: 'Meta Title',       name: 'meta_title',       widget: 'string', hint: '50–60 chars' },
+                  { label: 'Meta Description', name: 'meta_description', widget: 'text',   hint: '150–160 chars' },
+
+                  // Hero
+                  { label: 'Hero Badge Text',             name: 'hero_badge',     widget: 'string' },
+                  { label: 'Hero Heading (H1)',            name: 'hero_h1',        widget: 'string' },
+                  {
+                    label: 'Hero Rotating Words',
+                    name: 'hero_rotating_words',
+                    widget: 'list',
+                    field: { label: 'Word', name: 'word', widget: 'string' }
+                  },
+                  { label: 'Hero Sub Line 1 (supporting)', name: 'hero_sub_1',    widget: 'string' },
+                  { label: 'Hero Sub Line 2 (key stat)',   name: 'hero_sub_2',    widget: 'string' },
+                  { label: 'Hero NHS Note',                name: 'hero_nhs_note', widget: 'string' },
+                  { label: 'Next Available Date Text',     name: 'hero_next_avail', widget: 'string', hint: 'e.g. Next Available: Friday 10th April — Book Online, Call, or WhatsApp' },
+
+                  // Why Us
+                  { label: '"Why Us" Section Tag',  name: 'why_tag',     widget: 'string' },
+                  { label: '"Why Us" Heading',      name: 'why_heading', widget: 'string' },
+                  { label: '"Why Us" Intro Text',   name: 'why_intro',   widget: 'string' },
+                  {
+                    label: '"Why Us" Cards',
+                    name: 'why_cards',
+                    widget: 'list',
+                    fields: [
+                      { label: 'Card Title', name: 'title', widget: 'string' },
+                      { label: 'Card Text',  name: 'text',  widget: 'text' }
+                    ]
+                  },
+
+                  // Services
+                  { label: 'Services Section Tag',  name: 'services_tag',     widget: 'string' },
+                  { label: 'Services Heading',      name: 'services_heading', widget: 'string' },
+                  { label: 'Services Intro Text',   name: 'services_intro',   widget: 'string' },
+                  {
+                    label: 'Services List',
+                    name: 'services',
+                    widget: 'list',
+                    fields: [
+                      { label: 'Service Name',        name: 'name',  widget: 'string' },
+                      { label: 'Short Description',   name: 'desc',  widget: 'text' },
+                      { label: 'Price / Status',      name: 'price', widget: 'string' }
+                    ]
+                  },
+
+                  // Doctor
+                  { label: 'Doctor Section Tag',           name: 'doctor_tag',        widget: 'string' },
+                  { label: 'Doctor Name (H2)',              name: 'doctor_h2',         widget: 'string' },
+                  { label: 'Doctor Role / Title',          name: 'doctor_role',       widget: 'string' },
+                  { label: 'Doctor Bio — Paragraph 1',     name: 'doctor_bio_1',      widget: 'text' },
+                  { label: 'Doctor Bio — Paragraph 2',     name: 'doctor_bio_2',      widget: 'text' },
+                  { label: 'Doctor Quote',                 name: 'doctor_quote',      widget: 'string' },
+                  { label: 'Doctor Quote Attribution',     name: 'doctor_quote_cite', widget: 'string' },
+
+                  // Reviews
+                  { label: 'Reviews Section Tag', name: 'reviews_tag',     widget: 'string' },
+                  { label: 'Reviews Heading',     name: 'reviews_heading', widget: 'string' },
+                  {
+                    label: 'Patient Reviews',
+                    name: 'reviews',
+                    widget: 'list',
+                    fields: [
+                      { label: 'Review Quote',         name: 'text',   widget: 'text' },
+                      { label: 'Author & Location',    name: 'author', widget: 'string' }
+                    ]
+                  },
+
+                  // How It Works
+                  { label: '"How It Works" Tag',     name: 'how_tag',     widget: 'string' },
+                  { label: '"How It Works" Heading', name: 'how_heading', widget: 'string' },
+                  {
+                    label: 'Steps',
+                    name: 'how_steps',
+                    widget: 'list',
+                    fields: [
+                      { label: 'Step Title', name: 'title', widget: 'string' },
+                      { label: 'Step Text',  name: 'text',  widget: 'text' }
+                    ]
+                  },
+
+                  // Pricing (homepage preview)
+                  { label: 'Pricing Section Tag',     name: 'pricing_tag',     widget: 'string' },
+                  { label: 'Pricing Heading',         name: 'pricing_heading', widget: 'string' },
+                  { label: 'Pricing Intro (Line 1)',  name: 'pricing_intro_1', widget: 'text' },
+                  { label: 'Pricing Intro (Line 2)',  name: 'pricing_intro_2', widget: 'text' },
+                  {
+                    label: 'Pricing Rows',
+                    name: 'pricing_rows',
+                    widget: 'list',
+                    fields: [
+                      { label: 'Label',           name: 'label', widget: 'string' },
+                      { label: 'Note (sub text)', name: 'note',  widget: 'string' },
+                      { label: 'Price',           name: 'price', widget: 'string' }
+                    ]
+                  },
+
+                  // Final CTA
+                  { label: 'Final CTA Heading', name: 'cta_heading', widget: 'string' },
+                  { label: 'Final CTA Text',    name: 'cta_text',    widget: 'text' }
                 ]
               },
+
+              // ── FAQ ─────────────────────────────────────────────────
+              {
+                label: 'FAQ',
+                name: 'faq',
+                file: '_content/faq.json',
+                fields: [
+                  { label: 'Meta Title',       name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description', name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',         name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading (H1)', name: 'hero_h1',         widget: 'string' },
+                  { label: 'Hero Sub Text',    name: 'hero_sub',         widget: 'text' },
+                  {
+                    label: 'FAQ Sections',
+                    name: 'sections',
+                    widget: 'list',
+                    fields: [
+                      { label: 'Section Tag',     name: 'tag',     widget: 'string' },
+                      { label: 'Section Heading', name: 'heading', widget: 'string' },
+                      {
+                        label: 'Questions',
+                        name: 'questions',
+                        widget: 'list',
+                        fields: [
+                          { label: 'Question', name: 'question', widget: 'string' },
+                          { label: 'Answer',   name: 'answer',   widget: 'text' }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+
+              // ── CONTACT ─────────────────────────────────────────────
+              {
+                label: 'Contact',
+                name: 'contact',
+                file: '_content/contact.json',
+                fields: [
+                  { label: 'Meta Title',       name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description', name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',         name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading',     name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',    name: 'hero_sub',         widget: 'text' },
+                  { label: 'Phone / WhatsApp', name: 'phone',            widget: 'string' },
+                  { label: 'Email Address',    name: 'email',            widget: 'string' },
+                  { label: 'Address Line 1',   name: 'address_1',        widget: 'string' },
+                  { label: 'Address Line 2',   name: 'address_2',        widget: 'string' },
+                  { label: 'Address Line 3',   name: 'address_3',        widget: 'string' },
+                  { label: 'Postcode',         name: 'postcode',         widget: 'string' },
+                  {
+                    label: 'Opening Hours',
+                    name: 'hours',
+                    widget: 'list',
+                    fields: [
+                      { label: 'Day',   name: 'day',   widget: 'string' },
+                      { label: 'Hours', name: 'hours', widget: 'string' }
+                    ]
+                  },
+                  { label: 'Hours Note (italic text below table)', name: 'hours_note',         widget: 'string' },
+                  { label: '"Find Us" Heading',                    name: 'find_us_heading',    widget: 'string' },
+                  { label: '"Find Us" Paragraph',                  name: 'find_us_text',       widget: 'text' },
+                  { label: '"Not Sure?" Section Heading',          name: 'help_heading',       widget: 'string' },
+                  { label: '"Not Sure?" Paragraph',                name: 'help_text',          widget: 'text' },
+                  { label: 'Partnership Section Heading',          name: 'partnership_heading', widget: 'string' },
+                  { label: 'Partnership Paragraph',                name: 'partnership_text',   widget: 'text' }
+                ]
+              },
+
+              // ── PRICING ─────────────────────────────────────────────
+              {
+                label: 'Pricing',
+                name: 'pricing',
+                file: '_content/pricing.json',
+                fields: [
+                  { label: 'Meta Title',       name: 'meta_title',       widget: 'string' },
+                  { label: 'Meta Description', name: 'meta_description', widget: 'text' },
+                  { label: 'Hero Tag',         name: 'hero_tag',         widget: 'string' },
+                  { label: 'Hero Heading',     name: 'hero_h1',          widget: 'string' },
+                  { label: 'Hero Sub Text',    name: 'hero_sub',         widget: 'text' },
+                  { label: '"What\'s Included" Tag',     name: 'included_tag',     widget: 'string' },
+                  { label: '"What\'s Included" Heading', name: 'included_heading', widget: 'string' },
+                  { label: '"What\'s Included" Intro',   name: 'included_intro',   widget: 'text' },
+                  {
+                    label: '"What\'s Included" Cards',
+                    name: 'included_cards',
+                    widget: 'list',
+                    fields: [
+                      { label: 'Card Title', name: 'title', widget: 'string' },
+                      { label: 'Card Text',  name: 'text',  widget: 'text' }
+                    ]
+                  },
+                  { label: 'GP Fees Section Heading', name: 'gp_heading', widget: 'string' },
+                  {
+                    label: 'GP Pricing Rows',
+                    name: 'gp_rows',
+                    widget: 'list',
+                    fields: [
+                      { label: 'Label',           name: 'label', widget: 'string' },
+                      { label: 'Note (sub text)', name: 'note',  widget: 'string' },
+                      { label: 'Price',           name: 'price', widget: 'string' }
+                    ]
+                  }
+                ]
+              },
+
+              // ── ABOUT ───────────────────────────────────────────────
               {
                 label: 'About',
                 name: 'about',
@@ -61,6 +271,8 @@
                   { label: 'Meta Description', name: 'meta_description', widget: 'text' }
                 ]
               },
+
+              // ── SERVICES ────────────────────────────────────────────
               {
                 label: 'Services',
                 name: 'services',
@@ -68,42 +280,6 @@
                 fields: [
                   { label: 'Meta Title',       name: 'meta_title',       widget: 'string' },
                   { label: 'Meta Description', name: 'meta_description', widget: 'text' }
-                ]
-              },
-              {
-                label: 'Pricing',
-                name: 'pricing',
-                file: '_content/pricing.json',
-                fields: [
-                  { label: 'Meta Title',       name: 'meta_title',       widget: 'string' },
-                  { label: 'Meta Description', name: 'meta_description', widget: 'text' }
-                ]
-              },
-              {
-                label: 'Contact',
-                name: 'contact',
-                file: '_content/contact.json',
-                fields: [
-                  { label: 'Meta Title',       name: 'meta_title',       widget: 'string' },
-                  { label: 'Meta Description', name: 'meta_description', widget: 'text' }
-                ]
-              },
-              {
-                label: 'FAQ',
-                name: 'faq',
-                file: '_content/faq.json',
-                fields: [
-                  { label: 'Meta Title',       name: 'meta_title',       widget: 'string' },
-                  { label: 'Meta Description', name: 'meta_description', widget: 'text' },
-                  {
-                    label: 'Questions',
-                    name: 'questions',
-                    widget: 'list',
-                    fields: [
-                      { label: 'Question', name: 'question', widget: 'string' },
-                      { label: 'Answer',   name: 'answer',   widget: 'text' }
-                    ]
-                  }
                 ]
               }
             ]

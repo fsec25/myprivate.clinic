@@ -1,5 +1,123 @@
 {
-  "meta_title": "Private GP FAQs | MyPrivateClinic Preston",
-  "meta_description": "Frequently asked questions about private GP care at MyPrivateClinic in Preston. Learn about appointments, costs, NHS records access, and more.",
-  "questions": []
+  "meta_title": "FAQ | My Private Clinic — Fulwood, Preston",
+  "meta_description": "Frequently asked questions about My Private Clinic — appointments, pricing, prescriptions, referrals, and more. Private GP in Fulwood, Preston.",
+  "hero_tag": "Common Questions",
+  "hero_h1": "Everything You Need to Know",
+  "hero_sub": "Can't find what you're looking for? Call or WhatsApp us directly — we're happy to answer any question before you book.",
+  "sections": [
+    {
+      "tag": "About Us",
+      "heading": "About My Private Clinic",
+      "questions": [
+        {
+          "question": "Do I need to de-register from my NHS GP?",
+          "answer": "No. We work entirely alongside the NHS. You keep your NHS GP — we're an additional option for when you need to be seen sooner, or need more time."
+        },
+        {
+          "question": "Where is the clinic?",
+          "answer": "We're based at Ground Floor, Fatima Health Centre, 228 Garstang Road, Fulwood, Preston, PR2 9QB. Fatima Health Centre is a newly built facility with ample parking on site, well served by local bus routes."
+        },
+        {
+          "question": "When can I get an appointment?",
+          "answer": "Every Friday we run a full clinic from 9am to 8pm. All other days are available by appointment only. We're working towards a full seven-day service in the coming months."
+        },
+        {
+          "question": "Do you see patients from outside Preston?",
+          "answer": "Yes. We welcome patients from across Preston, Fulwood, Broughton, Longridge, the Ribble Valley and beyond. No GP referral is required to book."
+        }
+      ]
+    },
+    {
+      "tag": "Appointments",
+      "heading": "Booking & Availability",
+      "questions": [
+        {
+          "question": "How do I book?",
+          "answer": "Call or WhatsApp us on 07424 172034, or email hello@myprivate.clinic. Online booking is coming soon. Same-day appointments are often available — particularly on Fridays."
+        },
+        {
+          "question": "How long are appointments?",
+          "answer": "We offer 15-minute appointments (for minor or straightforward issues and follow-ups) and 30-minute appointments (for everything else). If you're unsure which to book, call us and we'll help you decide. We'd always rather you book 30 minutes and not need it than book 15 and feel rushed."
+        },
+        {
+          "question": "Can I book a telephone or video appointment?",
+          "answer": "Yes. Telephone and video appointments are available for existing patients at £49 for 15 minutes. New patients are encouraged to attend in person for their first appointment."
+        },
+        {
+          "question": "Can I bring someone with me?",
+          "answer": "Of course. You're welcome to bring a family member, partner or friend for support. For children's appointments, a parent or guardian must be present."
+        }
+      ]
+    },
+    {
+      "tag": "Prescriptions & Referrals",
+      "heading": "What's Included",
+      "questions": [
+        {
+          "question": "Are prescriptions really included?",
+          "answer": "The prescription writing is included — if the doctor decides you need medication, he writes the prescription as part of your appointment at no extra charge. You then take it to any UK pharmacy and pay only the dispensing cost there. Medication charges are set by the pharmacy, not by us."
+        },
+        {
+          "question": "Are referrals included too?",
+          "answer": "Yes. If you need referring to a specialist, the doctor will write the letter as part of your appointment — no separate charge, no extra visit needed. If you need a referral letter without a consultation, this is available at £40."
+        },
+        {
+          "question": "What if I need to see a specialist urgently?",
+          "answer": "The doctor can refer you to private specialists and arrange scans to help fast-track your care where needed. The referral letter is included in your consultation fee. If there is a clinical urgency, he will communicate this clearly in the referral."
+        },
+        {
+          "question": "Can I get repeat prescriptions?",
+          "answer": "Yes. Repeat prescriptions are available at £20 if you are already on a stable medication. Please call us to discuss — a brief consultation may be needed to ensure it is clinically appropriate."
+        }
+      ]
+    },
+    {
+      "tag": "Pricing",
+      "heading": "Fees & Payment",
+      "questions": [
+        {
+          "question": "How much does an appointment cost?",
+          "answer": "Adults: £69 for a 15-minute appointment (minor issues and follow-ups only), £119 for a 30-minute appointment. Children under 16: £49 for a 15-minute consultation. Telephone/video for existing patients: £49. See our full pricing page for a complete list."
+        },
+        {
+          "question": "Are there any hidden charges?",
+          "answer": "No. The price you see is the price you pay. Prescription writing and referral letters are included in your consultation fee. Blood tests and investigations are quoted separately if needed — the doctor will discuss this with you before anything is ordered."
+        },
+        {
+          "question": "How do I pay?",
+          "answer": "Payment is taken at the time of booking or at the appointment. We accept all major credit and debit cards."
+        },
+        {
+          "question": "Is there a cancellation charge?",
+          "answer": "There is no cancellation charge for changes made at least 24 hours before your appointment."
+        }
+      ]
+    },
+    {
+      "tag": "Clinical",
+      "heading": "Medical Questions",
+      "questions": [
+        {
+          "question": "What conditions do you see?",
+          "answer": "All general medical conditions — acute illness, chronic condition reviews, infections, skin problems, joint pain, repeat prescriptions, second opinions, women's health, men's health, children's health and more. If you're unsure whether we can help, just call."
+        },
+        {
+          "question": "Do you offer ongoing care for chronic conditions?",
+          "answer": "Absolutely. Many patients come to us for ongoing management of conditions like hypertension, diabetes, and thyroid disorders — and value seeing the same doctor at every visit."
+        },
+        {
+          "question": "Can children be seen?",
+          "answer": "Yes. Children's appointments are available from £49 for a 15-minute consultation. We see patients of all ages."
+        },
+        {
+          "question": "Do you offer blood tests and scans?",
+          "answer": "Yes. Blood tests are available and will be quoted separately depending on what is needed. The doctor will discuss this with you during your appointment."
+        },
+        {
+          "question": "Do you offer home visits?",
+          "answer": "Yes. Home visits are available from £119 within Fulwood and central Preston. Contact us for pricing if you are outside this area."
+        }
+      ]
+    }
+  ]
 }

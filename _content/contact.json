@@ -1,4 +1,25 @@
 {
-  "meta_title": "Contact MyPrivateClinic Preston | Book a Private GP Appointment",
-  "meta_description": "Contact MyPrivateClinic in Fulwood, Preston. Book a private GP appointment online, by phone, or WhatsApp. Same-day appointments available."
+  "meta_title": "Contact Us | My Private Clinic — Fulwood, Preston",
+  "meta_description": "Contact My Private Clinic in Fulwood, Preston. Call, WhatsApp or email Dr Faizal Secretary. Located at Fatima Health Centre, 228 Garstang Road, PR2 9QB.",
+  "hero_tag": "Get In Touch",
+  "hero_h1": "We're Here When You Need Us",
+  "hero_sub": "Book an appointment, ask a question, or just find out if we're the right fit for you. We're a phone call or WhatsApp message away.",
+  "phone": "07424 172034",
+  "email": "hello@myprivate.clinic",
+  "address_1": "Ground Floor, Fatima Health Centre",
+  "address_2": "228 Garstang Road",
+  "address_3": "Fulwood, Preston",
+  "postcode": "PR2 9QB",
+  "hours": [
+    { "day": "Friday", "hours": "9am to 8pm (Full clinic)" },
+    { "day": "Monday–Thursday", "hours": "By appointment only" },
+    { "day": "Saturday & Sunday", "hours": "By appointment only" }
+  ],
+  "hours_note": "Seven-day service coming soon",
+  "find_us_heading": "Fatima Health Centre, Fulwood",
+  "find_us_text": "Fatima Health Centre is located on Garstang Road in Fulwood — a newly built facility with ample parking on site. We are well served by local bus routes and are easily accessible from the surrounding areas of Preston, Fulwood, Broughton, Longridge and the Ribble Valley.",
+  "help_heading": "Not Sure Where to Start?",
+  "help_text": "Not every question needs a formal appointment. Call or WhatsApp us and the doctor will make sure you're pointed in the right direction.",
+  "partnership_heading": "Working in Partnership",
+  "partnership_text": "My Private Clinic is based within Fatima Health Centre — a multi-service health and wellbeing facility. We work in collaboration with the other services within the centre to provide a joined-up, holistic approach to your care. If you are a healthcare provider or organisation interested in working with us, we'd love to hear from you."
 }
