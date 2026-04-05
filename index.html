@@ -1292,11 +1292,15 @@
     var feature = document.querySelector('.mag-feature');
     var list    = document.querySelector('.mag-list');
     if (!feature || !list) return;
-    function tick() {
+    var navH = 72, maxShift = 0, rafId = null;
+    function measure() {
+      navH     = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 72;
+      maxShift = list.offsetHeight - feature.offsetHeight;
+    }
+    function paint() {
+      rafId = null;
       if (window.innerWidth <= 900) { feature.style.transform = ''; return; }
-      var navH    = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 72;
       var listTop = list.getBoundingClientRect().top;
-      var maxShift = list.offsetHeight - feature.offsetHeight;
       var shift = 0;
       if (listTop < navH) {
         shift = Math.min(navH - listTop, maxShift);
@@ -1304,9 +1308,14 @@
       }
       feature.style.transform = 'translateY(' + shift + 'px)';
     }
-    window.addEventListener('scroll', tick, { passive: true });
-    window.addEventListener('resize', tick);
-    tick();
+    function onScroll() {
+      if (!rafId) rafId = requestAnimationFrame(paint);
+    }
+    function onResize() { measure(); paint(); }
+    measure();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onResize);
+    paint();
   }());
 </script>
 <script src="assets/js/widgets.js"></script>
