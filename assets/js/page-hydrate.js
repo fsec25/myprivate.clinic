@@ -118,7 +118,12 @@
   function setHtml(sel, val) {
     if (val == null) return;
     var el = document.querySelector(sel);
-    if (el) el.innerHTML = val;
+    if (el) el.innerHTML = mdBold(val);
+  }
+
+  // Convert markdown **bold** → <strong>bold</strong>
+  function mdBold(s) {
+    return String(s).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
   }
 
   function esc(s) {
