@@ -31,9 +31,9 @@
       // ── Home page hero (different structure) ──
       set('#hero-heading', d.hero_h1);
       set('.hero-badge span', d.hero_badge);
-      set('.hero-sub-1', d.hero_sub_1);
+      setHtml('.hero-sub-1', d.hero_sub_1);
       set('.hero-sub-2', d.hero_sub_2);
-      set('.hero-nhs-note', d.hero_nhs_note);
+      setHtml('.hero-nhs-note', d.hero_nhs_note);
       set('#next-avail-text', d.hero_next_avail);
 
       if (Array.isArray(d.hero_rotating_words)) {
@@ -113,6 +113,12 @@
     if (val == null) return;
     var el = document.querySelector(sel);
     if (el) el.textContent = val;
+  }
+
+  function setHtml(sel, val) {
+    if (val == null) return;
+    var el = document.querySelector(sel);
+    if (el) el.innerHTML = val;
   }
 
   function esc(s) {
