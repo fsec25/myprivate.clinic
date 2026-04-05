@@ -23,10 +23,25 @@
         if (d[key] != null) el.textContent = d[key];
       });
 
-      // ── Hero section (all page types) ──
+      // ── Hero section (service / inner pages) ──
       set('.page-hero .gold-tag', d.hero_tag);
       set('#page-heading', d.hero_h1);
       set('.hero-sub', d.hero_sub);
+
+      // ── Home page hero (different structure) ──
+      set('#hero-heading', d.hero_h1);
+      set('.hero-badge span', d.hero_badge);
+      set('.hero-sub-1', d.hero_sub_1);
+      set('.hero-sub-2', d.hero_sub_2);
+      set('.hero-nhs-note', d.hero_nhs_note);
+      set('#next-avail-text', d.hero_next_avail);
+
+      if (Array.isArray(d.hero_rotating_words)) {
+        var rotWords = document.querySelectorAll('.hero-rotating-word');
+        d.hero_rotating_words.forEach(function (word, i) {
+          if (rotWords[i]) rotWords[i].textContent = word;
+        });
+      }
 
       // ── Service page intro (who-section) ──
       set('.who-section h2', d.intro_heading);
