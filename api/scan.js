@@ -33,24 +33,16 @@ export default async function handler(req, res) {
 
   // 1. Look up the campaign's destination URL
   let destination = 'https://myprivateclinic.vercel.app';
-  let debugInfo = {};
   try {
     const rows = await supabaseFetch(
       `/qr_codes?slug=eq.${encodeURIComponent(campaign)}&select=destination_url&limit=1`,
       { method: 'GET' }
     );
-    debugInfo = { rows, campaign, key_set: !!SUPABASE_KEY };
     if (rows && rows.length > 0) {
       destination = rows[0].destination_url;
     }
   } catch (e) {
-    debugInfo = { error: e.message, campaign, key_set: !!SUPABASE_KEY };
     console.error('QR lookup error:', e.message);
-  }
-
-  // Debug mode — add ?debug=1 to see what's happening
-  if (req.query.debug === '1') {
-    return res.status(200).json({ destination, ...debugInfo });
   }
 
   // 2. Log the scan (fire-and-forget — don't block redirect on DB write)
