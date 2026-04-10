@@ -1770,8 +1770,8 @@ const MPC = {
                     <td><strong>${counts[c.slug] || 0}</strong></td>
                     <td>${lastScan}</td>
                     <td style="white-space:nowrap">
-                      <button class="btn btn-ghost btn-icon" title="View QR Code" onclick="MPC.modules.marketing.showQRModal('${c.name}','${scanUrl}','${qrImgUrl}')">🔲</button>
-                      <button class="btn btn-ghost btn-icon" title="Copy link" onclick="navigator.clipboard.writeText('${scanUrl}');MPC.ui.showToast('Link copied','success')">📋</button>
+                      <button class="btn btn-ghost btn-icon" title="View QR Code" data-qr-name="${encodeURIComponent(c.name)}" data-qr-scan="${encodeURIComponent(scanUrl)}" data-qr-img="${encodeURIComponent(qrImgUrl)}" onclick="MPC.modules.marketing.showQRModal(decodeURIComponent(this.dataset.qrName),decodeURIComponent(this.dataset.qrScan),decodeURIComponent(this.dataset.qrImg))">🔲</button>
+                      <button class="btn btn-ghost btn-icon" title="Copy link" data-copy-url="${encodeURIComponent(scanUrl)}" onclick="navigator.clipboard.writeText(decodeURIComponent(this.dataset.copyUrl));MPC.ui.showToast('Link copied','success')">📋</button>
                       <button class="btn btn-ghost btn-icon" title="Edit" onclick="MPC.modules.marketing.editQR('${c.id}')">✏️</button>
                       <button class="btn btn-ghost btn-icon" title="Delete" onclick="MPC.modules.marketing.deleteQR('${c.id}')">🗑️</button>
                     </td>
@@ -1786,15 +1786,20 @@ const MPC = {
 
       showQRModal(name, scanUrl, imgUrl) {
         document.getElementById('modalTitle').textContent = name;
-        document.getElementById('modalBody').innerHTML = `
+        const body = document.getElementById('modalBody');
+        body.innerHTML = `
           <div style="text-align:center;padding:16px">
             <img src="${imgUrl}" alt="QR Code" style="width:200px;height:200px;border:1px solid var(--border);border-radius:8px;margin-bottom:16px">
             <div style="font-size:13px;color:var(--text-muted);word-break:break-all;margin-bottom:16px">${scanUrl}</div>
             <div style="display:flex;gap:8px;justify-content:center">
               <a href="${imgUrl}" download="qr-${name.replace(/\s+/g,'-').toLowerCase()}.png" class="btn btn-secondary btn-sm">Download PNG</a>
-              <button class="btn btn-primary btn-sm" onclick="navigator.clipboard.writeText('${scanUrl}');MPC.ui.showToast('Link copied','success')">Copy Link</button>
+              <button id="qrCopyBtn" class="btn btn-primary btn-sm">Copy Link</button>
             </div>
           </div>`;
+        body.querySelector('#qrCopyBtn').addEventListener('click', () => {
+          navigator.clipboard.writeText(scanUrl);
+          MPC.ui.showToast('Link copied', 'success');
+        });
         document.getElementById('modalSave').style.display = 'none';
         document.getElementById('modalOverlay').classList.add('active');
       },
