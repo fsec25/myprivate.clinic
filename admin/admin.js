@@ -1207,10 +1207,12 @@ const MPC = {
             <button class="subtab${tab==='calendar'?' active':''}" onclick="MPC.modules.marketing.switchTab('calendar')">Content Calendar</button>
             <button class="subtab${tab==='linkedin'?' active':''}" onclick="MPC.modules.marketing.switchTab('linkedin')">LinkedIn Posts</button>
             <button class="subtab${tab==='engagement'?' active':''}" onclick="MPC.modules.marketing.switchTab('engagement')">Engagement</button>
+            <button class="subtab${tab==='qrcodes'?' active':''}" onclick="MPC.modules.marketing.switchTab('qrcodes')">QR Codes</button>
           </div>
           <div id="mktTabContent"></div>`;
         if (tab === 'calendar') await MPC.modules.marketing.renderCalendar();
         else if (tab === 'linkedin') await MPC.modules.marketing.renderLinkedIn();
+        else if (tab === 'qrcodes') await MPC.modules.marketing.renderQR();
         else await MPC.modules.marketing.renderEngagement();
       },
 
@@ -1668,6 +1670,186 @@ const MPC = {
         if (error) { MPC.ui.showToast('Delete failed: ' + error.message, 'danger'); return; }
         MPC.ui.showToast('Post removed', 'warning');
         await MPC.modules.marketing.renderLinkedIn();
+      },
+
+      // ── QR Codes subtab ─────────────────────────────────────────
+      async renderQR() {
+        document.getElementById('mktTabContent').innerHTML = `
+          <div style="display:flex;justify-content:flex-end;margin-bottom:16px">
+            <button class="btn btn-primary btn-sm" onclick="MPC.modules.marketing.openAddQR()">+ New QR Code</button>
+          </div>
+          <div id="qrContent"><div class="loading-state"><div class="spinner"></div>Loading…</div></div>`;
+        await MPC.modules.marketing.loadQR();
+      },
+
+      async loadQR() {
+        const wrap = document.getElementById('qrContent');
+        if (!wrap) return;
+        try {
+          const [codes, scans] = await Promise.all([
+            MPC.db.getAll('qr_codes', 'created_at', false),
+            MPC.supabase.from('qr_scans').select('campaign_slug, scanned_at').then(r => r.data || []),
+          ]);
+
+          // Aggregate scan counts per campaign
+          const counts = {};
+          const recent = {};
+          (scans || []).forEach(s => {
+            counts[s.campaign_slug] = (counts[s.campaign_slug] || 0) + 1;
+            if (!recent[s.campaign_slug] || s.scanned_at > recent[s.campaign_slug]) {
+              recent[s.campaign_slug] = s.scanned_at;
+            }
+          });
+
+          // Last-30-days daily chart for all campaigns combined
+          const now = new Date();
+          const days = [];
+          for (let i = 29; i >= 0; i--) {
+            const d = new Date(now);
+            d.setDate(d.getDate() - i);
+            days.push(d.toISOString().slice(0, 10));
+          }
+          const dayMap = {};
+          days.forEach(d => dayMap[d] = 0);
+          (scans || []).forEach(s => {
+            const day = s.scanned_at ? s.scanned_at.slice(0, 10) : null;
+            if (day && dayMap[day] !== undefined) dayMap[day]++;
+          });
+
+          const chartMax = Math.max(...Object.values(dayMap), 1);
+          const chartBars = days.map(d => {
+            const h = Math.round((dayMap[d] / chartMax) * 80);
+            const label = d.slice(5); // MM-DD
+            return `<div class="qr-bar-wrap" title="${d}: ${dayMap[d]} scan${dayMap[d]!==1?'s':''}">
+              <div class="qr-bar" style="height:${h}px"></div>
+              <div class="qr-bar-label">${dayMap[d]>0?dayMap[d]:''}</div>
+            </div>`;
+          }).join('');
+
+          const totalScans = Object.values(counts).reduce((a, b) => a + b, 0);
+          const baseUrl = window.location.origin;
+
+          wrap.innerHTML = `
+            <div class="stats-grid" style="margin-bottom:24px">
+              <div class="stat-card">
+                <div class="stat-value">${codes.length}</div>
+                <div class="stat-label">Active QR Codes</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">${totalScans}</div>
+                <div class="stat-label">Total Scans</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value">${dayMap[days[days.length-1]] || 0}</div>
+                <div class="stat-label">Scans Today</div>
+              </div>
+            </div>
+
+            <div class="card" style="margin-bottom:24px">
+              <div class="card-header"><span class="card-title">Scans — Last 30 Days</span></div>
+              <div class="card-body">
+                <div class="qr-chart">${chartBars}</div>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <div class="table-header"><span class="card-title">All QR Codes</span></div>
+              ${!codes.length ? `<div class="table-empty"><span class="empty-icon">🔲</span>No QR codes yet — create one to get started.</div>` : `
+              <table><thead><tr>
+                <th>Name</th><th>Campaign Slug</th><th>Destination</th>
+                <th>Total Scans</th><th>Last Scan</th><th>Actions</th>
+              </tr></thead><tbody>
+                ${codes.map(c => {
+                  const scanUrl = `${baseUrl}/api/scan?c=${encodeURIComponent(c.slug)}`;
+                  const qrImgUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(scanUrl)}`;
+                  const lastScan = recent[c.slug] ? new Date(recent[c.slug]).toLocaleDateString('en-GB') : '—';
+                  return `<tr>
+                    <td class="fw-600">${c.name}</td>
+                    <td><code style="font-size:12px;background:var(--bg-secondary);padding:2px 6px;border-radius:4px">${c.slug}</code></td>
+                    <td><a href="${c.destination_url}" target="_blank" style="color:var(--primary);max-width:200px;display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${c.destination_url}</a></td>
+                    <td><strong>${counts[c.slug] || 0}</strong></td>
+                    <td>${lastScan}</td>
+                    <td style="white-space:nowrap">
+                      <button class="btn btn-ghost btn-icon" title="View QR Code" onclick="MPC.modules.marketing.showQRModal('${c.name}','${scanUrl}','${qrImgUrl}')">🔲</button>
+                      <button class="btn btn-ghost btn-icon" title="Copy link" onclick="navigator.clipboard.writeText('${scanUrl}');MPC.ui.showToast('Link copied','success')">📋</button>
+                      <button class="btn btn-ghost btn-icon" title="Edit" onclick="MPC.modules.marketing.editQR('${c.id}')">✏️</button>
+                      <button class="btn btn-ghost btn-icon" title="Delete" onclick="MPC.modules.marketing.deleteQR('${c.id}')">🗑️</button>
+                    </td>
+                  </tr>`;
+                }).join('')}
+              </tbody></table>`}
+            </div>`;
+        } catch (err) {
+          if (wrap) wrap.innerHTML = `<div class="table-empty"><span class="empty-icon">⚠️</span>${err.message}</div>`;
+        }
+      },
+
+      showQRModal(name, scanUrl, imgUrl) {
+        document.getElementById('modalTitle').textContent = name;
+        document.getElementById('modalBody').innerHTML = `
+          <div style="text-align:center;padding:16px">
+            <img src="${imgUrl}" alt="QR Code" style="width:200px;height:200px;border:1px solid var(--border);border-radius:8px;margin-bottom:16px">
+            <div style="font-size:13px;color:var(--text-muted);word-break:break-all;margin-bottom:16px">${scanUrl}</div>
+            <div style="display:flex;gap:8px;justify-content:center">
+              <a href="${imgUrl}" download="qr-${name.replace(/\s+/g,'-').toLowerCase()}.png" class="btn btn-secondary btn-sm">Download PNG</a>
+              <button class="btn btn-primary btn-sm" onclick="navigator.clipboard.writeText('${scanUrl}');MPC.ui.showToast('Link copied','success')">Copy Link</button>
+            </div>
+          </div>`;
+        document.getElementById('modalSave').style.display = 'none';
+        document.getElementById('modalOverlay').classList.add('active');
+      },
+
+      _qrForm(qr = {}) {
+        return `
+          <div class="form-group"><label class="form-label">Campaign Name</label>
+            <input class="form-control" id="fQrName" value="${qr.name||''}" placeholder="e.g. A5 Leaflet — April 2026"></div>
+          <div class="form-group"><label class="form-label">Slug (URL-safe, unique)</label>
+            <input class="form-control" id="fQrSlug" value="${qr.slug||''}" placeholder="e.g. leaflet-apr-2026"></div>
+          <div class="form-group"><label class="form-label">Destination URL</label>
+            <input class="form-control" id="fQrDest" value="${qr.destination_url||'https://myprivate.clinic'}" placeholder="https://myprivate.clinic"></div>
+          <div class="form-group"><label class="form-label">Notes</label>
+            <input class="form-control" id="fQrNotes" value="${qr.notes||''}" placeholder="Optional note"></div>`;
+      },
+
+      openAddQR() {
+        document.getElementById('modalSave').style.display = '';
+        MPC.ui.showModal('New QR Code', MPC.modules.marketing._qrForm(), async () => {
+          const name = document.getElementById('fQrName').value.trim();
+          const slug = document.getElementById('fQrSlug').value.trim().toLowerCase().replace(/[^a-z0-9-]/g, '-');
+          const dest = document.getElementById('fQrDest').value.trim();
+          const notes = document.getElementById('fQrNotes').value.trim();
+          if (!name || !slug || !dest) { MPC.ui.showToast('Name, slug and destination are required', 'danger'); return false; }
+          const { error } = await MPC.supabase.from('qr_codes').insert({ name, slug, destination_url: dest, notes: notes || null });
+          if (error) { MPC.ui.showToast('Save failed: ' + error.message, 'danger'); return false; }
+          MPC.ui.showToast('QR code created', 'success');
+          await MPC.modules.marketing.loadQR();
+        });
+      },
+
+      async editQR(id) {
+        const { data: qr } = await MPC.supabase.from('qr_codes').select('*').eq('id', id).single();
+        if (!qr) return;
+        document.getElementById('modalSave').style.display = '';
+        MPC.ui.showModal('Edit QR Code', MPC.modules.marketing._qrForm(qr), async () => {
+          const name = document.getElementById('fQrName').value.trim();
+          const slug = document.getElementById('fQrSlug').value.trim().toLowerCase().replace(/[^a-z0-9-]/g, '-');
+          const dest = document.getElementById('fQrDest').value.trim();
+          const notes = document.getElementById('fQrNotes').value.trim();
+          if (!name || !slug || !dest) { MPC.ui.showToast('Name, slug and destination are required', 'danger'); return false; }
+          const { error } = await MPC.supabase.from('qr_codes').update({ name, slug, destination_url: dest, notes: notes || null }).eq('id', id);
+          if (error) { MPC.ui.showToast('Update failed: ' + error.message, 'danger'); return false; }
+          MPC.ui.showToast('Updated', 'success');
+          await MPC.modules.marketing.loadQR();
+        });
+      },
+
+      async deleteQR(id) {
+        const ok = await MPC.ui.confirm('Delete this QR code? Scan history will be preserved.');
+        if (!ok) return;
+        const { error } = await MPC.supabase.from('qr_codes').delete().eq('id', id);
+        if (error) { MPC.ui.showToast('Delete failed: ' + error.message, 'danger'); return; }
+        MPC.ui.showToast('QR code deleted', 'warning');
+        await MPC.modules.marketing.loadQR();
       }
     },
 

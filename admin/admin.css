@@ -850,3 +850,34 @@ body.login-page {
   .goals-grid { grid-template-columns: 1fr; }
   table.responsive-table td::before { min-width: 80px; }
 }
+
+/* ── QR Code chart ─────────────────────────────────────── */
+.qr-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 100px;
+  padding: 8px 0 0;
+  overflow-x: auto;
+}
+.qr-bar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 8px;
+  cursor: default;
+}
+.qr-bar {
+  width: 100%;
+  min-height: 2px;
+  background: var(--primary);
+  border-radius: 3px 3px 0 0;
+  transition: height 0.3s ease;
+}
+.qr-bar-label {
+  font-size: 9px;
+  color: var(--text-muted);
+  margin-top: 3px;
+  min-height: 11px;
+}
