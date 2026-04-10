@@ -32,7 +32,7 @@ export default async function handler(req, res) {
   }
 
   // 1. Look up the campaign's destination URL
-  let destination = 'https://myprivate.clinic';
+  let destination = 'https://myprivateclinic.vercel.app';
   try {
     const rows = await supabaseFetch(
       `/qr_codes?slug=eq.${encodeURIComponent(campaign)}&select=destination_url&limit=1`,

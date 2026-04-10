@@ -10,4 +10,4 @@ Disallow: /services-option-d.html
 Disallow: /services-option-e.html
 Disallow: /services-option-f.html
 
-Sitemap: https://myprivate.clinic/sitemap.xml
+Sitemap: https://myprivateclinic.vercel.app/sitemap.xml

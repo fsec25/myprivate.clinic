@@ -48,7 +48,29 @@
       "Bash(gh repo:*)",
       "Bash(git --version)",
       "Bash(git remote:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(git checkout:*)",
+      "Bash(ls /Users/faizal/myprivateclinic/services-option-*.html)",
+      "Bash(curl -s https://www.gamca.org)",
+      "Bash(curl -s https://www.mohp.gov.qa/en/Pages/default.aspx)",
+      "WebSearch",
+      "WebFetch(domain:gamcaguide.com)",
+      "WebFetch(domain:qatarvisaguide.net)",
+      "WebFetch(domain:qatartravelinfo.com)",
+      "WebFetch(domain:www.gamcamedicalappointment.com)",
+      "WebFetch(domain:gamcamedstatus.com)",
+      "WebFetch(domain:gamcawafid.pk)",
+      "WebFetch(domain:visascheckinqatar.com)",
+      "WebFetch(domain:qatarqvc.com)",
+      "WebFetch(domain:gamca.in)",
+      "WebFetch(domain:checkqatarvisa.com)",
+      "WebFetch(domain:qatarvisainfo.com)",
+      "WebFetch(domain:www.visaguideqatar.com)",
+      "Bash(ls /Users/faizal/Downloads/*.pdf)",
+      "Bash(python3 -c \"import PyPDF2; print\\(''pypdf2''\\)\")",
+      "Bash(python3 -c \"import pdfminer; print\\(''pdfminer''\\)\")",
+      "Bash(pip3 install:*)",
+      "Bash(python3 -c \":*)"
     ]
   }
 }

@@ -286,6 +286,60 @@ INSERT INTO goals (title, period, category, target_value, current_value, unit, s
 ON CONFLICT DO NOTHING;
 
 -- ============================================================
+-- QR CODES TABLE
+-- Each row is a named campaign with a destination URL.
+-- ============================================================
+CREATE TABLE IF NOT EXISTS qr_codes (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  name TEXT NOT NULL,
+  slug TEXT NOT NULL UNIQUE,
+  destination_url TEXT NOT NULL,
+  notes TEXT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+ALTER TABLE qr_codes ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Authenticated users can manage qr_codes"
+  ON qr_codes FOR ALL
+  TO authenticated
+  USING (true)
+  WITH CHECK (true);
+
+-- Seed with the leaflet campaign
+INSERT INTO qr_codes (name, slug, destination_url, notes) VALUES
+  ('A5 Leaflet — April 2026', 'leaflet-apr-2026', 'https://myprivateclinic.vercel.app', 'Printed A5 leaflet distributed in Fulwood April 2026')
+ON CONFLICT DO NOTHING;
+
+-- ============================================================
+-- QR SCANS TABLE
+-- One row per scan. Logged by /api/scan.js on every redirect.
+-- ============================================================
+CREATE TABLE IF NOT EXISTS qr_scans (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  campaign_slug TEXT NOT NULL,
+  ip TEXT,
+  user_agent TEXT,
+  referrer TEXT,
+  scanned_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+-- Public insert allowed (no auth on scan endpoint — it's a redirect)
+ALTER TABLE qr_scans ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Public can insert qr_scans"
+  ON qr_scans FOR INSERT
+  TO anon
+  WITH CHECK (true);
+CREATE POLICY "Authenticated users can read qr_scans"
+  ON qr_scans FOR SELECT
+  TO authenticated
+  USING (true);
+
+-- Index for fast dashboard queries
+CREATE INDEX IF NOT EXISTS idx_qr_scans_campaign ON qr_scans (campaign_slug);
+CREATE INDEX IF NOT EXISTS idx_qr_scans_scanned_at ON qr_scans (scanned_at DESC);
+
+-- ============================================================
 -- UPDATED_AT trigger function (auto-update timestamps)
 -- ============================================================
 CREATE OR REPLACE FUNCTION update_updated_at_column()
@@ -304,7 +358,7 @@ BEGIN
   FOREACH t IN ARRAY ARRAY[
     'leads','corporate_pipeline','referrers','transactions',
     'compliance_items','content_calendar','referral_network',
-    'inventory','team_members','patient_feedback','goals'
+    'inventory','team_members','patient_feedback','goals','qr_codes'
   ]
   LOOP
     EXECUTE format('

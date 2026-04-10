@@ -1806,7 +1806,7 @@ const MPC = {
           <div class="form-group"><label class="form-label">Slug (URL-safe, unique)</label>
             <input class="form-control" id="fQrSlug" value="${qr.slug||''}" placeholder="e.g. leaflet-apr-2026"></div>
           <div class="form-group"><label class="form-label">Destination URL</label>
-            <input class="form-control" id="fQrDest" value="${qr.destination_url||'https://myprivate.clinic'}" placeholder="https://myprivate.clinic"></div>
+            <input class="form-control" id="fQrDest" value="${qr.destination_url||'https://myprivateclinic.vercel.app'}" placeholder="https://myprivateclinic.vercel.app"></div>
           <div class="form-group"><label class="form-label">Notes</label>
             <input class="form-control" id="fQrNotes" value="${qr.notes||''}" placeholder="Optional note"></div>`;
       },
