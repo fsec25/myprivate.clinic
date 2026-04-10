@@ -3,7 +3,7 @@
 // Logs the scan to Supabase, then redirects to the campaign's destination URL.
 
 const SUPABASE_URL = 'https://lbggerkztgeyydkyrgje.supabase.co';
-const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY || process.env.SUPABASE_ANON_KEY;
+const SUPABASE_KEY = process.env.SUPABASE_SERVICE_KEY || process.env.SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxiZ2dlcmt6dGdleXlka3lyZ2plIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUyOTM1NjAsImV4cCI6MjA5MDg2OTU2MH0.EtwwMJ7YPItswlqzxxstOXvVPz6XdcbEtBSCPZXg4cM';
 
 async function supabaseFetch(path, options = {}) {
   const res = await fetch(`${SUPABASE_URL}/rest/v1${path}`, {
