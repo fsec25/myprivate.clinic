@@ -1801,7 +1801,7 @@ const MPC = {
           MPC.ui.showToast('Link copied', 'success');
         });
         document.getElementById('modalSave').style.display = 'none';
-        document.getElementById('modalOverlay').classList.add('active');
+        document.getElementById('modalOverlay').classList.add('open');
       },
 
       _qrForm(qr = {}) {
