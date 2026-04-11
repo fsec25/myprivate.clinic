@@ -57,97 +57,71 @@ body {
   background: var(--green);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 7mm 7mm 6mm;
+  align-items: center;
+  justify-content: center;
+  padding: 7mm;
+  gap: 4mm;
 }
 
-/* Corner accent */
 .card-front::before {
   content: '';
   position: absolute;
   top: 0; right: 0;
-  width: 18mm;
-  height: 18mm;
-  background: radial-gradient(circle at top right, rgba(201,168,76,0.12), transparent 70%);
+  width: 20mm;
+  height: 20mm;
+  background: radial-gradient(circle at top right, rgba(201,168,76,0.1), transparent 70%);
 }
 
-.front-top {}
-
-.front-wordmark {
-  font-family: 'Jost', sans-serif;
-  font-size: 7.5px;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--cream-dim);
-  margin-bottom: 4mm;
-  display: block;
+.front-logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5mm;
 }
 
-.front-name {
+.front-logo-my {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
-  font-weight: 400;
+  font-style: italic;
+  font-size: 22px;
+  font-weight: 300;
   color: var(--cream);
-  line-height: 1.1;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.08em;
+  line-height: 1;
 }
 
-.front-name em {
-  font-style: italic;
+.front-logo-rule {
+  width: 18mm;
+  height: 0.5px;
+  background: var(--gold);
+  opacity: 0.6;
+}
+
+.front-logo-private {
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
   color: var(--gold);
 }
 
-.front-credentials {
+.front-logo-clinic {
   font-family: 'Jost', sans-serif;
-  font-size: 7px;
-  font-weight: 400;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--cream-dim);
-  margin-top: 2mm;
-}
-
-.front-rule {
-  width: 10mm;
-  height: 0.4px;
-  background: var(--gold);
-  margin: 3.5mm 0;
-  opacity: 0.7;
-}
-
-.front-role {
-  font-family: 'Jost', sans-serif;
-  font-size: 7.5px;
+  font-size: 9px;
   font-weight: 300;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--cream-dim);
-}
-
-.front-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
 }
 
 .front-tagline {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 9.5px;
+  font-size: 8.5px;
   font-weight: 300;
-  color: rgba(201,168,76,0.75);
-  letter-spacing: 0.02em;
-}
-
-.front-gmc {
-  font-family: 'Jost', sans-serif;
-  font-size: 6px;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(247,243,235,0.3);
-  text-align: right;
+  color: rgba(201,168,76,0.6);
+  letter-spacing: 0.04em;
+  text-align: center;
 }
 
 /* ── BACK ── */
@@ -165,17 +139,37 @@ body {
   align-items: flex-start;
 }
 
-.back-wordmark {
-  font-family: 'Jost', sans-serif;
-  font-size: 7.5px;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+.back-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 400;
   color: var(--green);
+  line-height: 1.1;
 }
 
-.back-wordmark span {
+.back-name em {
+  font-style: italic;
   color: var(--gold);
+}
+
+.back-credentials {
+  font-family: 'Jost', sans-serif;
+  font-size: 6.5px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(13,43,31,0.5);
+  margin-top: 1.5mm;
+}
+
+.back-role {
+  font-family: 'Jost', sans-serif;
+  font-size: 6.5px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(13,43,31,0.5);
+  margin-top: 1mm;
 }
 
 .back-qr {
@@ -254,12 +248,12 @@ body {
   font-weight: 500;
 }
 
-.back-tagline {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 8px;
+.back-website {
+  font-family: 'Jost', sans-serif;
+  font-size: 6.5px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
   color: var(--gold);
-  letter-spacing: 0.02em;
   text-align: right;
 }
 
@@ -282,28 +276,26 @@ body {
 </head>
 <body>
 
-<!-- FRONT -->
+<!-- FRONT — logo only -->
 <div class="label">Front</div>
 <div class="card card-front">
-  <div class="front-top">
-    <span class="front-wordmark">My Private Clinic</span>
-    <div class="front-name">Dr Faizal <em>Secretary</em></div>
-    <div class="front-credentials">MBChB &nbsp;·&nbsp; MRCGP &nbsp;·&nbsp; GMC Registered</div>
-    <div class="front-rule"></div>
-    <div class="front-role">Founder &amp; Lead GP</div>
+  <div class="front-logo-wrap">
+    <div class="front-logo-my">My</div>
+    <div class="front-logo-rule"></div>
+    <div class="front-logo-private">Private</div>
+    <div class="front-logo-clinic">Clinic</div>
   </div>
-  <div class="front-bottom">
-    <div class="front-tagline">Good medicine takes time.</div>
-    <div class="front-gmc">GMC Reg.<br>No. on request</div>
-  </div>
+  <div class="front-tagline">Good medicine takes time.</div>
 </div>
 
-<!-- BACK -->
+<!-- BACK — all info -->
 <div class="label">Back</div>
 <div class="card card-back">
   <div class="back-top">
     <div>
-      <div class="back-wordmark">My <span>Private</span> Clinic</div>
+      <div class="back-name">Dr Faizal <em>Secretary</em></div>
+      <div class="back-credentials">MBChB &nbsp;·&nbsp; MRCGP &nbsp;·&nbsp; GMC Registered</div>
+      <div class="back-role">Founder &amp; Lead GP</div>
     </div>
     <div class="back-qr">
       <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=0D2B1F&bgcolor=F7F3EB&data=https://myprivateclinic.vercel.app" alt="QR">
@@ -314,7 +306,7 @@ body {
 
   <div class="back-contact">
     <div class="back-contact-item">
-      <div class="back-contact-icon">📞</div>
+      <div class="back-contact-icon">☎</div>
       <div class="back-contact-text">07424 172034 &nbsp;·&nbsp; Call or WhatsApp</div>
     </div>
     <div class="back-contact-item">
@@ -322,7 +314,7 @@ body {
       <div class="back-contact-text">hello@myprivate.clinic</div>
     </div>
     <div class="back-contact-item">
-      <div class="back-contact-icon">📍</div>
+      <div class="back-contact-icon">◎</div>
       <div class="back-contact-text">Fatima Health Centre, 228 Garstang Road<br>Fulwood, Preston &nbsp;PR2 9QB</div>
     </div>
   </div>
@@ -331,10 +323,9 @@ body {
 
   <div class="back-bottom">
     <div class="back-hours">
-      <strong>Fridays</strong> 9am – 8pm<br>
-      All other days by appointment
+      <strong>Fridays</strong> 9am – 8pm &nbsp;·&nbsp; Other days by appointment
     </div>
-    <div class="back-tagline">myprivate.clinic</div>
+    <div class="back-website">myprivate.clinic</div>
   </div>
 </div>
 
