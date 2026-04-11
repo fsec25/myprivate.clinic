@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Card — Dr Faizal Secretary | My Private Clinic</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --green:  #0D2B1F;
+  --green-mid: #2D6A4F;
+  --gold:   #C9A84C;
+  --cream:  #F7F3EB;
+  --cream-dim: rgba(247,243,235,0.65);
+  --card-w: 85mm;
+  --card-h: 55mm;
+}
+
+body {
+  background: #e8e4dc;
+  font-family: 'Jost', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 40px;
+}
+
+.label {
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ── CARD BASE ── */
+.card {
+  width: var(--card-w);
+  height: var(--card-h);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.22), 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* ── FRONT ── */
+.card-front {
+  background: var(--green);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 7mm 7mm 6mm;
+}
+
+/* Corner accent */
+.card-front::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 18mm;
+  height: 18mm;
+  background: radial-gradient(circle at top right, rgba(201,168,76,0.12), transparent 70%);
+}
+
+.front-top {}
+
+.front-wordmark {
+  font-family: 'Jost', sans-serif;
+  font-size: 7.5px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  margin-bottom: 4mm;
+  display: block;
+}
+
+.front-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--cream);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.front-name em {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.front-credentials {
+  font-family: 'Jost', sans-serif;
+  font-size: 7px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  margin-top: 2mm;
+}
+
+.front-rule {
+  width: 10mm;
+  height: 0.4px;
+  background: var(--gold);
+  margin: 3.5mm 0;
+  opacity: 0.7;
+}
+
+.front-role {
+  font-family: 'Jost', sans-serif;
+  font-size: 7.5px;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+}
+
+.front-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.front-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 9.5px;
+  font-weight: 300;
+  color: rgba(201,168,76,0.75);
+  letter-spacing: 0.02em;
+}
+
+.front-gmc {
+  font-family: 'Jost', sans-serif;
+  font-size: 6px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(247,243,235,0.3);
+  text-align: right;
+}
+
+/* ── BACK ── */
+.card-back {
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6mm 7mm 5.5mm;
+}
+
+.back-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.back-wordmark {
+  font-family: 'Jost', sans-serif;
+  font-size: 7.5px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.back-wordmark span {
+  color: var(--gold);
+}
+
+.back-qr {
+  width: 14mm;
+  height: 14mm;
+  border: 0.5px solid rgba(13,43,31,0.2);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.back-qr img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.back-rule {
+  width: 100%;
+  height: 0.4px;
+  background: linear-gradient(to right, var(--gold), transparent);
+  opacity: 0.5;
+  margin: 2.5mm 0;
+}
+
+.back-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8mm;
+}
+
+.back-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5mm;
+}
+
+.back-contact-icon {
+  font-size: 7px;
+  color: var(--gold);
+  width: 3mm;
+  flex-shrink: 0;
+  margin-top: 0.3mm;
+}
+
+.back-contact-text {
+  font-family: 'Jost', sans-serif;
+  font-size: 7px;
+  font-weight: 400;
+  color: var(--green);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+.back-contact-text a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.back-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.back-hours {
+  font-family: 'Jost', sans-serif;
+  font-size: 6.5px;
+  font-weight: 300;
+  color: rgba(13,43,31,0.5);
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+}
+
+.back-hours strong {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.back-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 8px;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+  text-align: right;
+}
+
+/* ── PRINT ── */
+@media print {
+  body {
+    background: white;
+    padding: 0;
+    gap: 0;
+  }
+  .label { display: none; }
+  .card {
+    page-break-after: always;
+    box-shadow: none;
+    border: 0.5px solid #ccc;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- FRONT -->
+<div class="label">Front</div>
+<div class="card card-front">
+  <div class="front-top">
+    <span class="front-wordmark">My Private Clinic</span>
+    <div class="front-name">Dr Faizal <em>Secretary</em></div>
+    <div class="front-credentials">MBChB &nbsp;·&nbsp; MRCGP &nbsp;·&nbsp; GMC Registered</div>
+    <div class="front-rule"></div>
+    <div class="front-role">Founder &amp; Lead GP</div>
+  </div>
+  <div class="front-bottom">
+    <div class="front-tagline">Good medicine takes time.</div>
+    <div class="front-gmc">GMC Reg.<br>No. on request</div>
+  </div>
+</div>
+
+<!-- BACK -->
+<div class="label">Back</div>
+<div class="card card-back">
+  <div class="back-top">
+    <div>
+      <div class="back-wordmark">My <span>Private</span> Clinic</div>
+    </div>
+    <div class="back-qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&color=0D2B1F&bgcolor=F7F3EB&data=https://myprivateclinic.vercel.app" alt="QR">
+    </div>
+  </div>
+
+  <div class="back-rule"></div>
+
+  <div class="back-contact">
+    <div class="back-contact-item">
+      <div class="back-contact-icon">📞</div>
+      <div class="back-contact-text">07424 172034 &nbsp;·&nbsp; Call or WhatsApp</div>
+    </div>
+    <div class="back-contact-item">
+      <div class="back-contact-icon">✉</div>
+      <div class="back-contact-text">hello@myprivate.clinic</div>
+    </div>
+    <div class="back-contact-item">
+      <div class="back-contact-icon">📍</div>
+      <div class="back-contact-text">Fatima Health Centre, 228 Garstang Road<br>Fulwood, Preston &nbsp;PR2 9QB</div>
+    </div>
+  </div>
+
+  <div class="back-rule"></div>
+
+  <div class="back-bottom">
+    <div class="back-hours">
+      <strong>Fridays</strong> 9am – 8pm<br>
+      All other days by appointment
+    </div>
+    <div class="back-tagline">myprivate.clinic</div>
+  </div>
+</div>
+
+</body>
+</html>
